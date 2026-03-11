@@ -14,7 +14,11 @@ def _build_redis_client() -> redis.Redis:
     # Prefer full URLs in hosted environments (e.g., Heroku) so TLS and credentials are parsed correctly.
     redis_url = os.getenv('REDIS_TLS_URL') or os.getenv('REDIS_URL')
     if redis_url:
-        return redis.from_url(redis_url, health_check_interval=30)
+        kwargs = {'health_check_interval': 30}
+        if redis_url.startswith('rediss://'):
+            # Heroku Redis commonly presents a cert chain that fails strict validation in slim images.
+            kwargs['ssl_cert_reqs'] = os.getenv('REDIS_DB_SSL_CERT_REQS', 'none')
+        return redis.from_url(redis_url, **kwargs)
 
     kwargs = {
         'host': os.getenv('REDIS_DB_HOST'),

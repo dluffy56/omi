@@ -2,15 +2,32 @@ import os
 import shutil
 import uuid
 import wave
+import logging
 
 import torch
 import torchaudio
 from fastapi import HTTPException, UploadFile
 from pyannote.audio import Model, Inference
 
+logger = logging.getLogger(__name__)
+
 # Minimum audio duration (seconds) for speaker embedding extraction.
 # Audio shorter than this crashes wespeaker fbank (see issue #4572).
 MIN_EMBEDDING_AUDIO_DURATION = float(os.getenv("MIN_EMBEDDING_AUDIO_DURATION", "0.5"))
+
+
+def _load_model(model_name: str, hf_token: str | None):
+    try:
+        return Model.from_pretrained(model_name, token=hf_token)
+    except TypeError:
+        try:
+            return Model.from_pretrained(model_name, use_auth_token=hf_token)
+        except Exception as e:
+            logger.exception(f"Failed to load embedding model {model_name} with use_auth_token: {e}")
+            return None
+    except Exception as e:
+        logger.exception(f"Failed to load embedding model {model_name}: {e}")
+        return None
 
 
 def _get_audio_duration_from_file(file_path: str) -> float:
@@ -50,16 +67,18 @@ def _validate_audio_duration(file_path: str):
 
 # Instantiate pretrained speaker embedding model
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-embedding_model = Model.from_pretrained("pyannote/embedding", token=os.getenv('HUGGINGFACE_TOKEN'))
-embedding_inference = Inference(embedding_model, window="whole")
-embedding_inference.to(device)
+embedding_model = _load_model("pyannote/embedding", os.getenv('HUGGINGFACE_TOKEN'))
+embedding_inference = None
+if embedding_model is not None:
+    embedding_inference = Inference(embedding_model, window="whole")
+    embedding_inference.to(device)
 
 # Instantiate wespeaker-voxceleb-resnet34-LM model for v2
-embedding_model_v2 = Model.from_pretrained(
-    "pyannote/wespeaker-voxceleb-resnet34-LM", token=os.getenv('HUGGINGFACE_TOKEN')
-)
-embedding_inference_v2 = Inference(embedding_model_v2, window="whole")
-embedding_inference_v2.to(device)
+embedding_model_v2 = _load_model("pyannote/wespeaker-voxceleb-resnet34-LM", os.getenv('HUGGINGFACE_TOKEN'))
+embedding_inference_v2 = None
+if embedding_model_v2 is not None:
+    embedding_inference_v2 = Inference(embedding_model_v2, window="whole")
+    embedding_inference_v2.to(device)
 
 os.makedirs('_temp', exist_ok=True)
 
@@ -74,6 +93,12 @@ def embedding_endpoint(file: UploadFile):
     Returns:
         Dictionary containing the embedding vector and metadata
     """
+    if embedding_inference is None:
+        raise HTTPException(
+            status_code=503,
+            detail="Embedding model unavailable. Check HUGGINGFACE_TOKEN and gated model access.",
+        )
+
     upload_id = str(uuid.uuid4())
     # Sanitize filename to prevent path traversal
     filename = os.path.basename(file.filename)
@@ -109,6 +134,12 @@ def embedding_endpoint_v2(file: UploadFile):
     Returns:
         Dictionary containing the embedding vector and metadata
     """
+    if embedding_inference_v2 is None:
+        raise HTTPException(
+            status_code=503,
+            detail="Embedding v2 model unavailable. Check HUGGINGFACE_TOKEN and gated model access.",
+        )
+
     upload_id = str(uuid.uuid4())
     # Sanitize filename to prevent path traversal
     filename = os.path.basename(file.filename)
