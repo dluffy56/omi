@@ -9,13 +9,24 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-r = redis.Redis(
-    host=os.getenv('REDIS_DB_HOST'),
-    port=int(os.getenv('REDIS_DB_PORT')) if os.getenv('REDIS_DB_PORT') is not None else 6379,
-    username='default',
-    password=os.getenv('REDIS_DB_PASSWORD'),
-    health_check_interval=30,
-)
+
+def _build_redis_client() -> redis.Redis:
+    # Prefer full URLs in hosted environments (e.g., Heroku) so TLS and credentials are parsed correctly.
+    redis_url = os.getenv('REDIS_TLS_URL') or os.getenv('REDIS_URL')
+    if redis_url:
+        return redis.from_url(redis_url, health_check_interval=30)
+
+    kwargs = {
+        'host': os.getenv('REDIS_DB_HOST'),
+        'port': int(os.getenv('REDIS_DB_PORT')) if os.getenv('REDIS_DB_PORT') is not None else 6379,
+        'username': os.getenv('REDIS_DB_USERNAME', 'default'),
+        'password': os.getenv('REDIS_DB_PASSWORD'),
+        'health_check_interval': 30,
+    }
+    return redis.Redis(**kwargs)
+
+
+r = _build_redis_client()
 
 
 def try_catch_decorator(func):
@@ -307,6 +318,7 @@ def remove_user_soniox_speech_profile(uid: str):
     r.delete(f'users:{uid}:has_soniox_speech_profile')
 
 
+@try_catch_decorator
 def cache_user_name(uid: str, name: str, ttl: int = 60 * 60 * 24 * 7):
     r.set(f'users:{uid}:name', name)
     r.expire(f'users:{uid}:name', ttl)
