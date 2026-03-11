@@ -30,11 +30,11 @@ FROM python:3.11-slim
 
 WORKDIR /app
 ENV PATH="/opt/venv/bin:$PATH"
-ENV LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+ENV LD_LIBRARY_PATH=/usr/local/lib/x86_64-linux-gnu:/usr/local/lib:$LD_LIBRARY_PATH
 
 RUN apt-get update && apt-get -y install ffmpeg curl unzip && rm -rf /var/lib/apt/lists/*
 
-COPY --from=builder /usr/local/lib/liblc3.so* /usr/local/lib/
+COPY --from=builder /usr/local/lib/x86_64-linux-gnu/liblc3.so* /usr/local/lib/x86_64-linux-gnu/
 COPY --from=builder /tmp/wheels /tmp/wheels
 RUN ldconfig && \
     pip install --no-cache-dir /tmp/wheels/*.whl && \
