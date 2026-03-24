@@ -25,7 +25,7 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String get deleteConversationMessage =>
-      'Esteu segur que voleu eliminar aquesta conversa? Aquesta acció no es pot desfer.';
+      'Això també eliminarà els records, tasques i fitxers d\'àudio associats. Aquesta acció no es pot desfer.';
 
   @override
   String get confirm => 'Confirmar';
@@ -2686,7 +2686,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get showAll => 'Mostra-ho tot →';
 
   @override
-  String get noTasksForToday => 'No hi ha tasques per avui.\\nDemana a Omi més tasques o crea-les manualment.';
+  String get noTasksForToday => 'No hi ha tasques per avui.\nDemana a Omi més tasques o crea-les manualment.';
 
   @override
   String get dailyScore => 'PUNTUACIÓ DIÀRIA';
@@ -8524,4 +8524,178 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String get showTasksOnHomepage => 'Mostra les tasques a la pàgina principal';
+
+  @override
+  String get phoneCallsUnlimitedOnly => 'Trucades telefòniques via Omi';
+
+  @override
+  String get phoneCallsUpsellSubtitle =>
+      'Fes trucades a través d\'Omi i obtin transcripció en temps real, resums automàtics i més.';
+
+  @override
+  String get phoneCallsUpsellFeature1 => 'Transcripció en temps real de cada trucada';
+
+  @override
+  String get phoneCallsUpsellFeature2 => 'Resums automàtics de trucades i accions a fer';
+
+  @override
+  String get phoneCallsUpsellFeature3 => 'Els destinataris veuen el teu número real, no un d\'aleatori';
+
+  @override
+  String get phoneCallsUpsellFeature4 => 'Les teves trucades es mantenen privades i segures';
+
+  @override
+  String get phoneCallsUpgradeButton => 'Actualitza a Il·limitat';
+
+  @override
+  String get phoneCallsMaybeLater => 'Potser més tard';
+
+  @override
+  String get deleteSynced => 'Eliminar sincronitzats';
+
+  @override
+  String get deleteSyncedFiles => 'Eliminar enregistraments sincronitzats';
+
+  @override
+  String get deleteSyncedFilesMessage =>
+      'Aquests enregistraments ja estan sincronitzats amb el vostre telèfon. Això no es pot desfer.';
+
+  @override
+  String get syncedFilesDeleted => 'Enregistraments sincronitzats eliminats';
+
+  @override
+  String get deletePending => 'Eliminar pendents';
+
+  @override
+  String get deletePendingFiles => 'Eliminar enregistraments pendents';
+
+  @override
+  String get deletePendingFilesWarning =>
+      'Aquests enregistraments NO estan sincronitzats amb el vostre telèfon i es perdran permanentment. Això no es pot desfer.';
+
+  @override
+  String get pendingFilesDeleted => 'Enregistraments pendents eliminats';
+
+  @override
+  String get deleteAllFiles => 'Eliminar tots els enregistraments';
+
+  @override
+  String get deleteAll => 'Eliminar tot';
+
+  @override
+  String get deleteAllFilesWarning =>
+      'Això eliminarà els enregistraments sincronitzats i pendents. Els enregistraments pendents NO estan sincronitzats i es perdran permanentment.';
+
+  @override
+  String get allFilesDeleted => 'Tots els enregistraments eliminats';
+
+  @override
+  String nFiles(int count) {
+    return '$count enregistraments';
+  }
+
+  @override
+  String get manageStorage => 'Gestionar emmagatzematge';
+
+  @override
+  String get safelyBackedUp => 'Còpia de seguretat al vostre telèfon';
+
+  @override
+  String get notYetSynced => 'Encara no sincronitzat amb el vostre telèfon';
+
+  @override
+  String get clearAll => 'Esborrar tot';
+
+  @override
+  String get phoneKeypad => 'Teclat';
+
+  @override
+  String get phoneHideKeypad => 'Amaga el teclat';
+
+  @override
+  String get fairUsePolicy => 'Ús raonable';
+
+  @override
+  String get fairUseLoadError => 'No s\'ha pogut carregar l\'estat d\'ús raonable. Si us plau, torneu-ho a provar.';
+
+  @override
+  String get fairUseStatusNormal => 'El vostre ús està dins dels límits normals.';
+
+  @override
+  String get fairUseStageNormal => 'Normal';
+
+  @override
+  String get fairUseStageWarning => 'Avís';
+
+  @override
+  String get fairUseStageThrottle => 'Limitat';
+
+  @override
+  String get fairUseStageRestrict => 'Restringit';
+
+  @override
+  String get fairUseSpeechUsage => 'Ús de la parla';
+
+  @override
+  String get fairUseToday => 'Avui';
+
+  @override
+  String get fairUse3Day => 'Últims 3 dies';
+
+  @override
+  String get fairUseWeekly => 'Setmanal';
+
+  @override
+  String get fairUseAboutTitle => 'Sobre l\'ús raonable';
+
+  @override
+  String get fairUseAboutBody =>
+      'Omi està dissenyat per a converses personals, reunions i interaccions en directe. L\'ús es mesura pel temps real de parla detectat, no pel temps de connexió. Si l\'ús supera significativament els patrons normals per a contingut no personal, es podrien aplicar ajustos.';
+
+  @override
+  String fairUseCaseRefCopied(String caseRef) {
+    return '$caseRef copiat';
+  }
+
+  @override
+  String get fairUseDailyTranscription => 'Daily Transcription';
+
+  @override
+  String fairUseBudgetUsed(String used, String limit) {
+    return '${used}m / ${limit}m';
+  }
+
+  @override
+  String get fairUseBudgetExhausted => 'Daily transcription limit reached';
+
+  @override
+  String fairUseBudgetResetsAt(String time) {
+    return 'Resets $time';
+  }
+
+  @override
+  String get transcriptionPaused => 'Gravant, reconnectant';
+
+  @override
+  String get transcriptionPausedReconnecting => 'Encara gravant — reconnectant a la transcripció...';
+
+  @override
+  String fairUseBannerStatus(String status) {
+    return 'Ús raonable: $status';
+  }
+
+  @override
+  String get improveConnectionTitle => 'Millorar la connexió';
+
+  @override
+  String get improveConnectionContent =>
+      'Hem millorat com Omi es manté connectat al teu dispositiu. Per activar-ho, ves a la pàgina d\'informació del dispositiu, toca \"Desconnectar dispositiu\" i torna a vincular el teu dispositiu.';
+
+  @override
+  String get improveConnectionAction => 'Entesos';
+
+  @override
+  String clockSkewWarning(int minutes) {
+    return 'El rellotge del dispositiu va desajustat ~$minutes min. Comproveu la configuració de data i hora.';
+  }
 }

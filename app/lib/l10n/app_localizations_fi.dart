@@ -24,7 +24,8 @@ class AppLocalizationsFi extends AppLocalizations {
   String get deleteConversationTitle => 'Poista keskustelu?';
 
   @override
-  String get deleteConversationMessage => 'Haluatko varmasti poistaa tämän keskustelun? Tätä toimintoa ei voi perua.';
+  String get deleteConversationMessage =>
+      'Tämä poistaa myös liittyvät muistot, tehtävät ja äänitiedostot. Tätä toimintoa ei voi kumota.';
 
   @override
   String get confirm => 'Vahvista';
@@ -2670,7 +2671,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get showAll => 'Näytä kaikki →';
 
   @override
-  String get noTasksForToday => 'Ei tehtäviä tänään.\\nKysy Omilta lisää tehtäviä tai luo ne manuaalisesti.';
+  String get noTasksForToday => 'Ei tehtäviä tänään.\nKysy Omilta lisää tehtäviä tai luo ne manuaalisesti.';
 
   @override
   String get dailyScore => 'PÄIVITTÄINEN PISTEMÄÄRÄ';
@@ -8471,4 +8472,177 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get showTasksOnHomepage => 'Näytä tehtävät etusivulla';
+
+  @override
+  String get phoneCallsUnlimitedOnly => 'Puhelut Omin kautta';
+
+  @override
+  String get phoneCallsUpsellSubtitle =>
+      'Soita puheluita Omin kautta ja saa reaaliaikainen litterointi, automaattiset yhteenvedot ja paljon muuta.';
+
+  @override
+  String get phoneCallsUpsellFeature1 => 'Jokaisen puhelun reaaliaikainen litterointi';
+
+  @override
+  String get phoneCallsUpsellFeature2 => 'Automaattiset puheluyhteenvedot ja toimenpiteet';
+
+  @override
+  String get phoneCallsUpsellFeature3 => 'Vastaanottajat näkevät oikean numerosi, eivät satunnaista';
+
+  @override
+  String get phoneCallsUpsellFeature4 => 'Puhelusi pysyvät yksityisinä ja turvallisina';
+
+  @override
+  String get phoneCallsUpgradeButton => 'Päivitä Rajattomaan';
+
+  @override
+  String get phoneCallsMaybeLater => 'Ehkä myöhemmin';
+
+  @override
+  String get deleteSynced => 'Poista synkronoidut';
+
+  @override
+  String get deleteSyncedFiles => 'Poista synkronoidut tallenteet';
+
+  @override
+  String get deleteSyncedFilesMessage => 'Nämä tallenteet on jo synkronoitu puhelimeesi. Tätä ei voi kumota.';
+
+  @override
+  String get syncedFilesDeleted => 'Synkronoidut tallenteet poistettu';
+
+  @override
+  String get deletePending => 'Poista odottavat';
+
+  @override
+  String get deletePendingFiles => 'Poista odottavat tallenteet';
+
+  @override
+  String get deletePendingFilesWarning =>
+      'Näitä tallenteita EI ole synkronoitu puhelimeesi ja ne menetetään pysyvästi. Tätä ei voi kumota.';
+
+  @override
+  String get pendingFilesDeleted => 'Odottavat tallenteet poistettu';
+
+  @override
+  String get deleteAllFiles => 'Poista kaikki tallenteet';
+
+  @override
+  String get deleteAll => 'Poista kaikki';
+
+  @override
+  String get deleteAllFilesWarning =>
+      'Tämä poistaa synkronoidut ja odottavat tallenteet. Odottavia tallenteita EI ole synkronoitu ja ne menetetään pysyvästi.';
+
+  @override
+  String get allFilesDeleted => 'Kaikki tallenteet poistettu';
+
+  @override
+  String nFiles(int count) {
+    return '$count tallennetta';
+  }
+
+  @override
+  String get manageStorage => 'Hallitse tallennustilaa';
+
+  @override
+  String get safelyBackedUp => 'Turvallisesti varmuuskopioitu puhelimeesi';
+
+  @override
+  String get notYetSynced => 'Ei vielä synkronoitu puhelimeesi';
+
+  @override
+  String get clearAll => 'Tyhjennä kaikki';
+
+  @override
+  String get phoneKeypad => 'Näppäimistö';
+
+  @override
+  String get phoneHideKeypad => 'Piilota näppäimistö';
+
+  @override
+  String get fairUsePolicy => 'Kohtuullinen käyttö';
+
+  @override
+  String get fairUseLoadError => 'Kohtuullisen käytön tilaa ei voitu ladata. Yritä uudelleen.';
+
+  @override
+  String get fairUseStatusNormal => 'Käyttösi on normaalien rajojen sisällä.';
+
+  @override
+  String get fairUseStageNormal => 'Normaali';
+
+  @override
+  String get fairUseStageWarning => 'Varoitus';
+
+  @override
+  String get fairUseStageThrottle => 'Rajoitettu';
+
+  @override
+  String get fairUseStageRestrict => 'Estetty';
+
+  @override
+  String get fairUseSpeechUsage => 'Puheen käyttö';
+
+  @override
+  String get fairUseToday => 'Tänään';
+
+  @override
+  String get fairUse3Day => '3 päivän jakso';
+
+  @override
+  String get fairUseWeekly => 'Viikkojakso';
+
+  @override
+  String get fairUseAboutTitle => 'Tietoa kohtuullisesta käytöstä';
+
+  @override
+  String get fairUseAboutBody =>
+      'Omi on suunniteltu henkilökohtaisiin keskusteluihin, kokouksiin ja reaaliaikaiseen vuorovaikutukseen. Käyttöä mitataan havaitun todellisen puheajan, ei yhteysajan perusteella. Jos käyttö ylittää merkittävästi normaalit mallit ei-henkilökohtaisen sisällön osalta, säätöjä voidaan soveltaa.';
+
+  @override
+  String fairUseCaseRefCopied(String caseRef) {
+    return '$caseRef kopioitu';
+  }
+
+  @override
+  String get fairUseDailyTranscription => 'Daily Transcription';
+
+  @override
+  String fairUseBudgetUsed(String used, String limit) {
+    return '${used}m / ${limit}m';
+  }
+
+  @override
+  String get fairUseBudgetExhausted => 'Daily transcription limit reached';
+
+  @override
+  String fairUseBudgetResetsAt(String time) {
+    return 'Resets $time';
+  }
+
+  @override
+  String get transcriptionPaused => 'Nauhoittaa, yhdistetään uudelleen';
+
+  @override
+  String get transcriptionPausedReconnecting => 'Nauhoittaa yhä — yhdistetään uudelleen puheentunnistukseen...';
+
+  @override
+  String fairUseBannerStatus(String status) {
+    return 'Reilu käyttö: $status';
+  }
+
+  @override
+  String get improveConnectionTitle => 'Paranna yhteyttä';
+
+  @override
+  String get improveConnectionContent =>
+      'Olemme parantaneet Omin yhteydenpitoa laitteeseesi. Aktivoidaksesi tämän, siirry Laitteen tiedot -sivulle, napauta \"Katkaise laitteen yhteys\" ja yhdistä laitteesi uudelleen.';
+
+  @override
+  String get improveConnectionAction => 'Selvä';
+
+  @override
+  String clockSkewWarning(int minutes) {
+    return 'Laitteesi kello on ~$minutes min. väärässä. Tarkista päivämäärä- ja aika-asetukset.';
+  }
 }

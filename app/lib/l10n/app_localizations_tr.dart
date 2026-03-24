@@ -24,7 +24,8 @@ class AppLocalizationsTr extends AppLocalizations {
   String get deleteConversationTitle => 'Konuşma Silinsin mi?';
 
   @override
-  String get deleteConversationMessage => 'Bu konuşmayı silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.';
+  String get deleteConversationMessage =>
+      'Bu işlem ilişkili anıları, görevleri ve ses dosyalarını da silecektir. Bu işlem geri alınamaz.';
 
   @override
   String get confirm => 'Onayla';
@@ -1731,7 +1732,7 @@ class AppLocalizationsTr extends AppLocalizations {
   }
 
   @override
-  String get dontShowAgain => 'Bir daha gösterme';
+  String get dontShowAgain => 'Tekrar gösterme';
 
   @override
   String get iUnderstand => 'Anlıyorum';
@@ -2678,7 +2679,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get showAll => 'Hepsini göster →';
 
   @override
-  String get noTasksForToday => 'Bugün için görev yok.\\nDaha fazla görev için Omi\'ye sorun veya manuel oluşturun.';
+  String get noTasksForToday => 'Bugün için görev yok.\nDaha fazla görev için Omi\'ye sorun veya manuel oluşturun.';
 
   @override
   String get dailyScore => 'GÜNLÜK SKOR';
@@ -8485,4 +8486,177 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get showTasksOnHomepage => 'Ana sayfada görevleri göster';
+
+  @override
+  String get phoneCallsUnlimitedOnly => 'Omi ile Telefon Aramaları';
+
+  @override
+  String get phoneCallsUpsellSubtitle =>
+      'Omi üzerinden arama yapın ve gerçek zamanlı transkripsiyon, otomatik özetler ve daha fazlasını alın.';
+
+  @override
+  String get phoneCallsUpsellFeature1 => 'Her aramanın gerçek zamanlı transkripsiyonu';
+
+  @override
+  String get phoneCallsUpsellFeature2 => 'Otomatik arama özetleri ve görevler';
+
+  @override
+  String get phoneCallsUpsellFeature3 => 'Alıcılar rastgele değil, gerçek numaranızı görür';
+
+  @override
+  String get phoneCallsUpsellFeature4 => 'Aramalarınız gizli ve güvenli kalır';
+
+  @override
+  String get phoneCallsUpgradeButton => 'Sınırsız\'a yükselt';
+
+  @override
+  String get phoneCallsMaybeLater => 'Belki daha sonra';
+
+  @override
+  String get deleteSynced => 'Senkronize edilenleri sil';
+
+  @override
+  String get deleteSyncedFiles => 'Senkronize kayıtları sil';
+
+  @override
+  String get deleteSyncedFilesMessage => 'Bu kayıtlar zaten telefonunuzla senkronize edildi. Bu geri alınamaz.';
+
+  @override
+  String get syncedFilesDeleted => 'Senkronize kayıtlar silindi';
+
+  @override
+  String get deletePending => 'Bekleyenleri sil';
+
+  @override
+  String get deletePendingFiles => 'Bekleyen kayıtları sil';
+
+  @override
+  String get deletePendingFilesWarning =>
+      'Bu kayıtlar telefonunuzla senkronize EDİLMEDİ ve kalıcı olarak kaybolacak. Bu geri alınamaz.';
+
+  @override
+  String get pendingFilesDeleted => 'Bekleyen kayıtlar silindi';
+
+  @override
+  String get deleteAllFiles => 'Tüm kayıtları sil';
+
+  @override
+  String get deleteAll => 'Tümünü sil';
+
+  @override
+  String get deleteAllFilesWarning =>
+      'Bu, senkronize ve bekleyen kayıtları silecek. Bekleyen kayıtlar senkronize EDİLMEDİ ve kalıcı olarak kaybolacak.';
+
+  @override
+  String get allFilesDeleted => 'Tüm kayıtlar silindi';
+
+  @override
+  String nFiles(int count) {
+    return '$count kayıt';
+  }
+
+  @override
+  String get manageStorage => 'Depolamayı yönet';
+
+  @override
+  String get safelyBackedUp => 'Telefonunuza güvenli şekilde yedeklendi';
+
+  @override
+  String get notYetSynced => 'Henüz telefonunuzla senkronize edilmedi';
+
+  @override
+  String get clearAll => 'Tümünü temizle';
+
+  @override
+  String get phoneKeypad => 'Tuş takımı';
+
+  @override
+  String get phoneHideKeypad => 'Tuş takımını gizle';
+
+  @override
+  String get fairUsePolicy => 'Adil Kullanım';
+
+  @override
+  String get fairUseLoadError => 'Adil kullanım durumu yüklenemedi. Lütfen tekrar deneyin.';
+
+  @override
+  String get fairUseStatusNormal => 'Kullanımınız normal sınırlar içinde.';
+
+  @override
+  String get fairUseStageNormal => 'Normal';
+
+  @override
+  String get fairUseStageWarning => 'Uyarı';
+
+  @override
+  String get fairUseStageThrottle => 'Kısıtlı';
+
+  @override
+  String get fairUseStageRestrict => 'Engelli';
+
+  @override
+  String get fairUseSpeechUsage => 'Konuşma Kullanımı';
+
+  @override
+  String get fairUseToday => 'Bugün';
+
+  @override
+  String get fairUse3Day => '3 günlük süre';
+
+  @override
+  String get fairUseWeekly => 'Haftalık süre';
+
+  @override
+  String get fairUseAboutTitle => 'Adil Kullanım Hakkında';
+
+  @override
+  String get fairUseAboutBody =>
+      'Omi kişisel konuşmalar, toplantılar ve canlı etkileşimler için tasarlanmıştır. Kullanım, bağlantı süresine değil, tespit edilen gerçek konuşma süresine göre ölçülür. Kullanım, kişisel olmayan içerik için normal kalıpları önemli ölçüde aşarsa, düzenlemeler uygulanabilir.';
+
+  @override
+  String fairUseCaseRefCopied(String caseRef) {
+    return '$caseRef kopyalandı';
+  }
+
+  @override
+  String get fairUseDailyTranscription => 'Günlük transkripsiyon';
+
+  @override
+  String fairUseBudgetUsed(String used, String limit) {
+    return '${used}dk / ${limit}dk';
+  }
+
+  @override
+  String get fairUseBudgetExhausted => 'Günlük transkripsiyon limiti doldu';
+
+  @override
+  String fairUseBudgetResetsAt(String time) {
+    return 'Sıfırlanma $time';
+  }
+
+  @override
+  String get transcriptionPaused => 'Kaydediyor, yeniden bağlanıyor';
+
+  @override
+  String get transcriptionPausedReconnecting => 'Hâlâ kaydediyor — transkripsiyona yeniden bağlanıyor...';
+
+  @override
+  String fairUseBannerStatus(String status) {
+    return 'Adil Kullanım: $status';
+  }
+
+  @override
+  String get improveConnectionTitle => 'Bağlantıyı İyileştir';
+
+  @override
+  String get improveConnectionContent =>
+      'Omi\'nin cihazınıza bağlı kalma şeklini iyileştirdik. Bunu etkinleştirmek için Cihaz Bilgileri sayfasına gidin, \"Cihazı Kes\" seçeneğine dokunun ve cihazınızı tekrar eşleştirin.';
+
+  @override
+  String get improveConnectionAction => 'Anladım';
+
+  @override
+  String clockSkewWarning(int minutes) {
+    return 'Cihazınızın saati ~$minutes dk. farklı. Tarih ve saat ayarlarınızı kontrol edin.';
+  }
 }

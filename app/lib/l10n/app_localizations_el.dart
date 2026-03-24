@@ -25,7 +25,7 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get deleteConversationMessage =>
-      'Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτή τη συνομιλία; Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.';
+      'Αυτό θα διαγράψει επίσης τις σχετικές αναμνήσεις, εργασίες και αρχεία ήχου. Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.';
 
   @override
   String get confirm => 'Επιβεβαίωση';
@@ -2694,7 +2694,7 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get noTasksForToday =>
-      'Δεν υπάρχουν εργασίες για σήμερα.\\nΡωτήστε το Omi για περισσότερες εργασίες ή δημιουργήστε χειροκίνητα.';
+      'Δεν υπάρχουν εργασίες για σήμερα.\nΡωτήστε το Omi για περισσότερες εργασίες ή δημιουργήστε χειροκίνητα.';
 
   @override
   String get dailyScore => 'ΗΜΕΡΗΣΙΟ ΣΚΟΡ';
@@ -8536,4 +8536,178 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get showTasksOnHomepage => 'Εμφάνιση εργασιών στην αρχική σελίδα';
+
+  @override
+  String get phoneCallsUnlimitedOnly => 'Τηλεφωνικές κλήσεις μέσω Omi';
+
+  @override
+  String get phoneCallsUpsellSubtitle =>
+      'Κάντε κλήσεις μέσω Omi και λάβετε μεταγραφή σε πραγματικό χρόνο, αυτόματες περιλήψεις και πολλά άλλα.';
+
+  @override
+  String get phoneCallsUpsellFeature1 => 'Μεταγραφή σε πραγματικό χρόνο κάθε κλήσης';
+
+  @override
+  String get phoneCallsUpsellFeature2 => 'Αυτόματες περιλήψεις κλήσεων και ενέργειες';
+
+  @override
+  String get phoneCallsUpsellFeature3 => 'Οι παραλήπτες βλέπουν τον πραγματικό σας αριθμό, όχι τυχαίο';
+
+  @override
+  String get phoneCallsUpsellFeature4 => 'Οι κλήσεις σας παραμένουν ιδιωτικές και ασφαλείς';
+
+  @override
+  String get phoneCallsUpgradeButton => 'Αναβάθμιση σε Απεριόριστο';
+
+  @override
+  String get phoneCallsMaybeLater => 'Ίσως αργότερα';
+
+  @override
+  String get deleteSynced => 'Διαγραφή συγχρονισμένων';
+
+  @override
+  String get deleteSyncedFiles => 'Διαγραφή συγχρονισμένων ηχογραφήσεων';
+
+  @override
+  String get deleteSyncedFilesMessage =>
+      'Αυτές οι ηχογραφήσεις έχουν ήδη συγχρονιστεί με το τηλέφωνό σας. Δεν μπορεί να αναιρεθεί.';
+
+  @override
+  String get syncedFilesDeleted => 'Οι συγχρονισμένες ηχογραφήσεις διαγράφηκαν';
+
+  @override
+  String get deletePending => 'Διαγραφή εκκρεμών';
+
+  @override
+  String get deletePendingFiles => 'Διαγραφή εκκρεμών ηχογραφήσεων';
+
+  @override
+  String get deletePendingFilesWarning =>
+      'Αυτές οι ηχογραφήσεις ΔΕΝ έχουν συγχρονιστεί με το τηλέφωνό σας και θα χαθούν μόνιμα. Δεν μπορεί να αναιρεθεί.';
+
+  @override
+  String get pendingFilesDeleted => 'Οι εκκρεμείς ηχογραφήσεις διαγράφηκαν';
+
+  @override
+  String get deleteAllFiles => 'Διαγραφή όλων των ηχογραφήσεων';
+
+  @override
+  String get deleteAll => 'Διαγραφή όλων';
+
+  @override
+  String get deleteAllFilesWarning =>
+      'Αυτό θα διαγράψει συγχρονισμένες και εκκρεμείς ηχογραφήσεις. Οι εκκρεμείς ηχογραφήσεις ΔΕΝ έχουν συγχρονιστεί και θα χαθούν μόνιμα.';
+
+  @override
+  String get allFilesDeleted => 'Όλες οι ηχογραφήσεις διαγράφηκαν';
+
+  @override
+  String nFiles(int count) {
+    return '$count ηχογραφήσεις';
+  }
+
+  @override
+  String get manageStorage => 'Διαχείριση αποθήκευσης';
+
+  @override
+  String get safelyBackedUp => 'Αποθηκεύτηκε με ασφάλεια στο τηλέφωνό σας';
+
+  @override
+  String get notYetSynced => 'Δεν έχει συγχρονιστεί ακόμα με το τηλέφωνό σας';
+
+  @override
+  String get clearAll => 'Εκκαθάριση όλων';
+
+  @override
+  String get phoneKeypad => 'Πληκτρολόγιο';
+
+  @override
+  String get phoneHideKeypad => 'Απόκρυψη πληκτρολογίου';
+
+  @override
+  String get fairUsePolicy => 'Δίκαιη χρήση';
+
+  @override
+  String get fairUseLoadError => 'Δεν ήταν δυνατή η φόρτωση της κατάστασης δίκαιης χρήσης. Παρακαλώ δοκιμάστε ξανά.';
+
+  @override
+  String get fairUseStatusNormal => 'Η χρήση σας είναι εντός κανονικών ορίων.';
+
+  @override
+  String get fairUseStageNormal => 'Κανονική';
+
+  @override
+  String get fairUseStageWarning => 'Προειδοποίηση';
+
+  @override
+  String get fairUseStageThrottle => 'Περιορισμένη';
+
+  @override
+  String get fairUseStageRestrict => 'Αποκλεισμένη';
+
+  @override
+  String get fairUseSpeechUsage => 'Χρήση ομιλίας';
+
+  @override
+  String get fairUseToday => 'Σήμερα';
+
+  @override
+  String get fairUse3Day => '3ήμερο κυλιόμενο';
+
+  @override
+  String get fairUseWeekly => 'Εβδομαδιαίο κυλιόμενο';
+
+  @override
+  String get fairUseAboutTitle => 'Σχετικά με τη δίκαιη χρήση';
+
+  @override
+  String get fairUseAboutBody =>
+      'Το Omi είναι σχεδιασμένο για προσωπικές συνομιλίες, συναντήσεις και ζωντανές αλληλεπιδράσεις. Η χρήση μετράται βάσει του πραγματικού χρόνου ομιλίας που ανιχνεύεται, όχι του χρόνου σύνδεσης. Εάν η χρήση υπερβαίνει σημαντικά τα κανονικά πρότυπα για μη προσωπικό περιεχόμενο, ενδέχεται να εφαρμοστούν προσαρμογές.';
+
+  @override
+  String fairUseCaseRefCopied(String caseRef) {
+    return '$caseRef αντιγράφηκε';
+  }
+
+  @override
+  String get fairUseDailyTranscription => 'Daily Transcription';
+
+  @override
+  String fairUseBudgetUsed(String used, String limit) {
+    return '${used}m / ${limit}m';
+  }
+
+  @override
+  String get fairUseBudgetExhausted => 'Daily transcription limit reached';
+
+  @override
+  String fairUseBudgetResetsAt(String time) {
+    return 'Resets $time';
+  }
+
+  @override
+  String get transcriptionPaused => 'Εγγραφή, επανασύνδεση';
+
+  @override
+  String get transcriptionPausedReconnecting => 'Συνεχίζει η εγγραφή — επανασύνδεση με τη μεταγραφή...';
+
+  @override
+  String fairUseBannerStatus(String status) {
+    return 'Δίκαιη Χρήση: $status';
+  }
+
+  @override
+  String get improveConnectionTitle => 'Βελτίωση σύνδεσης';
+
+  @override
+  String get improveConnectionContent =>
+      'Βελτιώσαμε τον τρόπο που το Omi παραμένει συνδεδεμένο με τη συσκευή σας. Για να το ενεργοποιήσετε, μεταβείτε στη σελίδα Πληροφορίες συσκευής, πατήστε \"Αποσύνδεση συσκευής\" και συνδέστε ξανά τη συσκευή σας.';
+
+  @override
+  String get improveConnectionAction => 'Κατάλαβα';
+
+  @override
+  String clockSkewWarning(int minutes) {
+    return 'Το ρολόι της συσκευής σας αποκλίνει κατά ~$minutes λεπτά. Ελέγξτε τις ρυθμίσεις ημερομηνίας και ώρας.';
+  }
 }

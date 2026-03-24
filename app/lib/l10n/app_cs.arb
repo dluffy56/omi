@@ -5,7 +5,7 @@
     "transcriptTab": "Přepis",
     "actionItemsTab": "Úkoly",
     "deleteConversationTitle": "Smazat konverzaci?",
-    "deleteConversationMessage": "Opravdu chcete smazat tuto konverzaci? Tuto akci nelze vrátit zpět.",
+    "deleteConversationMessage": "Tím se také smažou související vzpomínky, úkoly a zvukové soubory. Tuto akci nelze vrátit zpět.",
     "confirm": "Potvrdit",
     "cancel": "Zrušit",
     "ok": "OK",
@@ -531,7 +531,7 @@
     "devicesFoundNearby": "{count} {count, plural, =1{ZAŘÍZENÍ} other{ZAŘÍZENÍ}} NALEZENO V BLÍZKOSTI",
     "pairingSuccessful": "PÁROVÁNÍ ÚSPĚŠNÉ",
     "errorConnectingAppleWatch": "Chyba při připojování k Apple Watch: {error}",
-    "dontShowAgain": "Nezobrazovat znovu",
+    "dontShowAgain": "Znovu nezobrazovat",
     "iUnderstand": "Rozumím",
     "enableBluetooth": "Povolit Bluetooth",
     "bluetoothNeeded": "Omi potřebuje Bluetooth pro připojení k vašemu nositelného zařízení. Povolte prosím Bluetooth a zkuste to znovu.",
@@ -816,7 +816,7 @@
     "conversationsProcessedAutomatically": "Konverzace se zpracovávají automaticky",
     "getInsightsInstantly": "Získejte poznatky a souhrny okamžitě",
     "showAll": "Zobrazit vše →",
-    "noTasksForToday": "Žádné úkoly pro dnešek.\\nZeptejte se Omi na další úkoly nebo je vytvořte ručně.",
+    "noTasksForToday": "Žádné úkoly pro dnešek.\nZeptejte se Omi na další úkoly nebo je vytvořte ručně.",
     "dailyScore": "DENNÍ SKÓRE",
     "dailyScoreDescription": "Skóre, které vám pomůže\nlépe se soustředit na plnění.",
     "searchResults": "Výsledky vyhledávání",
@@ -2629,7 +2629,7 @@
     "anyoneWithLinkCanView": "Kdokoli s odkazem může zobrazit",
     "tasksCleanTodayTitle": "Vyčistit dnešní úkoly?",
     "tasksCleanTodayMessage": "Tímto se odstraní pouze termíny",
-"tasksOverdue": "Po termínu",
+    "tasksOverdue": "Po termínu",
     "answerTheCallFrom": "Prijmete hovor od",
     "callAlreadyInProgress": "Hovor jiz probiha",
     "callRecordingConsentDisclaimer": "Nahravani hovoru muze vyzadovat souhlas ve vasi jurisdikci",
@@ -2691,5 +2691,89 @@
     "verifyYourNumber": "Overte sve cislo",
     "yourVerifiedNumbers": "Vase overena cisla",
     "showDailyScoreOnHomepage": "Zobrazit denní skóre na domovské stránce",
-    "showTasksOnHomepage": "Zobrazit úkoly na domovské stránce"
+    "showTasksOnHomepage": "Zobrazit úkoly na domovské stránce",
+    "phoneCallsUnlimitedOnly": "Telefonní hovory přes Omi",
+    "phoneCallsUpsellSubtitle": "Volejte přes Omi a získejte přepis v reálném čase, automatické shrnutí a další.",
+    "phoneCallsUpsellFeature1": "Přepis každého hovoru v reálném čase",
+    "phoneCallsUpsellFeature2": "Automatické shrnutí hovorů a úkoly",
+    "phoneCallsUpsellFeature3": "Příjemci vidí vaše skutečné číslo, ne náhodné",
+    "phoneCallsUpsellFeature4": "Vaše hovory zůstávají soukromé a bezpečné",
+    "phoneCallsUpgradeButton": "Upgradovat na Neomezený",
+    "phoneCallsMaybeLater": "Možná později",
+    "deleteSynced": "Smazat synchronizované",
+    "deleteSyncedFiles": "Smazat synchronizované nahrávky",
+    "deleteSyncedFilesMessage": "Tyto nahrávky jsou již synchronizovány s vaším telefonem. Toto nelze vrátit zpět.",
+    "syncedFilesDeleted": "Synchronizované nahrávky smazány",
+    "deletePending": "Smazat čekající",
+    "deletePendingFiles": "Smazat čekající nahrávky",
+    "deletePendingFilesWarning": "Tyto nahrávky NEJSOU synchronizovány s vaším telefonem a budou trvale ztraceny. Toto nelze vrátit zpět.",
+    "pendingFilesDeleted": "Čekající nahrávky smazány",
+    "deleteAllFiles": "Smazat všechny nahrávky",
+    "deleteAll": "Smazat vše",
+    "deleteAllFilesWarning": "Toto smaže synchronizované i čekající nahrávky. Čekající nahrávky NEJSOU synchronizovány a budou trvale ztraceny.",
+    "allFilesDeleted": "Všechny nahrávky smazány",
+    "nFiles": "{count} nahrávek",
+    "manageStorage": "Správa úložiště",
+    "safelyBackedUp": "Bezpečně zálohováno na vašem telefonu",
+    "notYetSynced": "Zatím nesynchronizováno s vaším telefonem",
+    "clearAll": "Vymazat vše",
+    "phoneKeypad": "Klávesnice",
+    "phoneHideKeypad": "Skrýt klávesnici",
+    "transcriptionPaused": "Nahrávání, připojování",
+    "transcriptionPausedReconnecting": "Stále se nahrává — připojování k přepisu...",
+    "fairUsePolicy": "Spravedlivé používání",
+    "fairUseLoadError": "Nepodařilo se načíst stav spravedlivého používání. Zkuste to prosím znovu.",
+    "fairUseStatusNormal": "Vaše používání je v normálních mezích.",
+    "fairUseStageNormal": "Normální",
+    "fairUseStageWarning": "Upozornění",
+    "fairUseStageThrottle": "Omezeno",
+    "fairUseStageRestrict": "Zakázáno",
+    "fairUseSpeechUsage": "Využití řeči",
+    "fairUseToday": "Dnes",
+    "fairUse3Day": "3denní období",
+    "fairUseWeekly": "Týdenní období",
+    "fairUseAboutTitle": "O spravedlivém používání",
+    "fairUseAboutBody": "Omi je navržen pro osobní konverzace, schůzky a živé interakce. Používání se měří skutečným detekovaným časem řeči, nikoli časem připojení. Pokud používání výrazně překročí běžné vzorce pro neosobní obsah, mohou být provedeny úpravy.",
+    "fairUseCaseRefCopied": "{caseRef} zkopírováno",
+    "@fairUseCaseRefCopied": {
+        "description": "Snackbar message when case reference is copied",
+        "placeholders": {
+            "caseRef": {
+                "type": "String"
+            }
+        }
+    },
+    "fairUseDailyTranscription": "Daily Transcription",
+    "fairUseBudgetExhausted": "Daily transcription limit reached",
+    "fairUseBudgetResetsAt": "Resets {time}",
+    "fairUseBudgetUsed": "{used}m / {limit}m",
+    "@fairUseBudgetUsed": {
+        "placeholders": {
+            "used": {
+                "type": "String"
+            },
+            "limit": {
+                "type": "String"
+            }
+        }
+    },
+    "@fairUseBudgetResetsAt": {
+        "placeholders": {
+            "time": {
+                "type": "String"
+            }
+        }
+    },
+    "fairUseBannerStatus": "Spravedlivé užívání: {status}",
+    "@fairUseBannerStatus": {
+        "placeholders": {
+            "status": {
+                "type": "String"
+            }
+        }
+    },
+    "improveConnectionTitle": "Zlepšit připojení",
+    "improveConnectionContent": "Vylepšili jsme způsob, jakým Omi zůstává připojeno k vašemu zařízení. Pro aktivaci přejděte na stránku Informace o zařízení, klepněte na \"Odpojit zařízení\" a poté zařízení znovu spárujte.",
+    "improveConnectionAction": "Rozumím",
+    "clockSkewWarning": "Hodiny vašeho zařízení se liší o ~{minutes} min. Zkontrolujte nastavení data a času."
 }

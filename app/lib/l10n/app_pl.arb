@@ -5,7 +5,7 @@
     "transcriptTab": "Transkrypcja",
     "actionItemsTab": "Zadania",
     "deleteConversationTitle": "Usunąć rozmowę?",
-    "deleteConversationMessage": "Czy na pewno chcesz usunąć tę rozmowę? Ta czynność nie może zostać cofnięta.",
+    "deleteConversationMessage": "Spowoduje to również usunięcie powiązanych wspomnień, zadań i plików audio. Tej czynności nie można cofnąć.",
     "confirm": "Potwierdź",
     "cancel": "Anuluj",
     "ok": "OK",
@@ -798,7 +798,7 @@
     "conversationsProcessedAutomatically": "Rozmowy są przetwarzane automatycznie",
     "getInsightsInstantly": "Uzyskaj natychmiastowe spostrzeżenia i podsumowania",
     "showAll": "Pokaż wszystko →",
-    "noTasksForToday": "Brak zadań na dziś.\\nZapytaj Omi o więcej zadań lub utwórz je ręcznie.",
+    "noTasksForToday": "Brak zadań na dziś.\nZapytaj Omi o więcej zadań lub utwórz je ręcznie.",
     "dailyScore": "DZIENNY WYNIK",
     "dailyScoreDescription": "Wynik, który pomoże Ci lepiej\nskupić się na realizacji.",
     "searchResults": "Wyniki wyszukiwania",
@@ -2695,7 +2695,7 @@
     "anyoneWithLinkCanView": "Każdy, kto ma link, może wyświetlić",
     "tasksCleanTodayTitle": "Wyczyścić dzisiejsze zadania?",
     "tasksCleanTodayMessage": "To usunie tylko terminy",
-"tasksOverdue": "Zaległe",
+    "tasksOverdue": "Zaległe",
     "answerTheCallFrom": "Odbierz polaczenie od",
     "callAlreadyInProgress": "Polaczenie jest juz w toku",
     "callRecordingConsentDisclaimer": "Nagrywanie rozmow moze wymagac zgody w Twojej jurysdykcji",
@@ -2757,5 +2757,89 @@
     "verifyYourNumber": "Zweryfikuj swoj numer",
     "yourVerifiedNumbers": "Twoje zweryfikowane numery",
     "showDailyScoreOnHomepage": "Pokaż dzienny wynik na stronie głównej",
-    "showTasksOnHomepage": "Pokaż zadania na stronie głównej"
+    "showTasksOnHomepage": "Pokaż zadania na stronie głównej",
+    "phoneCallsUnlimitedOnly": "Połączenia telefoniczne przez Omi",
+    "phoneCallsUpsellSubtitle": "Dzwoń przez Omi i otrzymuj transkrypcję w czasie rzeczywistym, automatyczne podsumowania i wiele więcej.",
+    "phoneCallsUpsellFeature1": "Transkrypcja w czasie rzeczywistym każdego połączenia",
+    "phoneCallsUpsellFeature2": "Automatyczne podsumowania połączeń i zadania",
+    "phoneCallsUpsellFeature3": "Odbiorcy widzą twój prawdziwy numer, nie losowy",
+    "phoneCallsUpsellFeature4": "Twoje połączenia pozostają prywatne i bezpieczne",
+    "phoneCallsUpgradeButton": "Przejdź na Bez limitu",
+    "phoneCallsMaybeLater": "Może później",
+    "deleteSynced": "Usuń zsynchronizowane",
+    "deleteSyncedFiles": "Usuń zsynchronizowane nagrania",
+    "deleteSyncedFilesMessage": "Te nagrania zostały już zsynchronizowane z telefonem. Tej operacji nie można cofnąć.",
+    "syncedFilesDeleted": "Zsynchronizowane nagrania usunięte",
+    "deletePending": "Usuń oczekujące",
+    "deletePendingFiles": "Usuń oczekujące nagrania",
+    "deletePendingFilesWarning": "Te nagrania NIE zostały zsynchronizowane z telefonem i zostaną trwale utracone. Tej operacji nie można cofnąć.",
+    "pendingFilesDeleted": "Oczekujące nagrania usunięte",
+    "deleteAllFiles": "Usuń wszystkie nagrania",
+    "deleteAll": "Usuń wszystko",
+    "deleteAllFilesWarning": "To usunie zsynchronizowane i oczekujące nagrania. Oczekujące nagrania NIE zostały zsynchronizowane i zostaną trwale utracone.",
+    "allFilesDeleted": "Wszystkie nagrania usunięte",
+    "nFiles": "{count} nagrań",
+    "manageStorage": "Zarządzaj pamięcią",
+    "safelyBackedUp": "Bezpiecznie zapisane na Twoim telefonie",
+    "notYetSynced": "Jeszcze nie zsynchronizowano z Twoim telefonem",
+    "clearAll": "Wyczyść wszystko",
+    "phoneKeypad": "Klawiatura",
+    "phoneHideKeypad": "Ukryj klawiaturę",
+    "transcriptionPaused": "Nagrywanie, ponowne łączenie",
+    "transcriptionPausedReconnecting": "Nadal nagrywa — ponowne łączenie z transkrypcją...",
+    "fairUsePolicy": "Uczciwe korzystanie",
+    "fairUseLoadError": "Nie udało się załadować statusu uczciwego korzystania. Spróbuj ponownie.",
+    "fairUseStatusNormal": "Twoje użytkowanie mieści się w normalnych granicach.",
+    "fairUseStageNormal": "Normalne",
+    "fairUseStageWarning": "Ostrzeżenie",
+    "fairUseStageThrottle": "Ograniczone",
+    "fairUseStageRestrict": "Zablokowane",
+    "fairUseSpeechUsage": "Użycie mowy",
+    "fairUseToday": "Dzisiaj",
+    "fairUse3Day": "3-dniowy okres",
+    "fairUseWeekly": "Tygodniowy okres",
+    "fairUseAboutTitle": "O uczciwym korzystaniu",
+    "fairUseAboutBody": "Omi jest zaprojektowany do osobistych rozmów, spotkań i interakcji na żywo. Użytkowanie mierzone jest na podstawie wykrytego rzeczywistego czasu mowy, a nie czasu połączenia. Jeśli użytkowanie znacząco przekracza normalne wzorce dla treści nieosobistych, mogą zostać zastosowane korekty.",
+    "fairUseCaseRefCopied": "{caseRef} skopiowano",
+    "@fairUseCaseRefCopied": {
+        "description": "Snackbar message when case reference is copied",
+        "placeholders": {
+            "caseRef": {
+                "type": "String"
+            }
+        }
+    },
+    "fairUseDailyTranscription": "Dzienna transkrypcja",
+    "fairUseBudgetExhausted": "Osiągnięto dzienny limit transkrypcji",
+    "fairUseBudgetResetsAt": "Resetuje się {time}",
+    "fairUseBudgetUsed": "{used}m / {limit}m",
+    "@fairUseBudgetUsed": {
+        "placeholders": {
+            "used": {
+                "type": "String"
+            },
+            "limit": {
+                "type": "String"
+            }
+        }
+    },
+    "@fairUseBudgetResetsAt": {
+        "placeholders": {
+            "time": {
+                "type": "String"
+            }
+        }
+    },
+    "fairUseBannerStatus": "Uczciwe użytkowanie: {status}",
+    "@fairUseBannerStatus": {
+        "placeholders": {
+            "status": {
+                "type": "String"
+            }
+        }
+    },
+    "improveConnectionTitle": "Popraw połączenie",
+    "improveConnectionContent": "Poprawiliśmy sposób, w jaki Omi utrzymuje połączenie z Twoim urządzeniem. Aby to aktywować, przejdź na stronę Informacje o urządzeniu, dotknij \"Odłącz urządzenie\" i ponownie sparuj urządzenie.",
+    "improveConnectionAction": "Rozumiem",
+    "clockSkewWarning": "Zegar urządzenia różni się o ~{minutes} min. Sprawdź ustawienia daty i godziny."
 }

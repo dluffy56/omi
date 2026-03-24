@@ -5,7 +5,7 @@
     "transcriptTab": "Транскрипт",
     "actionItemsTab": "Задачи",
     "deleteConversationTitle": "Изтриване на разговор?",
-    "deleteConversationMessage": "Сигурни ли сте, че искате да изтриете този разговор? Това действие не може да бъде отменено.",
+    "deleteConversationMessage": "Това ще изтрие и свързаните спомени, задачи и аудио файлове. Това действие не може да бъде отменено.",
     "confirm": "Потвърди",
     "cancel": "Отказ",
     "ok": "ОК",
@@ -816,7 +816,7 @@
     "conversationsProcessedAutomatically": "Разговорите се обработват автоматично",
     "getInsightsInstantly": "Получавайте прозрения и обобщения моментално",
     "showAll": "Покажи всички →",
-    "noTasksForToday": "Няма задачи за днес.\\nПопитайте Omi за повече задачи или създайте ръчно.",
+    "noTasksForToday": "Няма задачи за днес.\nПопитайте Omi за повече задачи или създайте ръчно.",
     "dailyScore": "ДНЕВЕН РЕЗУЛТАТ",
     "dailyScoreDescription": "Резултат, който ви помага\nда се фокусирате върху изпълнението.",
     "searchResults": "Резултати от търсенето",
@@ -2629,7 +2629,7 @@
     "anyoneWithLinkCanView": "Всеки с връзката може да преглежда",
     "tasksCleanTodayTitle": "Да изчистим днешните задачи?",
     "tasksCleanTodayMessage": "Това само ще премахне крайните срокове",
-"tasksOverdue": "Просрочени",
+    "tasksOverdue": "Просрочени",
     "phoneCallsWithOmi": "Телефонни обаждания с Omi",
     "phoneCallsSubtitle": "Обаждайте се с транскрипция в реално време",
     "phoneSetupStep1Title": "Потвърдете телефонния си номер",
@@ -2691,5 +2691,89 @@
     "speakerLabelYou": "Вие",
     "speakerLabelUnknown": "Неизвестен",
     "showDailyScoreOnHomepage": "Покажи дневния резултат на началната страница",
-    "showTasksOnHomepage": "Покажи задачите на началната страница"
+    "showTasksOnHomepage": "Покажи задачите на началната страница",
+    "phoneCallsUnlimitedOnly": "Телефонни обаждания чрез Omi",
+    "phoneCallsUpsellSubtitle": "Правете обаждания чрез Omi и получавайте транскрипция в реално време, автоматични резюмета и още. Достъпно само за абонати на план Неограничен.",
+    "phoneCallsUpsellFeature1": "Транскрипция в реално време на всяко обаждане",
+    "phoneCallsUpsellFeature2": "Автоматични резюмета и задачи от обаждания",
+    "phoneCallsUpsellFeature3": "Получателите виждат истинския ви номер, не случаен",
+    "phoneCallsUpsellFeature4": "Вашите обаждания остават лични и сигурни",
+    "phoneCallsUpgradeButton": "Надградете до Неограничен",
+    "phoneCallsMaybeLater": "Може би по-късно",
+    "deleteSynced": "Изтриване на синхронизираните",
+    "deleteSyncedFiles": "Изтрий синхронизираните записи",
+    "deleteSyncedFilesMessage": "Тези записи вече са синхронизирани с телефона ви. Това не може да бъде отменено.",
+    "syncedFilesDeleted": "Синхронизираните записи са изтрити",
+    "deletePending": "Изтриване на чакащите",
+    "deletePendingFiles": "Изтрий чакащите записи",
+    "deletePendingFilesWarning": "Тези записи НЕ са синхронизирани с телефона ви и ще бъдат загубени завинаги. Това не може да бъде отменено.",
+    "pendingFilesDeleted": "Чакащите записи са изтрити",
+    "deleteAllFiles": "Изтрий всички записи",
+    "deleteAll": "Изтриване на всички",
+    "deleteAllFilesWarning": "Това ще изтрие синхронизираните и чакащите записи. Чакащите записи НЕ са синхронизирани и ще бъдат загубени завинаги.",
+    "allFilesDeleted": "Всички записи са изтрити",
+    "nFiles": "{count} записа",
+    "manageStorage": "Управление на хранилището",
+    "safelyBackedUp": "Безопасно запазено на телефона ви",
+    "notYetSynced": "Все още не е синхронизирано с телефона ви",
+    "clearAll": "Изчисти всичко",
+    "phoneKeypad": "Клавиатура",
+    "phoneHideKeypad": "Скрий клавиатурата",
+    "transcriptionPaused": "Записва се, свързване отново",
+    "transcriptionPausedReconnecting": "Все още се записва — свързване с транскрипцията...",
+    "fairUsePolicy": "Честна употреба",
+    "fairUseLoadError": "Неуспешно зареждане на статуса на честна употреба. Моля, опитайте отново.",
+    "fairUseStatusNormal": "Вашата употреба е в нормалните граници.",
+    "fairUseStageNormal": "Нормална",
+    "fairUseStageWarning": "Предупреждение",
+    "fairUseStageThrottle": "Ограничена",
+    "fairUseStageRestrict": "Забранена",
+    "fairUseSpeechUsage": "Употреба на реч",
+    "fairUseToday": "Днес",
+    "fairUse3Day": "3-дневен период",
+    "fairUseWeekly": "Седмичен период",
+    "fairUseAboutTitle": "Относно честната употреба",
+    "fairUseAboutBody": "Omi е проектиран за лични разговори, срещи и взаимодействия на живо. Употребата се измерва по реалното открито време на реч, а не по времето на връзка. Ако употребата значително надвишава нормалните модели за неличностно съдържание, може да се приложат корекции.",
+    "fairUseCaseRefCopied": "{caseRef} копирано",
+    "@fairUseCaseRefCopied": {
+        "description": "Snackbar message when case reference is copied",
+        "placeholders": {
+            "caseRef": {
+                "type": "String"
+            }
+        }
+    },
+    "fairUseDailyTranscription": "Daily Transcription",
+    "fairUseBudgetExhausted": "Daily transcription limit reached",
+    "fairUseBudgetResetsAt": "Resets {time}",
+    "fairUseBudgetUsed": "{used}m / {limit}m",
+    "@fairUseBudgetUsed": {
+        "placeholders": {
+            "used": {
+                "type": "String"
+            },
+            "limit": {
+                "type": "String"
+            }
+        }
+    },
+    "@fairUseBudgetResetsAt": {
+        "placeholders": {
+            "time": {
+                "type": "String"
+            }
+        }
+    },
+    "fairUseBannerStatus": "Добросъвестно ползване: {status}",
+    "@fairUseBannerStatus": {
+        "placeholders": {
+            "status": {
+                "type": "String"
+            }
+        }
+    },
+    "improveConnectionTitle": "Подобряване на връзката",
+    "improveConnectionContent": "Подобрихме начина, по който Omi остава свързан с вашето устройство. За да активирате това, моля, отидете на страницата с информация за устройството, натиснете \"Изключване на устройството\" и сдвоете устройството си отново.",
+    "improveConnectionAction": "Разбрах",
+    "clockSkewWarning": "Часовникът на устройството ви е разместен с ~{minutes} мин. Проверете настройките за дата и час."
 }

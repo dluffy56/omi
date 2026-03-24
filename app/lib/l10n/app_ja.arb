@@ -5,7 +5,7 @@
     "transcriptTab": "トランスクリプト",
     "actionItemsTab": "アクションアイテム",
     "deleteConversationTitle": "会話を削除しますか？",
-    "deleteConversationMessage": "この会話を削除してもよろしいですか？この操作は元に戻せません。",
+    "deleteConversationMessage": "関連する記憶、タスク、音声ファイルも削除されます。この操作は元に戻せません。",
     "confirm": "確認",
     "cancel": "キャンセル",
     "ok": "OK",
@@ -531,7 +531,7 @@
     "devicesFoundNearby": "{count}台のデバイスが近くに見つかりました",
     "pairingSuccessful": "ペアリング成功",
     "errorConnectingAppleWatch": "Apple Watchへの接続エラー: {error}",
-    "dontShowAgain": "再度表示しない",
+    "dontShowAgain": "今後表示しない",
     "iUnderstand": "理解しました",
     "enableBluetooth": "Bluetoothを有効にする",
     "bluetoothNeeded": "Omiはウェアラブルに接続するためにBluetoothが必要です。Bluetoothを有効にして再試行してください。",
@@ -799,7 +799,7 @@
     "conversationsProcessedAutomatically": "会話は自動的に処理されます",
     "getInsightsInstantly": "すぐに洞察と要約を取得できます",
     "showAll": "すべて表示 →",
-    "noTasksForToday": "今日のタスクはありません。\\nOmiに他のタスクを尋ねるか、手動で作成してください。",
+    "noTasksForToday": "今日のタスクはありません。\nOmiに他のタスクを尋ねるか、手動で作成してください。",
     "dailyScore": "デイリースコア",
     "dailyScoreDescription": "実行に集中するための\nスコアです。",
     "searchResults": "検索結果",
@@ -2661,7 +2661,7 @@
     "anyoneWithLinkCanView": "リンクを知っている人は誰でも閲覧できます",
     "tasksCleanTodayTitle": "今日のタスクを整理しますか？",
     "tasksCleanTodayMessage": "期限のみ削除されます",
-"tasksOverdue": "期限切れ",
+    "tasksOverdue": "期限切れ",
     "answerTheCallFrom": "この番号からの着信に応答",
     "callAlreadyInProgress": "通話中です",
     "callRecordingConsentDisclaimer": "通話録音にはお住まいの地域で同意が必要な場合があります",
@@ -2723,5 +2723,89 @@
     "verifyYourNumber": "番号を認証",
     "yourVerifiedNumbers": "認証済みの番号",
     "showDailyScoreOnHomepage": "ホームページにデイリースコアを表示",
-    "showTasksOnHomepage": "ホームページにタスクを表示"
+    "showTasksOnHomepage": "ホームページにタスクを表示",
+    "phoneCallsUnlimitedOnly": "Omiで電話をかける",
+    "phoneCallsUpsellSubtitle": "Omiで通話し、リアルタイム文字起こし、自動要約などを取得。",
+    "phoneCallsUpsellFeature1": "すべての通話のリアルタイム文字起こし",
+    "phoneCallsUpsellFeature2": "通話の自動要約とアクションアイテム",
+    "phoneCallsUpsellFeature3": "受信者にはあなたの実際の番号が表示されます",
+    "phoneCallsUpsellFeature4": "通話はプライベートで安全",
+    "phoneCallsUpgradeButton": "Unlimitedにアップグレード",
+    "phoneCallsMaybeLater": "また後で",
+    "deleteSynced": "同期済みを削除",
+    "deleteSyncedFiles": "同期済み録音を削除",
+    "deleteSyncedFilesMessage": "これらの録音はすでにスマホに同期されています。この操作は取り消せません。",
+    "syncedFilesDeleted": "同期済み録音を削除しました",
+    "deletePending": "保留中を削除",
+    "deletePendingFiles": "保留中の録音を削除",
+    "deletePendingFilesWarning": "これらの録音はスマホに同期されておらず、完全に失われます。この操作は取り消せません。",
+    "pendingFilesDeleted": "保留中の録音を削除しました",
+    "deleteAllFiles": "すべての録音を削除",
+    "deleteAll": "すべて削除",
+    "deleteAllFilesWarning": "同期済みと保留中の録音がすべて削除されます。保留中の録音は同期されておらず、完全に失われます。",
+    "allFilesDeleted": "すべての録音を削除しました",
+    "nFiles": "{count}件の録音",
+    "manageStorage": "ストレージを管理",
+    "safelyBackedUp": "スマホに安全にバックアップ済み",
+    "notYetSynced": "まだスマホに同期されていません",
+    "clearAll": "すべて削除",
+    "phoneKeypad": "キーパッド",
+    "phoneHideKeypad": "キーパッドを隠す",
+    "transcriptionPaused": "録音中、再接続中",
+    "transcriptionPausedReconnecting": "録音は継続中 — 文字起こしに再接続しています...",
+    "fairUsePolicy": "フェアユース",
+    "fairUseLoadError": "フェアユースの状態を読み込めませんでした。もう一度お試しください。",
+    "fairUseStatusNormal": "ご利用は通常の範囲内です。",
+    "fairUseStageNormal": "通常",
+    "fairUseStageWarning": "警告",
+    "fairUseStageThrottle": "制限中",
+    "fairUseStageRestrict": "利用停止",
+    "fairUseSpeechUsage": "音声使用量",
+    "fairUseToday": "今日",
+    "fairUse3Day": "3日間",
+    "fairUseWeekly": "週間",
+    "fairUseAboutTitle": "フェアユースについて",
+    "fairUseAboutBody": "Omiは個人的な会話、会議、ライブのやり取りのために設計されています。使用量は接続時間ではなく、検出された実際の発話時間で測定されます。非個人的なコンテンツに対して通常のパターンを大幅に超える使用がある場合、調整が適用されることがあります。",
+    "fairUseCaseRefCopied": "{caseRef} をコピーしました",
+    "@fairUseCaseRefCopied": {
+        "description": "Snackbar message when case reference is copied",
+        "placeholders": {
+            "caseRef": {
+                "type": "String"
+            }
+        }
+    },
+    "fairUseDailyTranscription": "日次文字起こし",
+    "fairUseBudgetExhausted": "日次文字起こし上限に達しました",
+    "fairUseBudgetResetsAt": "リセット {time}",
+    "fairUseBudgetUsed": "{used}分 / {limit}分",
+    "@fairUseBudgetUsed": {
+        "placeholders": {
+            "used": {
+                "type": "String"
+            },
+            "limit": {
+                "type": "String"
+            }
+        }
+    },
+    "@fairUseBudgetResetsAt": {
+        "placeholders": {
+            "time": {
+                "type": "String"
+            }
+        }
+    },
+    "fairUseBannerStatus": "公正使用：{status}",
+    "@fairUseBannerStatus": {
+        "placeholders": {
+            "status": {
+                "type": "String"
+            }
+        }
+    },
+    "improveConnectionTitle": "接続を改善",
+    "improveConnectionContent": "Omiがデバイスとの接続を維持する方法を改善しました。これを有効にするには、デバイス情報ページに移動し、「デバイスを切断」をタップしてから、デバイスを再度ペアリングしてください。",
+    "improveConnectionAction": "了解",
+    "clockSkewWarning": "デバイスの時計が約{minutes}分ずれています。日付と時刻の設定を確認してください。"
 }

@@ -24,7 +24,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get deleteConversationTitle => '会話を削除しますか？';
 
   @override
-  String get deleteConversationMessage => 'この会話を削除してもよろしいですか？この操作は元に戻せません。';
+  String get deleteConversationMessage => '関連する記憶、タスク、音声ファイルも削除されます。この操作は元に戻せません。';
 
   @override
   String get confirm => '確認';
@@ -1700,7 +1700,7 @@ class AppLocalizationsJa extends AppLocalizations {
   }
 
   @override
-  String get dontShowAgain => '再度表示しない';
+  String get dontShowAgain => '今後表示しない';
 
   @override
   String get iUnderstand => '理解しました';
@@ -2630,7 +2630,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get showAll => 'すべて表示 →';
 
   @override
-  String get noTasksForToday => '今日のタスクはありません。\\nOmiに他のタスクを尋ねるか、手動で作成してください。';
+  String get noTasksForToday => '今日のタスクはありません。\nOmiに他のタスクを尋ねるか、手動で作成してください。';
 
   @override
   String get dailyScore => 'デイリースコア';
@@ -8332,4 +8332,174 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get showTasksOnHomepage => 'ホームページにタスクを表示';
+
+  @override
+  String get phoneCallsUnlimitedOnly => 'Omiで電話をかける';
+
+  @override
+  String get phoneCallsUpsellSubtitle => 'Omiで通話し、リアルタイム文字起こし、自動要約などを取得。';
+
+  @override
+  String get phoneCallsUpsellFeature1 => 'すべての通話のリアルタイム文字起こし';
+
+  @override
+  String get phoneCallsUpsellFeature2 => '通話の自動要約とアクションアイテム';
+
+  @override
+  String get phoneCallsUpsellFeature3 => '受信者にはあなたの実際の番号が表示されます';
+
+  @override
+  String get phoneCallsUpsellFeature4 => '通話はプライベートで安全';
+
+  @override
+  String get phoneCallsUpgradeButton => 'Unlimitedにアップグレード';
+
+  @override
+  String get phoneCallsMaybeLater => 'また後で';
+
+  @override
+  String get deleteSynced => '同期済みを削除';
+
+  @override
+  String get deleteSyncedFiles => '同期済み録音を削除';
+
+  @override
+  String get deleteSyncedFilesMessage => 'これらの録音はすでにスマホに同期されています。この操作は取り消せません。';
+
+  @override
+  String get syncedFilesDeleted => '同期済み録音を削除しました';
+
+  @override
+  String get deletePending => '保留中を削除';
+
+  @override
+  String get deletePendingFiles => '保留中の録音を削除';
+
+  @override
+  String get deletePendingFilesWarning => 'これらの録音はスマホに同期されておらず、完全に失われます。この操作は取り消せません。';
+
+  @override
+  String get pendingFilesDeleted => '保留中の録音を削除しました';
+
+  @override
+  String get deleteAllFiles => 'すべての録音を削除';
+
+  @override
+  String get deleteAll => 'すべて削除';
+
+  @override
+  String get deleteAllFilesWarning => '同期済みと保留中の録音がすべて削除されます。保留中の録音は同期されておらず、完全に失われます。';
+
+  @override
+  String get allFilesDeleted => 'すべての録音を削除しました';
+
+  @override
+  String nFiles(int count) {
+    return '$count件の録音';
+  }
+
+  @override
+  String get manageStorage => 'ストレージを管理';
+
+  @override
+  String get safelyBackedUp => 'スマホに安全にバックアップ済み';
+
+  @override
+  String get notYetSynced => 'まだスマホに同期されていません';
+
+  @override
+  String get clearAll => 'すべて削除';
+
+  @override
+  String get phoneKeypad => 'キーパッド';
+
+  @override
+  String get phoneHideKeypad => 'キーパッドを隠す';
+
+  @override
+  String get fairUsePolicy => 'フェアユース';
+
+  @override
+  String get fairUseLoadError => 'フェアユースの状態を読み込めませんでした。もう一度お試しください。';
+
+  @override
+  String get fairUseStatusNormal => 'ご利用は通常の範囲内です。';
+
+  @override
+  String get fairUseStageNormal => '通常';
+
+  @override
+  String get fairUseStageWarning => '警告';
+
+  @override
+  String get fairUseStageThrottle => '制限中';
+
+  @override
+  String get fairUseStageRestrict => '利用停止';
+
+  @override
+  String get fairUseSpeechUsage => '音声使用量';
+
+  @override
+  String get fairUseToday => '今日';
+
+  @override
+  String get fairUse3Day => '3日間';
+
+  @override
+  String get fairUseWeekly => '週間';
+
+  @override
+  String get fairUseAboutTitle => 'フェアユースについて';
+
+  @override
+  String get fairUseAboutBody =>
+      'Omiは個人的な会話、会議、ライブのやり取りのために設計されています。使用量は接続時間ではなく、検出された実際の発話時間で測定されます。非個人的なコンテンツに対して通常のパターンを大幅に超える使用がある場合、調整が適用されることがあります。';
+
+  @override
+  String fairUseCaseRefCopied(String caseRef) {
+    return '$caseRef をコピーしました';
+  }
+
+  @override
+  String get fairUseDailyTranscription => '日次文字起こし';
+
+  @override
+  String fairUseBudgetUsed(String used, String limit) {
+    return '$used分 / $limit分';
+  }
+
+  @override
+  String get fairUseBudgetExhausted => '日次文字起こし上限に達しました';
+
+  @override
+  String fairUseBudgetResetsAt(String time) {
+    return 'リセット $time';
+  }
+
+  @override
+  String get transcriptionPaused => '録音中、再接続中';
+
+  @override
+  String get transcriptionPausedReconnecting => '録音は継続中 — 文字起こしに再接続しています...';
+
+  @override
+  String fairUseBannerStatus(String status) {
+    return '公正使用：$status';
+  }
+
+  @override
+  String get improveConnectionTitle => '接続を改善';
+
+  @override
+  String get improveConnectionContent =>
+      'Omiがデバイスとの接続を維持する方法を改善しました。これを有効にするには、デバイス情報ページに移動し、「デバイスを切断」をタップしてから、デバイスを再度ペアリングしてください。';
+
+  @override
+  String get improveConnectionAction => '了解';
+
+  @override
+  String clockSkewWarning(int minutes) {
+    return 'デバイスの時計が約$minutes分ずれています。日付と時刻の設定を確認してください。';
+  }
 }

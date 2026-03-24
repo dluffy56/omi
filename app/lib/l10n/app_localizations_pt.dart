@@ -25,7 +25,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get deleteConversationMessage =>
-      'Tem certeza de que deseja apagar esta conversa? Esta ação não pode ser desfeita.';
+      'Isso também excluirá as memórias, tarefas e arquivos de áudio associados. Esta ação não pode ser desfeita.';
 
   @override
   String get confirm => 'Confirmar';
@@ -2648,7 +2648,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get showAll => 'Mostrar tudo →';
 
   @override
-  String get noTasksForToday => 'Nenhuma tarefa para hoje.\\nPergunte ao Omi por mais tarefas ou crie manualmente.';
+  String get noTasksForToday => 'Nenhuma tarefa para hoje.\nPergunte ao Omi por mais tarefas ou crie manualmente.';
 
   @override
   String get dailyScore => 'PONTUAÇÃO DIÁRIA';
@@ -8475,4 +8475,178 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get showTasksOnHomepage => 'Mostrar tarefas na página inicial';
+
+  @override
+  String get phoneCallsUnlimitedOnly => 'Chamadas telefónicas via Omi';
+
+  @override
+  String get phoneCallsUpsellSubtitle =>
+      'Faça chamadas pelo Omi e obtenha transcrição em tempo real, resumos automáticos e muito mais.';
+
+  @override
+  String get phoneCallsUpsellFeature1 => 'Transcrição em tempo real de cada chamada';
+
+  @override
+  String get phoneCallsUpsellFeature2 => 'Resumos automáticos de chamadas e tarefas';
+
+  @override
+  String get phoneCallsUpsellFeature3 => 'Os destinatários veem o seu número real, não um aleatório';
+
+  @override
+  String get phoneCallsUpsellFeature4 => 'As suas chamadas permanecem privadas e seguras';
+
+  @override
+  String get phoneCallsUpgradeButton => 'Atualizar para Ilimitado';
+
+  @override
+  String get phoneCallsMaybeLater => 'Talvez mais tarde';
+
+  @override
+  String get deleteSynced => 'Eliminar sincronizados';
+
+  @override
+  String get deleteSyncedFiles => 'Excluir gravações sincronizadas';
+
+  @override
+  String get deleteSyncedFilesMessage =>
+      'Estas gravações já foram sincronizadas com seu telefone. Isso não pode ser desfeito.';
+
+  @override
+  String get syncedFilesDeleted => 'Gravações sincronizadas excluídas';
+
+  @override
+  String get deletePending => 'Eliminar pendentes';
+
+  @override
+  String get deletePendingFiles => 'Excluir gravações pendentes';
+
+  @override
+  String get deletePendingFilesWarning =>
+      'Estas gravações NÃO foram sincronizadas com seu telefone e serão permanentemente perdidas. Isso não pode ser desfeito.';
+
+  @override
+  String get pendingFilesDeleted => 'Gravações pendentes excluídas';
+
+  @override
+  String get deleteAllFiles => 'Excluir todas as gravações';
+
+  @override
+  String get deleteAll => 'Eliminar tudo';
+
+  @override
+  String get deleteAllFilesWarning =>
+      'Isso excluirá gravações sincronizadas e pendentes. Gravações pendentes NÃO foram sincronizadas e serão permanentemente perdidas.';
+
+  @override
+  String get allFilesDeleted => 'Todas as gravações excluídas';
+
+  @override
+  String nFiles(int count) {
+    return '$count gravações';
+  }
+
+  @override
+  String get manageStorage => 'Gerenciar armazenamento';
+
+  @override
+  String get safelyBackedUp => 'Backup seguro no seu telefone';
+
+  @override
+  String get notYetSynced => 'Ainda não sincronizado com seu telefone';
+
+  @override
+  String get clearAll => 'Limpar tudo';
+
+  @override
+  String get phoneKeypad => 'Teclado';
+
+  @override
+  String get phoneHideKeypad => 'Ocultar teclado';
+
+  @override
+  String get fairUsePolicy => 'Uso justo';
+
+  @override
+  String get fairUseLoadError => 'Não foi possível carregar o status de uso justo. Tente novamente.';
+
+  @override
+  String get fairUseStatusNormal => 'Seu uso está dentro dos limites normais.';
+
+  @override
+  String get fairUseStageNormal => 'Normal';
+
+  @override
+  String get fairUseStageWarning => 'Aviso';
+
+  @override
+  String get fairUseStageThrottle => 'Limitado';
+
+  @override
+  String get fairUseStageRestrict => 'Bloqueado';
+
+  @override
+  String get fairUseSpeechUsage => 'Uso de fala';
+
+  @override
+  String get fairUseToday => 'Hoje';
+
+  @override
+  String get fairUse3Day => '3 dias contínuos';
+
+  @override
+  String get fairUseWeekly => 'Semanal contínuo';
+
+  @override
+  String get fairUseAboutTitle => 'Sobre o uso justo';
+
+  @override
+  String get fairUseAboutBody =>
+      'O Omi é projetado para conversas pessoais, reuniões e interações ao vivo. O uso é medido pelo tempo real de fala detectado, não pelo tempo de conexão. Se o uso exceder significativamente os padrões normais para conteúdo não pessoal, ajustes podem ser aplicados.';
+
+  @override
+  String fairUseCaseRefCopied(String caseRef) {
+    return '$caseRef copiado';
+  }
+
+  @override
+  String get fairUseDailyTranscription => 'Transcrição diária';
+
+  @override
+  String fairUseBudgetUsed(String used, String limit) {
+    return '${used}m / ${limit}m';
+  }
+
+  @override
+  String get fairUseBudgetExhausted => 'Limite diário de transcrição atingido';
+
+  @override
+  String fairUseBudgetResetsAt(String time) {
+    return 'Reinicia $time';
+  }
+
+  @override
+  String get transcriptionPaused => 'Gravando, reconectando';
+
+  @override
+  String get transcriptionPausedReconnecting => 'Ainda gravando — reconectando à transcrição...';
+
+  @override
+  String fairUseBannerStatus(String status) {
+    return 'Uso justo: $status';
+  }
+
+  @override
+  String get improveConnectionTitle => 'Melhorar conexão';
+
+  @override
+  String get improveConnectionContent =>
+      'Melhorámos a forma como o Omi se mantém ligado ao seu dispositivo. Para ativar isto, vá à página de Informações do dispositivo, toque em \"Desligar dispositivo\" e emparelhe o seu dispositivo novamente.';
+
+  @override
+  String get improveConnectionAction => 'Entendi';
+
+  @override
+  String clockSkewWarning(int minutes) {
+    return 'O relógio do dispositivo está desajustado ~$minutes min. Verifique as configurações de data e hora.';
+  }
 }

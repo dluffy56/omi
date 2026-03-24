@@ -25,7 +25,7 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get deleteConversationMessage =>
-      'क्या आप वाकई इस बातचीत को हटाना चाहते हैं? यह क्रिया पूर्ववत नहीं की जा सकती।';
+      'इससे संबंधित यादें, कार्य और ऑडियो फ़ाइलें भी हटा दी जाएंगी। यह क्रिया पूर्ववत नहीं की जा सकती।';
 
   @override
   String get confirm => 'पुष्टि करें';
@@ -1714,7 +1714,7 @@ class AppLocalizationsHi extends AppLocalizations {
   }
 
   @override
-  String get dontShowAgain => 'फिर से न दिखाएं';
+  String get dontShowAgain => 'दोबारा न दिखाएं';
 
   @override
   String get iUnderstand => 'मैं समझता हूं';
@@ -2646,8 +2646,7 @@ class AppLocalizationsHi extends AppLocalizations {
   String get showAll => 'सभी दिखाएं →';
 
   @override
-  String get noTasksForToday =>
-      'आज के लिए कोई कार्य नहीं।\\nअधिक कार्यों के लिए Omi से पूछें या मैन्युअल रूप से बनाएं।';
+  String get noTasksForToday => 'आज के लिए कोई कार्य नहीं।\nअधिक कार्यों के लिए Omi से पूछें या मैन्युअल रूप से बनाएं।';
 
   @override
   String get dailyScore => 'दैनिक स्कोर';
@@ -8453,4 +8452,178 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get showTasksOnHomepage => 'होमपेज पर कार्य दिखाएं';
+
+  @override
+  String get phoneCallsUnlimitedOnly => 'Omi से फ़ोन कॉल';
+
+  @override
+  String get phoneCallsUpsellSubtitle =>
+      'Omi से कॉल करें और रियल-टाइम ट्रांसक्रिप्शन, स्वचालित सारांश और बहुत कुछ पाएं।';
+
+  @override
+  String get phoneCallsUpsellFeature1 => 'हर कॉल की रियल-टाइम ट्रांसक्रिप्शन';
+
+  @override
+  String get phoneCallsUpsellFeature2 => 'स्वचालित कॉल सारांश और कार्य सूची';
+
+  @override
+  String get phoneCallsUpsellFeature3 => 'प्राप्तकर्ता आपका असली नंबर देखते हैं, कोई रैंडम नंबर नहीं';
+
+  @override
+  String get phoneCallsUpsellFeature4 => 'आपकी कॉल निजी और सुरक्षित रहती हैं';
+
+  @override
+  String get phoneCallsUpgradeButton => 'अनलिमिटेड में अपग्रेड करें';
+
+  @override
+  String get phoneCallsMaybeLater => 'शायद बाद में';
+
+  @override
+  String get deleteSynced => 'सिंक किए गए हटाएं';
+
+  @override
+  String get deleteSyncedFiles => 'सिंक की गई रिकॉर्डिंग हटाएं';
+
+  @override
+  String get deleteSyncedFilesMessage =>
+      'ये रिकॉर्डिंग पहले से आपके फोन पर सिंक हो चुकी हैं। यह पूर्ववत नहीं किया जा सकता।';
+
+  @override
+  String get syncedFilesDeleted => 'सिंक की गई रिकॉर्डिंग हटाई गईं';
+
+  @override
+  String get deletePending => 'लंबित हटाएं';
+
+  @override
+  String get deletePendingFiles => 'लंबित रिकॉर्डिंग हटाएं';
+
+  @override
+  String get deletePendingFilesWarning =>
+      'ये रिकॉर्डिंग आपके फोन पर सिंक नहीं हुई हैं और स्थायी रूप से खो जाएंगी। यह पूर्ववत नहीं किया जा सकता।';
+
+  @override
+  String get pendingFilesDeleted => 'लंबित रिकॉर्डिंग हटाई गईं';
+
+  @override
+  String get deleteAllFiles => 'सभी रिकॉर्डिंग हटाएं';
+
+  @override
+  String get deleteAll => 'सब हटाएं';
+
+  @override
+  String get deleteAllFilesWarning =>
+      'यह सिंक की गई और लंबित दोनों रिकॉर्डिंग हटा देगा। लंबित रिकॉर्डिंग सिंक नहीं हुई हैं और स्थायी रूप से खो जाएंगी।';
+
+  @override
+  String get allFilesDeleted => 'सभी रिकॉर्डिंग हटाई गईं';
+
+  @override
+  String nFiles(int count) {
+    return '$count रिकॉर्डिंग';
+  }
+
+  @override
+  String get manageStorage => 'स्टोरेज प्रबंधित करें';
+
+  @override
+  String get safelyBackedUp => 'आपके फोन पर सुरक्षित बैकअप';
+
+  @override
+  String get notYetSynced => 'अभी तक आपके फोन पर सिंक नहीं हुआ';
+
+  @override
+  String get clearAll => 'सब हटाएं';
+
+  @override
+  String get phoneKeypad => 'कीपैड';
+
+  @override
+  String get phoneHideKeypad => 'कीपैड छुपाएं';
+
+  @override
+  String get fairUsePolicy => 'उचित उपयोग';
+
+  @override
+  String get fairUseLoadError => 'उचित उपयोग की स्थिति लोड नहीं हो सकी। कृपया पुनः प्रयास करें।';
+
+  @override
+  String get fairUseStatusNormal => 'आपका उपयोग सामान्य सीमा के भीतर है।';
+
+  @override
+  String get fairUseStageNormal => 'सामान्य';
+
+  @override
+  String get fairUseStageWarning => 'चेतावनी';
+
+  @override
+  String get fairUseStageThrottle => 'सीमित';
+
+  @override
+  String get fairUseStageRestrict => 'प्रतिबंधित';
+
+  @override
+  String get fairUseSpeechUsage => 'वाक् उपयोग';
+
+  @override
+  String get fairUseToday => 'आज';
+
+  @override
+  String get fairUse3Day => '3-दिन की अवधि';
+
+  @override
+  String get fairUseWeekly => 'साप्ताहिक अवधि';
+
+  @override
+  String get fairUseAboutTitle => 'उचित उपयोग के बारे में';
+
+  @override
+  String get fairUseAboutBody =>
+      'Omi व्यक्तिगत वार्तालाप, बैठकों और लाइव इंटरैक्शन के लिए डिज़ाइन किया गया है। उपयोग को वास्तविक पहचानी गई वाक् समय से मापा जाता है, कनेक्शन समय से नहीं। यदि उपयोग गैर-व्यक्तिगत सामग्री के लिए सामान्य पैटर्न से काफी अधिक हो जाता है, तो समायोजन लागू हो सकते हैं।';
+
+  @override
+  String fairUseCaseRefCopied(String caseRef) {
+    return '$caseRef कॉपी किया गया';
+  }
+
+  @override
+  String get fairUseDailyTranscription => 'दैनिक ट्रांसक्रिप्शन';
+
+  @override
+  String fairUseBudgetUsed(String used, String limit) {
+    return '$usedमि / $limitमि';
+  }
+
+  @override
+  String get fairUseBudgetExhausted => 'दैनिक ट्रांसक्रिप्शन सीमा पूरी हुई';
+
+  @override
+  String fairUseBudgetResetsAt(String time) {
+    return 'रीसेट $time';
+  }
+
+  @override
+  String get transcriptionPaused => 'रिकॉर्डिंग जारी, पुन: कनेक्ट हो रहा है';
+
+  @override
+  String get transcriptionPausedReconnecting => 'अभी भी रिकॉर्ड हो रहा है — ट्रांसक्रिप्शन से पुनः कनेक्ट हो रहा है...';
+
+  @override
+  String fairUseBannerStatus(String status) {
+    return 'उचित उपयोग: $status';
+  }
+
+  @override
+  String get improveConnectionTitle => 'कनेक्शन सुधारें';
+
+  @override
+  String get improveConnectionContent =>
+      'हमने Omi के आपके डिवाइस से जुड़े रहने के तरीके में सुधार किया है। इसे सक्रिय करने के लिए, डिवाइस जानकारी पृष्ठ पर जाएं, \"डिवाइस डिस्कनेक्ट करें\" पर टैप करें, और अपने डिवाइस को फिर से पेयर करें।';
+
+  @override
+  String get improveConnectionAction => 'समझ गया';
+
+  @override
+  String clockSkewWarning(int minutes) {
+    return 'आपके डिवाइस की घड़ी ~$minutes मिनट गलत है। अपनी तारीख और समय सेटिंग जांचें।';
+  }
 }

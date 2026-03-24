@@ -25,7 +25,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get deleteConversationMessage =>
-      'Apakah Anda yakin ingin menghapus percakapan ini? Tindakan ini tidak dapat dibatalkan.';
+      'Ini juga akan menghapus kenangan, tugas, dan file audio terkait. Tindakan ini tidak dapat dibatalkan.';
 
   @override
   String get confirm => 'Konfirmasi';
@@ -2681,7 +2681,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get noTasksForToday =>
-      'Tidak ada tugas untuk hari ini.\\nTanyakan Omi untuk lebih banyak tugas atau buat secara manual.';
+      'Tidak ada tugas untuk hari ini.\nTanyakan Omi untuk lebih banyak tugas atau buat secara manual.';
 
   @override
   String get dailyScore => 'SKOR HARIAN';
@@ -8483,4 +8483,177 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get showTasksOnHomepage => 'Tampilkan Tugas di beranda';
+
+  @override
+  String get phoneCallsUnlimitedOnly => 'Panggilan Telepon via Omi';
+
+  @override
+  String get phoneCallsUpsellSubtitle =>
+      'Lakukan panggilan melalui Omi dan dapatkan transkripsi real-time, ringkasan otomatis, dan lainnya.';
+
+  @override
+  String get phoneCallsUpsellFeature1 => 'Transkripsi real-time setiap panggilan';
+
+  @override
+  String get phoneCallsUpsellFeature2 => 'Ringkasan panggilan otomatis dan item tindakan';
+
+  @override
+  String get phoneCallsUpsellFeature3 => 'Penerima melihat nomor asli Anda, bukan nomor acak';
+
+  @override
+  String get phoneCallsUpsellFeature4 => 'Panggilan Anda tetap pribadi dan aman';
+
+  @override
+  String get phoneCallsUpgradeButton => 'Upgrade ke Unlimited';
+
+  @override
+  String get phoneCallsMaybeLater => 'Mungkin nanti';
+
+  @override
+  String get deleteSynced => 'Hapus yang disinkronkan';
+
+  @override
+  String get deleteSyncedFiles => 'Hapus rekaman tersinkronisasi';
+
+  @override
+  String get deleteSyncedFilesMessage => 'Rekaman ini sudah disinkronkan ke ponsel Anda. Ini tidak dapat dibatalkan.';
+
+  @override
+  String get syncedFilesDeleted => 'Rekaman tersinkronisasi dihapus';
+
+  @override
+  String get deletePending => 'Hapus yang tertunda';
+
+  @override
+  String get deletePendingFiles => 'Hapus rekaman tertunda';
+
+  @override
+  String get deletePendingFilesWarning =>
+      'Rekaman ini BELUM disinkronkan ke ponsel Anda dan akan hilang secara permanen. Ini tidak dapat dibatalkan.';
+
+  @override
+  String get pendingFilesDeleted => 'Rekaman tertunda dihapus';
+
+  @override
+  String get deleteAllFiles => 'Hapus semua rekaman';
+
+  @override
+  String get deleteAll => 'Hapus semua';
+
+  @override
+  String get deleteAllFilesWarning =>
+      'Ini akan menghapus rekaman tersinkronisasi dan tertunda. Rekaman tertunda BELUM disinkronkan dan akan hilang secara permanen.';
+
+  @override
+  String get allFilesDeleted => 'Semua rekaman dihapus';
+
+  @override
+  String nFiles(int count) {
+    return '$count rekaman';
+  }
+
+  @override
+  String get manageStorage => 'Kelola penyimpanan';
+
+  @override
+  String get safelyBackedUp => 'Dicadangkan dengan aman ke ponsel Anda';
+
+  @override
+  String get notYetSynced => 'Belum disinkronkan ke ponsel Anda';
+
+  @override
+  String get clearAll => 'Hapus semua';
+
+  @override
+  String get phoneKeypad => 'Keypad';
+
+  @override
+  String get phoneHideKeypad => 'Sembunyikan keypad';
+
+  @override
+  String get fairUsePolicy => 'Penggunaan Wajar';
+
+  @override
+  String get fairUseLoadError => 'Tidak dapat memuat status penggunaan wajar. Silakan coba lagi.';
+
+  @override
+  String get fairUseStatusNormal => 'Penggunaan Anda dalam batas normal.';
+
+  @override
+  String get fairUseStageNormal => 'Normal';
+
+  @override
+  String get fairUseStageWarning => 'Peringatan';
+
+  @override
+  String get fairUseStageThrottle => 'Dibatasi';
+
+  @override
+  String get fairUseStageRestrict => 'Diblokir';
+
+  @override
+  String get fairUseSpeechUsage => 'Penggunaan Ucapan';
+
+  @override
+  String get fairUseToday => 'Hari ini';
+
+  @override
+  String get fairUse3Day => '3 hari bergulir';
+
+  @override
+  String get fairUseWeekly => 'Mingguan bergulir';
+
+  @override
+  String get fairUseAboutTitle => 'Tentang Penggunaan Wajar';
+
+  @override
+  String get fairUseAboutBody =>
+      'Omi dirancang untuk percakapan pribadi, rapat, dan interaksi langsung. Penggunaan diukur berdasarkan waktu bicara nyata yang terdeteksi, bukan waktu koneksi. Jika penggunaan secara signifikan melebihi pola normal untuk konten non-pribadi, penyesuaian dapat diterapkan.';
+
+  @override
+  String fairUseCaseRefCopied(String caseRef) {
+    return '$caseRef disalin';
+  }
+
+  @override
+  String get fairUseDailyTranscription => 'Daily Transcription';
+
+  @override
+  String fairUseBudgetUsed(String used, String limit) {
+    return '${used}m / ${limit}m';
+  }
+
+  @override
+  String get fairUseBudgetExhausted => 'Daily transcription limit reached';
+
+  @override
+  String fairUseBudgetResetsAt(String time) {
+    return 'Resets $time';
+  }
+
+  @override
+  String get transcriptionPaused => 'Merekam, menghubungkan ulang';
+
+  @override
+  String get transcriptionPausedReconnecting => 'Masih merekam — menghubungkan ulang ke transkripsi...';
+
+  @override
+  String fairUseBannerStatus(String status) {
+    return 'Penggunaan Wajar: $status';
+  }
+
+  @override
+  String get improveConnectionTitle => 'Tingkatkan Koneksi';
+
+  @override
+  String get improveConnectionContent =>
+      'Kami telah meningkatkan cara Omi tetap terhubung ke perangkat Anda. Untuk mengaktifkan ini, buka halaman Info Perangkat, ketuk \"Putuskan Perangkat\", lalu pasangkan perangkat Anda kembali.';
+
+  @override
+  String get improveConnectionAction => 'Mengerti';
+
+  @override
+  String clockSkewWarning(int minutes) {
+    return 'Jam perangkat Anda melenceng ~$minutes menit. Periksa pengaturan tanggal & waktu.';
+  }
 }

@@ -24,7 +24,8 @@ class AppLocalizationsLt extends AppLocalizations {
   String get deleteConversationTitle => 'Ištrinti pokalbį?';
 
   @override
-  String get deleteConversationMessage => 'Ar tikrai norite ištrinti šį pokalbį? Šio veiksmo negalima atšaukti.';
+  String get deleteConversationMessage =>
+      'Tai taip pat ištrins susijusius prisiminimus, užduotis ir garso failus. Šio veiksmo negalima atšaukti.';
 
   @override
   String get confirm => 'Patvirtinti';
@@ -2673,7 +2674,7 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String get noTasksForToday =>
-      'Šiandien nėra užduočių.\\nPaprašykite Omi daugiau užduočių arba sukurkite rankiniu būdu.';
+      'Šiandien nėra užduočių.\nPaprašykite Omi daugiau užduočių arba sukurkite rankiniu būdu.';
 
   @override
   String get dailyScore => 'DIENOS BALAS';
@@ -8480,4 +8481,177 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String get showTasksOnHomepage => 'Rodyti užduotis pagrindiniame puslapyje';
+
+  @override
+  String get phoneCallsUnlimitedOnly => 'Telefono skambučiai per Omi';
+
+  @override
+  String get phoneCallsUpsellSubtitle =>
+      'Skambinkite per Omi ir gaukite transkripcijas realiu laiku, automatinius santraukas ir daugiau.';
+
+  @override
+  String get phoneCallsUpsellFeature1 => 'Kiekvieno skambučio transkripcija realiu laiku';
+
+  @override
+  String get phoneCallsUpsellFeature2 => 'Automatinės skambučių santraukos ir veiksmai';
+
+  @override
+  String get phoneCallsUpsellFeature3 => 'Gavėjai mato jūsų tikrąjį numerį, ne atsitiktinį';
+
+  @override
+  String get phoneCallsUpsellFeature4 => 'Jūsų skambučiai lieka privatūs ir saugūs';
+
+  @override
+  String get phoneCallsUpgradeButton => 'Atnaujinti iki Neriboto';
+
+  @override
+  String get phoneCallsMaybeLater => 'Gal vėliau';
+
+  @override
+  String get deleteSynced => 'Ištrinti sinchronizuotus';
+
+  @override
+  String get deleteSyncedFiles => 'Ištrinti sinchronizuotus įrašus';
+
+  @override
+  String get deleteSyncedFilesMessage => 'Šie įrašai jau sinchronizuoti su jūsų telefonu. To atšaukti negalima.';
+
+  @override
+  String get syncedFilesDeleted => 'Sinchronizuoti įrašai ištrinti';
+
+  @override
+  String get deletePending => 'Ištrinti laukiančius';
+
+  @override
+  String get deletePendingFiles => 'Ištrinti laukiančius įrašus';
+
+  @override
+  String get deletePendingFilesWarning =>
+      'Šie įrašai NĖRA sinchronizuoti su jūsų telefonu ir bus visam laikui prarasti. To atšaukti negalima.';
+
+  @override
+  String get pendingFilesDeleted => 'Laukiantys įrašai ištrinti';
+
+  @override
+  String get deleteAllFiles => 'Ištrinti visus įrašus';
+
+  @override
+  String get deleteAll => 'Ištrinti viską';
+
+  @override
+  String get deleteAllFilesWarning =>
+      'Tai ištrins sinchronizuotus ir laukiančius įrašus. Laukiantys įrašai NĖRA sinchronizuoti ir bus visam laikui prarasti.';
+
+  @override
+  String get allFilesDeleted => 'Visi įrašai ištrinti';
+
+  @override
+  String nFiles(int count) {
+    return '$count įrašų';
+  }
+
+  @override
+  String get manageStorage => 'Tvarkyti saugyklą';
+
+  @override
+  String get safelyBackedUp => 'Saugiai nukopijuota į jūsų telefoną';
+
+  @override
+  String get notYetSynced => 'Dar nesinchronizuota su jūsų telefonu';
+
+  @override
+  String get clearAll => 'Išvalyti viską';
+
+  @override
+  String get phoneKeypad => 'Klaviatūra';
+
+  @override
+  String get phoneHideKeypad => 'Slėpti klaviatūrą';
+
+  @override
+  String get fairUsePolicy => 'Sąžiningas naudojimas';
+
+  @override
+  String get fairUseLoadError => 'Nepavyko įkelti sąžiningo naudojimo būsenos. Bandykite dar kartą.';
+
+  @override
+  String get fairUseStatusNormal => 'Jūsų naudojimas yra normaliose ribose.';
+
+  @override
+  String get fairUseStageNormal => 'Normalus';
+
+  @override
+  String get fairUseStageWarning => 'Įspėjimas';
+
+  @override
+  String get fairUseStageThrottle => 'Apribotas';
+
+  @override
+  String get fairUseStageRestrict => 'Užblokuotas';
+
+  @override
+  String get fairUseSpeechUsage => 'Kalbos naudojimas';
+
+  @override
+  String get fairUseToday => 'Šiandien';
+
+  @override
+  String get fairUse3Day => '3 dienų slankus';
+
+  @override
+  String get fairUseWeekly => 'Savaitinis slankus';
+
+  @override
+  String get fairUseAboutTitle => 'Apie sąžiningą naudojimą';
+
+  @override
+  String get fairUseAboutBody =>
+      'Omi sukurtas asmeniniams pokalbiams, susitikimams ir tiesioginei sąveikai. Naudojimas matuojamas pagal aptiktą tikrąjį kalbos laiką, o ne prisijungimo laiką. Jei naudojimas žymiai viršija įprastus modelius ne asmeniniam turiniui, gali būti taikomi koregavimai.';
+
+  @override
+  String fairUseCaseRefCopied(String caseRef) {
+    return '$caseRef nukopijuota';
+  }
+
+  @override
+  String get fairUseDailyTranscription => 'Daily Transcription';
+
+  @override
+  String fairUseBudgetUsed(String used, String limit) {
+    return '${used}m / ${limit}m';
+  }
+
+  @override
+  String get fairUseBudgetExhausted => 'Daily transcription limit reached';
+
+  @override
+  String fairUseBudgetResetsAt(String time) {
+    return 'Resets $time';
+  }
+
+  @override
+  String get transcriptionPaused => 'Įrašoma, jungiamasi iš naujo';
+
+  @override
+  String get transcriptionPausedReconnecting => 'Vis dar įrašoma — jungiamasi prie transkripcijos...';
+
+  @override
+  String fairUseBannerStatus(String status) {
+    return 'Sąžiningas naudojimas: $status';
+  }
+
+  @override
+  String get improveConnectionTitle => 'Pagerinti ryšį';
+
+  @override
+  String get improveConnectionContent =>
+      'Patobulinome, kaip Omi lieka prisijungęs prie jūsų įrenginio. Norėdami tai aktyvuoti, eikite į įrenginio informacijos puslapį, bakstelėkite \"Atjungti įrenginį\" ir vėl susiekite savo įrenginį.';
+
+  @override
+  String get improveConnectionAction => 'Supratau';
+
+  @override
+  String clockSkewWarning(int minutes) {
+    return 'Jūsų įrenginio laikrodis skiriasi ~$minutes min. Patikrinkite datos ir laiko nustatymus.';
+  }
 }

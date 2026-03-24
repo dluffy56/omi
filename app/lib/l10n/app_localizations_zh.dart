@@ -24,7 +24,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get deleteConversationTitle => '删除对话？';
 
   @override
-  String get deleteConversationMessage => '您确定要删除此对话吗？此操作无法撤消。';
+  String get deleteConversationMessage => '这也将删除相关的记忆、任务和音频文件。此操作无法撤消。';
 
   @override
   String get confirm => '确认';
@@ -2625,7 +2625,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get showAll => '显示全部 →';
 
   @override
-  String get noTasksForToday => '今天没有任务。\\n向Omi询问更多任务或手动创建。';
+  String get noTasksForToday => '今天没有任务。\n向Omi询问更多任务或手动创建。';
 
   @override
   String get dailyScore => '每日评分';
@@ -8322,4 +8322,172 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get showTasksOnHomepage => '在首页显示任务';
+
+  @override
+  String get phoneCallsUnlimitedOnly => '通过 Omi 拨打电话';
+
+  @override
+  String get phoneCallsUpsellSubtitle => '通过 Omi 拨打电话，获取实时转录、自动摘要等功能。';
+
+  @override
+  String get phoneCallsUpsellFeature1 => '每次通话的实时转录';
+
+  @override
+  String get phoneCallsUpsellFeature2 => '自动通话摘要和待办事项';
+
+  @override
+  String get phoneCallsUpsellFeature3 => '接收方看到的是您的真实号码，而非随机号码';
+
+  @override
+  String get phoneCallsUpsellFeature4 => '您的通话保持私密和安全';
+
+  @override
+  String get phoneCallsUpgradeButton => '升级到无限计划';
+
+  @override
+  String get phoneCallsMaybeLater => '以后再说';
+
+  @override
+  String get deleteSynced => '删除已同步';
+
+  @override
+  String get deleteSyncedFiles => '删除已同步录音';
+
+  @override
+  String get deleteSyncedFilesMessage => '这些录音已同步到您的手机。此操作无法撤销。';
+
+  @override
+  String get syncedFilesDeleted => '已同步录音已删除';
+
+  @override
+  String get deletePending => '删除待处理';
+
+  @override
+  String get deletePendingFiles => '删除待处理录音';
+
+  @override
+  String get deletePendingFilesWarning => '这些录音尚未同步到您的手机，将永久丢失。此操作无法撤销。';
+
+  @override
+  String get pendingFilesDeleted => '待处理录音已删除';
+
+  @override
+  String get deleteAllFiles => '删除所有录音';
+
+  @override
+  String get deleteAll => '全部删除';
+
+  @override
+  String get deleteAllFilesWarning => '这将删除已同步和待处理的录音。待处理录音尚未同步，将永久丢失。';
+
+  @override
+  String get allFilesDeleted => '所有录音已删除';
+
+  @override
+  String nFiles(int count) {
+    return '$count个录音';
+  }
+
+  @override
+  String get manageStorage => '管理存储';
+
+  @override
+  String get safelyBackedUp => '已安全备份到您的手机';
+
+  @override
+  String get notYetSynced => '尚未同步到您的手机';
+
+  @override
+  String get clearAll => '全部清除';
+
+  @override
+  String get phoneKeypad => '键盘';
+
+  @override
+  String get phoneHideKeypad => '隐藏键盘';
+
+  @override
+  String get fairUsePolicy => '公平使用';
+
+  @override
+  String get fairUseLoadError => '无法加载公平使用状态。请重试。';
+
+  @override
+  String get fairUseStatusNormal => '您的使用量在正常范围内。';
+
+  @override
+  String get fairUseStageNormal => '正常';
+
+  @override
+  String get fairUseStageWarning => '警告';
+
+  @override
+  String get fairUseStageThrottle => '已限制';
+
+  @override
+  String get fairUseStageRestrict => '已封锁';
+
+  @override
+  String get fairUseSpeechUsage => '语音使用量';
+
+  @override
+  String get fairUseToday => '今天';
+
+  @override
+  String get fairUse3Day => '3天滚动';
+
+  @override
+  String get fairUseWeekly => '每周滚动';
+
+  @override
+  String get fairUseAboutTitle => '关于公平使用';
+
+  @override
+  String get fairUseAboutBody => 'Omi 专为个人对话、会议和实时互动而设计。使用量按检测到的实际语音时间衡量，而非连接时间。如果使用量明显超出非个人内容的正常模式，可能会进行调整。';
+
+  @override
+  String fairUseCaseRefCopied(String caseRef) {
+    return '$caseRef 已复制';
+  }
+
+  @override
+  String get fairUseDailyTranscription => '每日转写';
+
+  @override
+  String fairUseBudgetUsed(String used, String limit) {
+    return '$used分 / $limit分';
+  }
+
+  @override
+  String get fairUseBudgetExhausted => '已达到每日转写限额';
+
+  @override
+  String fairUseBudgetResetsAt(String time) {
+    return '重置时间 $time';
+  }
+
+  @override
+  String get transcriptionPaused => '录音中，正在重连';
+
+  @override
+  String get transcriptionPausedReconnecting => '仍在录音 — 正在重新连接转录...';
+
+  @override
+  String fairUseBannerStatus(String status) {
+    return '公平使用：$status';
+  }
+
+  @override
+  String get improveConnectionTitle => '改善连接';
+
+  @override
+  String get improveConnectionContent => '我们改进了 Omi 与您设备保持连接的方式。要激活此功能，请前往设备信息页面，点击\"断开设备\"，然后重新配对您的设备。';
+
+  @override
+  String get improveConnectionAction => '知道了';
+
+  @override
+  String clockSkewWarning(int minutes) {
+    return '您的设备时钟偏差约$minutes分钟。请检查日期和时间设置。';
+  }
 }

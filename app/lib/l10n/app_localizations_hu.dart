@@ -25,7 +25,7 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get deleteConversationMessage =>
-      'Biztosan törölni szeretnéd ezt a beszélgetést? Ez a művelet nem vonható vissza.';
+      'Ez törli a kapcsolódó emlékeket, feladatokat és hangfájlokat is. Ez a művelet nem vonható vissza.';
 
   @override
   String get confirm => 'Megerősítés';
@@ -2689,7 +2689,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get showAll => 'Összes megjelenítése →';
 
   @override
-  String get noTasksForToday => 'Nincs feladat mára.\\nKérdezzen Omit több feladatért, vagy hozzon létre manuálisan.';
+  String get noTasksForToday => 'Nincs feladat mára.\nKérdezzen Omit több feladatért, vagy hozzon létre manuálisan.';
 
   @override
   String get dailyScore => 'NAPI PONTSZÁM';
@@ -8510,4 +8510,178 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get showTasksOnHomepage => 'Feladatok megjelenítése a főoldalon';
+
+  @override
+  String get phoneCallsUnlimitedOnly => 'Telefonhívások az Omi-n keresztül';
+
+  @override
+  String get phoneCallsUpsellSubtitle =>
+      'Hívjon az Omi-n keresztül, és kapjon valós idejű átírást, automatikus összefoglalókat és még többet.';
+
+  @override
+  String get phoneCallsUpsellFeature1 => 'Minden hívás valós idejű átírása';
+
+  @override
+  String get phoneCallsUpsellFeature2 => 'Automatikus hívás-összefoglalók és tennivalók';
+
+  @override
+  String get phoneCallsUpsellFeature3 => 'A címzettek a valódi számodat látják, nem egy véletlent';
+
+  @override
+  String get phoneCallsUpsellFeature4 => 'Hívásai privátok és biztonságosak maradnak';
+
+  @override
+  String get phoneCallsUpgradeButton => 'Váltás Korlátlanra';
+
+  @override
+  String get phoneCallsMaybeLater => 'Talán később';
+
+  @override
+  String get deleteSynced => 'Szinkronizáltak törlése';
+
+  @override
+  String get deleteSyncedFiles => 'Szinkronizált felvételek törlése';
+
+  @override
+  String get deleteSyncedFilesMessage =>
+      'Ezek a felvételek már szinkronizálva vannak a telefonjával. Ez nem vonható vissza.';
+
+  @override
+  String get syncedFilesDeleted => 'Szinkronizált felvételek törölve';
+
+  @override
+  String get deletePending => 'Függőben lévők törlése';
+
+  @override
+  String get deletePendingFiles => 'Függő felvételek törlése';
+
+  @override
+  String get deletePendingFilesWarning =>
+      'Ezek a felvételek NINCSENEK szinkronizálva a telefonjával és véglegesen elvesznek. Ez nem vonható vissza.';
+
+  @override
+  String get pendingFilesDeleted => 'Függő felvételek törölve';
+
+  @override
+  String get deleteAllFiles => 'Összes felvétel törlése';
+
+  @override
+  String get deleteAll => 'Összes törlése';
+
+  @override
+  String get deleteAllFilesWarning =>
+      'Ez törli a szinkronizált és függő felvételeket. A függő felvételek NINCSENEK szinkronizálva és véglegesen elvesznek.';
+
+  @override
+  String get allFilesDeleted => 'Összes felvétel törölve';
+
+  @override
+  String nFiles(int count) {
+    return '$count felvétel';
+  }
+
+  @override
+  String get manageStorage => 'Tárhely kezelése';
+
+  @override
+  String get safelyBackedUp => 'Biztonságosan mentve a telefonjára';
+
+  @override
+  String get notYetSynced => 'Még nincs szinkronizálva a telefonjával';
+
+  @override
+  String get clearAll => 'Összes törlése';
+
+  @override
+  String get phoneKeypad => 'Billentyűzet';
+
+  @override
+  String get phoneHideKeypad => 'Billentyűzet elrejtése';
+
+  @override
+  String get fairUsePolicy => 'Méltányos használat';
+
+  @override
+  String get fairUseLoadError => 'Nem sikerült betölteni a méltányos használat állapotát. Kérjük, próbálja újra.';
+
+  @override
+  String get fairUseStatusNormal => 'Használata a normális határokon belül van.';
+
+  @override
+  String get fairUseStageNormal => 'Normál';
+
+  @override
+  String get fairUseStageWarning => 'Figyelmeztetés';
+
+  @override
+  String get fairUseStageThrottle => 'Korlátozott';
+
+  @override
+  String get fairUseStageRestrict => 'Letiltva';
+
+  @override
+  String get fairUseSpeechUsage => 'Beszédhasználat';
+
+  @override
+  String get fairUseToday => 'Ma';
+
+  @override
+  String get fairUse3Day => '3 napos gördülő';
+
+  @override
+  String get fairUseWeekly => 'Heti gördülő';
+
+  @override
+  String get fairUseAboutTitle => 'A méltányos használatról';
+
+  @override
+  String get fairUseAboutBody =>
+      'Az Omi személyes beszélgetésekhez, megbeszélésekhez és élő interakciókhoz készült. A használatot a ténylegesen észlelt beszédidő alapján mérik, nem a csatlakozási idő alapján. Ha a használat jelentősen meghaladja a nem személyes tartalom normális mintáit, módosítások alkalmazhatók.';
+
+  @override
+  String fairUseCaseRefCopied(String caseRef) {
+    return '$caseRef másolva';
+  }
+
+  @override
+  String get fairUseDailyTranscription => 'Daily Transcription';
+
+  @override
+  String fairUseBudgetUsed(String used, String limit) {
+    return '${used}m / ${limit}m';
+  }
+
+  @override
+  String get fairUseBudgetExhausted => 'Daily transcription limit reached';
+
+  @override
+  String fairUseBudgetResetsAt(String time) {
+    return 'Resets $time';
+  }
+
+  @override
+  String get transcriptionPaused => 'Felvétel, újrakapcsolódás';
+
+  @override
+  String get transcriptionPausedReconnecting => 'A felvétel folytatódik — újrakapcsolódás az átíráshoz...';
+
+  @override
+  String fairUseBannerStatus(String status) {
+    return 'Méltányos használat: $status';
+  }
+
+  @override
+  String get improveConnectionTitle => 'Kapcsolat javítása';
+
+  @override
+  String get improveConnectionContent =>
+      'Javítottuk, hogyan marad az Omi csatlakozva az eszközödhöz. Az aktiváláshoz menj az Eszközinfo oldalra, koppints az \"Eszköz leválasztása\" gombra, majd párosítsd újra az eszközödet.';
+
+  @override
+  String get improveConnectionAction => 'Értem';
+
+  @override
+  String clockSkewWarning(int minutes) {
+    return 'Az eszköz órája ~$minutes perccel eltér. Ellenőrizze a dátum- és időbeállításokat.';
+  }
 }

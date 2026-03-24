@@ -21,7 +21,7 @@
     "@deleteConversationTitle": {
         "description": "Title for delete confirmation dialog"
     },
-    "deleteConversationMessage": "Are you sure you want to delete this conversation? This action cannot be undone.",
+    "deleteConversationMessage": "This will also delete associated memories, tasks, and audio files. This action cannot be undone.",
     "@deleteConversationMessage": {
         "description": "Message for delete confirmation dialog"
     },
@@ -63,7 +63,7 @@
     },
     "clear": "Clear",
     "@clear": {
-        "description": "Clear button"
+        "description": "Button label to clear files"
     },
     "copyTranscript": "Copy Transcript",
     "@copyTranscript": {
@@ -1634,7 +1634,7 @@
             }
         }
     },
-    "dontShowAgain": "Don't show it again",
+    "dontShowAgain": "Don't show again",
     "@dontShowAgain": {
         "description": "Checkbox text to prevent showing dialog again"
     },
@@ -3026,7 +3026,7 @@
     "@showAll": {
         "description": "Button text to show all items"
     },
-    "noTasksForToday": "No tasks for today.\\nAsk Omi for more tasks or create manually.",
+    "noTasksForToday": "No tasks for today.\nAsk Omi for more tasks or create manually.",
     "@noTasksForToday": {
         "description": "Message shown when there are no tasks due today"
     },
@@ -10086,7 +10086,7 @@
     "@tasksCleanTodayMessage": {
         "description": "Confirmation dialog message for cleaning today task deadlines"
     },
-"tasksOverdue": "Overdue",
+    "tasksOverdue": "Overdue",
     "phoneCallsWithOmi": "Phone Calls with Omi",
     "phoneCallsSubtitle": "Make calls with real-time transcription",
     "phoneSetupStep1Title": "Verify your phone number",
@@ -10182,13 +10182,194 @@
     "failedToInitializeCallService": "Failed to initialize call service",
     "speakerLabelYou": "You",
     "speakerLabelUnknown": "Unknown",
-    "tagLabel": "Tag",
-    "@tagLabel": {
-        "description": "Short label for accepting a speaker suggestion in live transcript"
+    "showDailyScoreOnHomepage": "Show Daily Score on homepage",
+    "@showDailyScoreOnHomepage": {
+        "description": "Description for show daily score toggle in developer settings"
+    },
+    "showTasksOnHomepage": "Show Tasks on homepage",
+    "@showTasksOnHomepage": {
+        "description": "Description for show tasks toggle in developer settings"
+    },
+    "phoneCallsUnlimitedOnly": "Phone Calls via Omi",
+    "@phoneCallsUnlimitedOnly": {
+        "description": "Title for the phone calls upsell sheet shown to non-unlimited users"
+    },
+    "phoneCallsUpsellSubtitle": "Make calls through Omi and get real-time transcription, automatic summaries, and more. Available exclusively for Unlimited plan subscribers.",
+    "@phoneCallsUpsellSubtitle": {
+        "description": "Subtitle explaining phone calls feature on upsell sheet"
+    },
+    "phoneCallsUpsellFeature1": "Real-time transcription of every call",
+    "@phoneCallsUpsellFeature1": {
+        "description": "Phone calls upsell feature 1"
+    },
+    "phoneCallsUpsellFeature2": "Automatic call summaries and action items",
+    "@phoneCallsUpsellFeature2": {
+        "description": "Phone calls upsell feature 2"
+    },
+    "phoneCallsUpsellFeature3": "Recipients see your real number, not a random one",
+    "@phoneCallsUpsellFeature3": {
+        "description": "Phone calls upsell feature 3"
+    },
+    "phoneCallsUpsellFeature4": "Your calls stay private and secure",
+    "@phoneCallsUpsellFeature4": {
+        "description": "Phone calls upsell feature 4"
+    },
+    "phoneCallsUpgradeButton": "Upgrade to Unlimited",
+    "@phoneCallsUpgradeButton": {
+        "description": "Button text to upgrade to unlimited plan from phone calls upsell"
+    },
+    "phoneCallsMaybeLater": "Maybe later",
+    "@phoneCallsMaybeLater": {
+        "description": "Dismiss button text on phone calls upsell sheet"
+    },
+    "deleteSynced": "Delete Synced",
+    "@deleteSynced": {
+        "description": "Menu option to delete synced recordings"
+    },
+    "deleteSyncedFiles": "Delete Synced Recordings",
+    "@deleteSyncedFiles": {
+        "description": "Dialog title for deleting synced files"
+    },
+    "deleteSyncedFilesMessage": "These recordings have already been synced to your phone. This cannot be undone.",
+    "@deleteSyncedFilesMessage": {
+        "description": "Confirmation message for deleting synced files"
+    },
+    "syncedFilesDeleted": "Synced recordings deleted",
+    "@syncedFilesDeleted": {
+        "description": "Snackbar message after synced files deleted"
+    },
+    "deletePending": "Delete Pending",
+    "@deletePending": {
+        "description": "Menu option to delete pending recordings"
+    },
+    "deletePendingFiles": "Delete Pending Recordings",
+    "@deletePendingFiles": {
+        "description": "Dialog title for deleting pending files"
+    },
+    "deletePendingFilesWarning": "These recordings have NOT been synced to your phone and will be permanently lost. This cannot be undone.",
+    "@deletePendingFilesWarning": {
+        "description": "Warning message for deleting pending files"
+    },
+    "pendingFilesDeleted": "Pending recordings deleted",
+    "@pendingFilesDeleted": {
+        "description": "Snackbar message after pending files deleted"
+    },
+    "deleteAllFiles": "Delete All Recordings",
+    "@deleteAllFiles": {
+        "description": "Dialog title for deleting all files"
+    },
+    "deleteAll": "Delete All",
+    "@deleteAll": {
+        "description": "Menu option to delete all recordings"
+    },
+    "deleteAllFilesWarning": "This will delete both synced and pending recordings. Pending recordings have NOT been synced and will be permanently lost. This cannot be undone.",
+    "@deleteAllFilesWarning": {
+        "description": "Warning message for deleting all files"
+    },
+    "allFilesDeleted": "All recordings deleted",
+    "@allFilesDeleted": {
+        "description": "Snackbar message after all files deleted"
+    },
+    "nFiles": "{count} recordings",
+    "@nFiles": {
+        "description": "Count of files",
+        "placeholders": {
+            "count": {
+                "type": "int"
+            }
+        }
+    },
+    "manageStorage": "Manage Storage",
+    "@manageStorage": {
+        "description": "Menu option and sheet title for managing recording storage"
+    },
+    "safelyBackedUp": "Safely backed up to your phone",
+    "@safelyBackedUp": {
+        "description": "Description for synced files in manage storage sheet"
+    },
+    "notYetSynced": "Not yet synced to your phone",
+    "@notYetSynced": {
+        "description": "Description for pending files in manage storage sheet"
+    },
+    "clearAll": "Clear All",
+    "@clearAll": {
+        "description": "Button label to clear all files"
+    },
+    "phoneKeypad": "Keypad",
+    "@phoneKeypad": {
+        "description": "Label for the keypad/dialpad button during an active phone call"
+    },
+    "phoneHideKeypad": "Hide Keypad",
+    "@phoneHideKeypad": {
+        "description": "Label for the button to dismiss the in-call keypad"
+    },
+    "fairUsePolicy": "Fair Use",
+    "fairUseLoadError": "Unable to load fair use status. Please try again.",
+    "fairUseStatusNormal": "Your usage is within normal limits.",
+    "fairUseStageNormal": "Normal",
+    "fairUseStageWarning": "Warning",
+    "fairUseStageThrottle": "Throttled",
+    "fairUseStageRestrict": "Restricted",
+    "fairUseSpeechUsage": "Speech Usage",
+    "fairUseToday": "Today",
+    "fairUse3Day": "3-Day Rolling",
+    "fairUseWeekly": "Weekly Rolling",
+    "fairUseAboutTitle": "About Fair Use",
+    "fairUseAboutBody": "Omi is designed for personal conversations, meetings, and live interactions. Usage is measured by real speech time detected, not connection time. If usage significantly exceeds normal patterns for non-personal content, adjustments may apply.",
+    "fairUseCaseRefCopied": "{caseRef} copied",
+    "@fairUseCaseRefCopied": {
+        "description": "Snackbar message when case reference is copied to clipboard",
+        "placeholders": {
+            "caseRef": {
+                "type": "String"
+            }
+        }
+    },
+    "fairUseDailyTranscription": "Daily Transcription",
+    "fairUseBudgetUsed": "{used}m / {limit}m",
+    "@fairUseBudgetUsed": {
+        "placeholders": {
+            "used": {
+                "type": "String"
+            },
+            "limit": {
+                "type": "String"
+            }
+        }
+    },
+    "fairUseBudgetExhausted": "Daily transcription limit reached",
+    "fairUseBudgetResetsAt": "Resets {time}",
+    "@fairUseBudgetResetsAt": {
+        "placeholders": {
+            "time": {
+                "type": "String"
+            }
+        }
+    },
+    "transcriptionPaused": "Recording, reconnecting",
+    "transcriptionPausedReconnecting": "Still recording — reconnecting to transcription...",
+    "fairUseBannerStatus": "Fair Use: {status}",
+    "@fairUseBannerStatus": {
+        "placeholders": {
+            "status": {
+                "type": "String"
+            }
+        }
+    },
+    "improveConnectionTitle": "Improve Connection",
+    "improveConnectionContent": "We've improved how Omi stays connected to your device. To activate this, please go to the Device Info page, tap \"Disconnect Device\", and then pair your device again.",
+    "improveConnectionAction": "Got it",
+    "clockSkewWarning": "Your device clock is off by ~{minutes} min. Check your date & time settings.",
+    "@clockSkewWarning": {
+        "placeholders": {
+            "minutes": {
+                "type": "int"
+            }
+        }
     },
     "shareSpeechProfile": "Share Speech Profile",
     "@shareSpeechProfile": {
-        "description": "Button label to open the speech profile sharing dialog"
+        "description": "Title for the share speech profile dialog"
     },
     "enterUserIdToShare": "Enter the user ID to share your speech profile with",
     "@enterUserIdToShare": {
@@ -10202,13 +10383,13 @@
     "@profileSharedFail": {
         "description": "Snackbar message when sharing a speech profile fails"
     },
-    "sharedWithSection": "You shared with",
-    "@sharedWithSection": {
-        "description": "Section header for profiles shared with others"
+    "cannotShareWithSelf": "You cannot share your speech profile with yourself",
+    "@cannotShareWithSelf": {
+        "description": "Error message when user tries to share with their own ID"
     },
-    "sharedWithYouSection": "Shared with you",
-    "@sharedWithYouSection": {
-        "description": "Section header for profiles shared with the user"
+    "userNotFound": "User not found",
+    "@userNotFound": {
+        "description": "Error when the target user ID does not exist"
     },
     "noSharedProfiles": "You haven't shared your speech profile with anyone yet",
     "@noSharedProfiles": {
@@ -10222,9 +10403,9 @@
     "@revokeShareConfirmation": {
         "description": "Confirmation message for revoking speech profile sharing"
     },
-    "sharedProfiles": "Shared Profiles",
-    "@sharedProfiles": {
-        "description": "Short menu title for speech profile sharing status page"
+    "speechProfileSharing": "Speech Profile Sharing",
+    "@speechProfileSharing": {
+        "description": "Menu title and page title for speech profile sharing management"
     },
     "noSpeechProfileRecorded": "You need to record your speech profile before sharing",
     "@noSpeechProfileRecorded": {
@@ -10232,21 +10413,21 @@
     },
     "recordNow": "Record Now",
     "@recordNow": {
-        "description": "Button to navigate to speech profile recording page"
+        "description": "Button text to navigate to speech profile recording"
     },
-    "cannotShareWithSelf": "Omi already knows your voice!",
-    "@cannotShareWithSelf": {
-        "description": "Error when user tries to share with themselves"
+    "sharedWithSection": "Shared With",
+    "@sharedWithSection": {
+        "description": "Section header for users you have shared your profile with"
     },
-    "userNotFound": "User not found. Please check the ID and try again.",
-    "@userNotFound": {
-        "description": "Error when target user ID does not exist"
+    "sharedWithYouSection": "Shared With You",
+    "@sharedWithYouSection": {
+        "description": "Section header for users who shared their profile with you"
     },
     "removeSharedProfile": "Remove",
     "@removeSharedProfile": {
-        "description": "Button to remove a speech profile shared with you"
+        "description": "Button text to remove a shared profile"
     },
-    "removeSharedProfileConfirmation": "Stop auto-identifying this person's voice in your conversations?",
+    "removeSharedProfileConfirmation": "Stop using this shared speech profile?",
     "@removeSharedProfileConfirmation": {
         "description": "Confirmation message for removing a shared profile"
     },
@@ -10261,13 +10442,5 @@
     "removeShareFail": "Failed to remove shared profile",
     "@removeShareFail": {
         "description": "Error message when removing a shared speech profile fails"
-    },
-    "showDailyScoreOnHomepage": "Show Daily Score on homepage",
-    "@showDailyScoreOnHomepage": {
-        "description": "Description for show daily score toggle in developer settings"
-    },
-    "showTasksOnHomepage": "Show Tasks on homepage",
-    "@showTasksOnHomepage": {
-        "description": "Description for show tasks toggle in developer settings"
     }
 }

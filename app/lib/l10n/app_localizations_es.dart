@@ -25,7 +25,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get deleteConversationMessage =>
-      '¿Seguro que quieres borrar esta conversación? Esta acción no se puede deshacer.';
+      'Esto también eliminará los recuerdos, tareas y archivos de audio asociados. Esta acción no se puede deshacer.';
 
   @override
   String get confirm => 'Confirmar';
@@ -2657,7 +2657,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get showAll => 'Mostrar todo →';
 
   @override
-  String get noTasksForToday => 'No hay tareas para hoy.\\nPregúntale a Omi por más tareas o créalas manualmente.';
+  String get noTasksForToday => 'No hay tareas para hoy.\nPregúntale a Omi por más tareas o créalas manualmente.';
 
   @override
   String get dailyScore => 'PUNTUACIÓN DIARIA';
@@ -8490,4 +8490,178 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get showTasksOnHomepage => 'Mostrar tareas en la página de inicio';
+
+  @override
+  String get phoneCallsUnlimitedOnly => 'Llamadas telefónicas vía Omi';
+
+  @override
+  String get phoneCallsUpsellSubtitle =>
+      'Realiza llamadas a través de Omi y obtén transcripción en tiempo real, resúmenes automáticos y más.';
+
+  @override
+  String get phoneCallsUpsellFeature1 => 'Transcripción en tiempo real de cada llamada';
+
+  @override
+  String get phoneCallsUpsellFeature2 => 'Resúmenes automáticos de llamadas y tareas';
+
+  @override
+  String get phoneCallsUpsellFeature3 => 'Los destinatarios ven tu número real, no uno aleatorio';
+
+  @override
+  String get phoneCallsUpsellFeature4 => 'Tus llamadas se mantienen privadas y seguras';
+
+  @override
+  String get phoneCallsUpgradeButton => 'Actualizar a Ilimitado';
+
+  @override
+  String get phoneCallsMaybeLater => 'Quizás más tarde';
+
+  @override
+  String get deleteSynced => 'Eliminar sincronizados';
+
+  @override
+  String get deleteSyncedFiles => 'Eliminar grabaciones sincronizadas';
+
+  @override
+  String get deleteSyncedFilesMessage =>
+      'Estas grabaciones ya se sincronizaron con tu teléfono. Esto no se puede deshacer.';
+
+  @override
+  String get syncedFilesDeleted => 'Grabaciones sincronizadas eliminadas';
+
+  @override
+  String get deletePending => 'Eliminar pendientes';
+
+  @override
+  String get deletePendingFiles => 'Eliminar grabaciones pendientes';
+
+  @override
+  String get deletePendingFilesWarning =>
+      'Estas grabaciones NO se han sincronizado con tu teléfono y se perderán permanentemente. Esto no se puede deshacer.';
+
+  @override
+  String get pendingFilesDeleted => 'Grabaciones pendientes eliminadas';
+
+  @override
+  String get deleteAllFiles => 'Eliminar todas las grabaciones';
+
+  @override
+  String get deleteAll => 'Eliminar todo';
+
+  @override
+  String get deleteAllFilesWarning =>
+      'Esto eliminará grabaciones sincronizadas y pendientes. Las grabaciones pendientes NO se han sincronizado y se perderán permanentemente.';
+
+  @override
+  String get allFilesDeleted => 'Todas las grabaciones eliminadas';
+
+  @override
+  String nFiles(int count) {
+    return '$count grabaciones';
+  }
+
+  @override
+  String get manageStorage => 'Gestionar almacenamiento';
+
+  @override
+  String get safelyBackedUp => 'Respaldado en tu teléfono';
+
+  @override
+  String get notYetSynced => 'Aún no sincronizado con tu teléfono';
+
+  @override
+  String get clearAll => 'Borrar todo';
+
+  @override
+  String get phoneKeypad => 'Teclado';
+
+  @override
+  String get phoneHideKeypad => 'Ocultar teclado';
+
+  @override
+  String get fairUsePolicy => 'Uso razonable';
+
+  @override
+  String get fairUseLoadError => 'No se pudo cargar el estado de uso razonable. Por favor, inténtelo de nuevo.';
+
+  @override
+  String get fairUseStatusNormal => 'Su uso está dentro de los límites normales.';
+
+  @override
+  String get fairUseStageNormal => 'Normal';
+
+  @override
+  String get fairUseStageWarning => 'Advertencia';
+
+  @override
+  String get fairUseStageThrottle => 'Limitado';
+
+  @override
+  String get fairUseStageRestrict => 'Restringido';
+
+  @override
+  String get fairUseSpeechUsage => 'Uso del habla';
+
+  @override
+  String get fairUseToday => 'Hoy';
+
+  @override
+  String get fairUse3Day => '3 días continuos';
+
+  @override
+  String get fairUseWeekly => 'Semanal continuo';
+
+  @override
+  String get fairUseAboutTitle => 'Sobre el uso razonable';
+
+  @override
+  String get fairUseAboutBody =>
+      'Omi está diseñado para conversaciones personales, reuniones e interacciones en vivo. El uso se mide por el tiempo real de habla detectado, no por el tiempo de conexión. Si el uso supera significativamente los patrones normales para contenido no personal, se pueden aplicar ajustes.';
+
+  @override
+  String fairUseCaseRefCopied(String caseRef) {
+    return '$caseRef copiado';
+  }
+
+  @override
+  String get fairUseDailyTranscription => 'Transcripción diaria';
+
+  @override
+  String fairUseBudgetUsed(String used, String limit) {
+    return '${used}m / ${limit}m';
+  }
+
+  @override
+  String get fairUseBudgetExhausted => 'Límite diario de transcripción alcanzado';
+
+  @override
+  String fairUseBudgetResetsAt(String time) {
+    return 'Se reinicia $time';
+  }
+
+  @override
+  String get transcriptionPaused => 'Grabando, reconectando';
+
+  @override
+  String get transcriptionPausedReconnecting => 'Aún grabando — reconectando a la transcripción...';
+
+  @override
+  String fairUseBannerStatus(String status) {
+    return 'Uso justo: $status';
+  }
+
+  @override
+  String get improveConnectionTitle => 'Mejorar conexión';
+
+  @override
+  String get improveConnectionContent =>
+      'Hemos mejorado cómo Omi se mantiene conectado a tu dispositivo. Para activarlo, ve a la página de Información del dispositivo, toca \"Desconectar dispositivo\" y vuelve a vincular tu dispositivo.';
+
+  @override
+  String get improveConnectionAction => 'Entendido';
+
+  @override
+  String clockSkewWarning(int minutes) {
+    return 'El reloj de tu dispositivo está desfasado ~$minutes min. Revisa la configuración de fecha y hora.';
+  }
 }

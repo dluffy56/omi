@@ -25,7 +25,7 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get deleteConversationMessage =>
-      'Sei sicuro di voler eliminare questa conversazione? Questa azione non può essere annullata.';
+      'Questo eliminerà anche i ricordi, le attività e i file audio associati. Questa azione non può essere annullata.';
 
   @override
   String get confirm => 'Conferma';
@@ -2684,7 +2684,7 @@ class AppLocalizationsIt extends AppLocalizations {
   String get showAll => 'Mostra tutto →';
 
   @override
-  String get noTasksForToday => 'Nessuna attività per oggi.\\nChiedi a Omi più attività o creale manualmente.';
+  String get noTasksForToday => 'Nessuna attività per oggi.\nChiedi a Omi più attività o creale manualmente.';
 
   @override
   String get dailyScore => 'PUNTEGGIO GIORNALIERO';
@@ -8524,4 +8524,178 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get showTasksOnHomepage => 'Mostra attività nella homepage';
+
+  @override
+  String get phoneCallsUnlimitedOnly => 'Chiamate telefoniche tramite Omi';
+
+  @override
+  String get phoneCallsUpsellSubtitle =>
+      'Effettua chiamate tramite Omi e ottieni trascrizione in tempo reale, riassunti automatici e altro.';
+
+  @override
+  String get phoneCallsUpsellFeature1 => 'Trascrizione in tempo reale di ogni chiamata';
+
+  @override
+  String get phoneCallsUpsellFeature2 => 'Riassunti automatici delle chiamate e azioni da fare';
+
+  @override
+  String get phoneCallsUpsellFeature3 => 'I destinatari vedono il tuo vero numero, non uno casuale';
+
+  @override
+  String get phoneCallsUpsellFeature4 => 'Le tue chiamate restano private e sicure';
+
+  @override
+  String get phoneCallsUpgradeButton => 'Passa a Illimitato';
+
+  @override
+  String get phoneCallsMaybeLater => 'Forse più tardi';
+
+  @override
+  String get deleteSynced => 'Elimina sincronizzati';
+
+  @override
+  String get deleteSyncedFiles => 'Elimina registrazioni sincronizzate';
+
+  @override
+  String get deleteSyncedFilesMessage =>
+      'Queste registrazioni sono già state sincronizzate con il tuo telefono. Questa azione non può essere annullata.';
+
+  @override
+  String get syncedFilesDeleted => 'Registrazioni sincronizzate eliminate';
+
+  @override
+  String get deletePending => 'Elimina in sospeso';
+
+  @override
+  String get deletePendingFiles => 'Elimina registrazioni in sospeso';
+
+  @override
+  String get deletePendingFilesWarning =>
+      'Queste registrazioni NON sono state sincronizzate con il tuo telefono e andranno perse permanentemente. Questa azione non può essere annullata.';
+
+  @override
+  String get pendingFilesDeleted => 'Registrazioni in sospeso eliminate';
+
+  @override
+  String get deleteAllFiles => 'Elimina tutte le registrazioni';
+
+  @override
+  String get deleteAll => 'Elimina tutto';
+
+  @override
+  String get deleteAllFilesWarning =>
+      'Questo eliminerà le registrazioni sincronizzate e in sospeso. Le registrazioni in sospeso NON sono state sincronizzate e andranno perse permanentemente.';
+
+  @override
+  String get allFilesDeleted => 'Tutte le registrazioni eliminate';
+
+  @override
+  String nFiles(int count) {
+    return '$count registrazioni';
+  }
+
+  @override
+  String get manageStorage => 'Gestisci archivio';
+
+  @override
+  String get safelyBackedUp => 'Salvato sul tuo telefono';
+
+  @override
+  String get notYetSynced => 'Non ancora sincronizzato con il tuo telefono';
+
+  @override
+  String get clearAll => 'Cancella tutto';
+
+  @override
+  String get phoneKeypad => 'Tastiera';
+
+  @override
+  String get phoneHideKeypad => 'Nascondi tastiera';
+
+  @override
+  String get fairUsePolicy => 'Uso corretto';
+
+  @override
+  String get fairUseLoadError => 'Impossibile caricare lo stato di uso corretto. Riprova.';
+
+  @override
+  String get fairUseStatusNormal => 'Il tuo utilizzo è entro i limiti normali.';
+
+  @override
+  String get fairUseStageNormal => 'Normale';
+
+  @override
+  String get fairUseStageWarning => 'Avviso';
+
+  @override
+  String get fairUseStageThrottle => 'Limitato';
+
+  @override
+  String get fairUseStageRestrict => 'Bloccato';
+
+  @override
+  String get fairUseSpeechUsage => 'Utilizzo vocale';
+
+  @override
+  String get fairUseToday => 'Oggi';
+
+  @override
+  String get fairUse3Day => '3 giorni consecutivi';
+
+  @override
+  String get fairUseWeekly => 'Settimanale';
+
+  @override
+  String get fairUseAboutTitle => 'Informazioni sull\'uso corretto';
+
+  @override
+  String get fairUseAboutBody =>
+      'Omi è progettato per conversazioni personali, riunioni e interazioni dal vivo. L\'utilizzo è misurato dal tempo reale di parlato rilevato, non dal tempo di connessione. Se l\'utilizzo supera significativamente i modelli normali per contenuti non personali, potrebbero essere applicate modifiche.';
+
+  @override
+  String fairUseCaseRefCopied(String caseRef) {
+    return '$caseRef copiato';
+  }
+
+  @override
+  String get fairUseDailyTranscription => 'Trascrizione giornaliera';
+
+  @override
+  String fairUseBudgetUsed(String used, String limit) {
+    return '${used}m / ${limit}m';
+  }
+
+  @override
+  String get fairUseBudgetExhausted => 'Limite di trascrizione giornaliero raggiunto';
+
+  @override
+  String fairUseBudgetResetsAt(String time) {
+    return 'Si reimposta $time';
+  }
+
+  @override
+  String get transcriptionPaused => 'Registrazione, riconnessione';
+
+  @override
+  String get transcriptionPausedReconnecting => 'Registrazione in corso — riconnessione alla trascrizione...';
+
+  @override
+  String fairUseBannerStatus(String status) {
+    return 'Uso corretto: $status';
+  }
+
+  @override
+  String get improveConnectionTitle => 'Migliora connessione';
+
+  @override
+  String get improveConnectionContent =>
+      'Abbiamo migliorato il modo in cui Omi rimane connesso al tuo dispositivo. Per attivarlo, vai alla pagina Info dispositivo, tocca \"Disconnetti dispositivo\" e associa nuovamente il tuo dispositivo.';
+
+  @override
+  String get improveConnectionAction => 'Capito';
+
+  @override
+  String clockSkewWarning(int minutes) {
+    return 'L\'orologio del dispositivo è sfasato di ~$minutes min. Controlla le impostazioni di data e ora.';
+  }
 }

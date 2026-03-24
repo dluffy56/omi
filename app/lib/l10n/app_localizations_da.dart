@@ -25,7 +25,7 @@ class AppLocalizationsDa extends AppLocalizations {
 
   @override
   String get deleteConversationMessage =>
-      'Er du sikker på, at du vil slette denne samtale? Denne handling kan ikke fortrydes.';
+      'Dette vil også slette tilknyttede minder, opgaver og lydfiler. Denne handling kan ikke fortrydes.';
 
   @override
   String get confirm => 'Bekræft';
@@ -2654,7 +2654,7 @@ class AppLocalizationsDa extends AppLocalizations {
   String get showAll => 'Vis alle →';
 
   @override
-  String get noTasksForToday => 'Ingen opgaver for i dag.\\nSpørg Omi om flere opgaver eller opret manuelt.';
+  String get noTasksForToday => 'Ingen opgaver for i dag.\nSpørg Omi om flere opgaver eller opret manuelt.';
 
   @override
   String get dailyScore => 'DAGLIG SCORE';
@@ -8456,4 +8456,178 @@ class AppLocalizationsDa extends AppLocalizations {
 
   @override
   String get showTasksOnHomepage => 'Vis opgaver på hjemmesiden';
+
+  @override
+  String get phoneCallsUnlimitedOnly => 'Telefonopkald via Omi';
+
+  @override
+  String get phoneCallsUpsellSubtitle =>
+      'Foretag opkald via Omi og få transskription i realtid, automatiske resuméer og mere.';
+
+  @override
+  String get phoneCallsUpsellFeature1 => 'Transskription i realtid af hvert opkald';
+
+  @override
+  String get phoneCallsUpsellFeature2 => 'Automatiske opkaldsresuméer og handlingspunkter';
+
+  @override
+  String get phoneCallsUpsellFeature3 => 'Modtagere ser dit rigtige nummer, ikke et tilfældigt';
+
+  @override
+  String get phoneCallsUpsellFeature4 => 'Dine opkald forbliver private og sikre';
+
+  @override
+  String get phoneCallsUpgradeButton => 'Opgrader til Ubegrænset';
+
+  @override
+  String get phoneCallsMaybeLater => 'Måske senere';
+
+  @override
+  String get deleteSynced => 'Slet synkroniserede';
+
+  @override
+  String get deleteSyncedFiles => 'Slet synkroniserede optagelser';
+
+  @override
+  String get deleteSyncedFilesMessage =>
+      'Disse optagelser er allerede synkroniseret med din telefon. Dette kan ikke fortrydes.';
+
+  @override
+  String get syncedFilesDeleted => 'Synkroniserede optagelser slettet';
+
+  @override
+  String get deletePending => 'Slet ventende';
+
+  @override
+  String get deletePendingFiles => 'Slet ventende optagelser';
+
+  @override
+  String get deletePendingFilesWarning =>
+      'Disse optagelser er IKKE synkroniseret med din telefon og vil gå permanent tabt. Dette kan ikke fortrydes.';
+
+  @override
+  String get pendingFilesDeleted => 'Ventende optagelser slettet';
+
+  @override
+  String get deleteAllFiles => 'Slet alle optagelser';
+
+  @override
+  String get deleteAll => 'Slet alle';
+
+  @override
+  String get deleteAllFilesWarning =>
+      'Dette sletter synkroniserede og ventende optagelser. Ventende optagelser er IKKE synkroniseret og vil gå permanent tabt.';
+
+  @override
+  String get allFilesDeleted => 'Alle optagelser slettet';
+
+  @override
+  String nFiles(int count) {
+    return '$count optagelser';
+  }
+
+  @override
+  String get manageStorage => 'Administrer lager';
+
+  @override
+  String get safelyBackedUp => 'Sikkert sikkerhedskopieret til din telefon';
+
+  @override
+  String get notYetSynced => 'Endnu ikke synkroniseret med din telefon';
+
+  @override
+  String get clearAll => 'Ryd alt';
+
+  @override
+  String get phoneKeypad => 'Tastatur';
+
+  @override
+  String get phoneHideKeypad => 'Skjul tastatur';
+
+  @override
+  String get fairUsePolicy => 'Rimelig brug';
+
+  @override
+  String get fairUseLoadError => 'Kunne ikke indlæse status for rimelig brug. Prøv venligst igen.';
+
+  @override
+  String get fairUseStatusNormal => 'Dit forbrug er inden for normale grænser.';
+
+  @override
+  String get fairUseStageNormal => 'Normal';
+
+  @override
+  String get fairUseStageWarning => 'Advarsel';
+
+  @override
+  String get fairUseStageThrottle => 'Begrænset';
+
+  @override
+  String get fairUseStageRestrict => 'Spærret';
+
+  @override
+  String get fairUseSpeechUsage => 'Taleforbrug';
+
+  @override
+  String get fairUseToday => 'I dag';
+
+  @override
+  String get fairUse3Day => '3-dages rullende';
+
+  @override
+  String get fairUseWeekly => 'Ugentlig rullende';
+
+  @override
+  String get fairUseAboutTitle => 'Om rimelig brug';
+
+  @override
+  String get fairUseAboutBody =>
+      'Omi er designet til personlige samtaler, møder og live-interaktioner. Forbruget måles ved den faktiske registrerede taletid, ikke forbindelsestid. Hvis forbruget væsentligt overstiger normale mønstre for ikke-personligt indhold, kan der foretages justeringer.';
+
+  @override
+  String fairUseCaseRefCopied(String caseRef) {
+    return '$caseRef kopieret';
+  }
+
+  @override
+  String get fairUseDailyTranscription => 'Daily Transcription';
+
+  @override
+  String fairUseBudgetUsed(String used, String limit) {
+    return '${used}m / ${limit}m';
+  }
+
+  @override
+  String get fairUseBudgetExhausted => 'Daily transcription limit reached';
+
+  @override
+  String fairUseBudgetResetsAt(String time) {
+    return 'Resets $time';
+  }
+
+  @override
+  String get transcriptionPaused => 'Optager, genopretter forbindelse';
+
+  @override
+  String get transcriptionPausedReconnecting => 'Optager stadig — genopretter forbindelse til transskription...';
+
+  @override
+  String fairUseBannerStatus(String status) {
+    return 'Fair brug: $status';
+  }
+
+  @override
+  String get improveConnectionTitle => 'Forbedre forbindelsen';
+
+  @override
+  String get improveConnectionContent =>
+      'Vi har forbedret, hvordan Omi forbliver forbundet til din enhed. For at aktivere dette, gå til enhedsinfosiden, tryk på \"Afbryd enhed\", og tilslut din enhed igen.';
+
+  @override
+  String get improveConnectionAction => 'Forstået';
+
+  @override
+  String clockSkewWarning(int minutes) {
+    return 'Dit enheds ur er forskudt ~$minutes min. Tjek dine dato- og tidsindstillinger.';
+  }
 }

@@ -24,7 +24,8 @@ class AppLocalizationsCs extends AppLocalizations {
   String get deleteConversationTitle => 'Smazat konverzaci?';
 
   @override
-  String get deleteConversationMessage => 'Opravdu chcete smazat tuto konverzaci? Tuto akci nelze vrátit zpět.';
+  String get deleteConversationMessage =>
+      'Tím se také smažou související vzpomínky, úkoly a zvukové soubory. Tuto akci nelze vrátit zpět.';
 
   @override
   String get confirm => 'Potvrdit';
@@ -1727,7 +1728,7 @@ class AppLocalizationsCs extends AppLocalizations {
   }
 
   @override
-  String get dontShowAgain => 'Nezobrazovat znovu';
+  String get dontShowAgain => 'Znovu nezobrazovat';
 
   @override
   String get iUnderstand => 'Rozumím';
@@ -2674,7 +2675,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get showAll => 'Zobrazit vše →';
 
   @override
-  String get noTasksForToday => 'Žádné úkoly pro dnešek.\\nZeptejte se Omi na další úkoly nebo je vytvořte ručně.';
+  String get noTasksForToday => 'Žádné úkoly pro dnešek.\nZeptejte se Omi na další úkoly nebo je vytvořte ručně.';
 
   @override
   String get dailyScore => 'DENNÍ SKÓRE';
@@ -8468,4 +8469,178 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get showTasksOnHomepage => 'Zobrazit úkoly na domovské stránce';
+
+  @override
+  String get phoneCallsUnlimitedOnly => 'Telefonní hovory přes Omi';
+
+  @override
+  String get phoneCallsUpsellSubtitle =>
+      'Volejte přes Omi a získejte přepis v reálném čase, automatické shrnutí a další.';
+
+  @override
+  String get phoneCallsUpsellFeature1 => 'Přepis každého hovoru v reálném čase';
+
+  @override
+  String get phoneCallsUpsellFeature2 => 'Automatické shrnutí hovorů a úkoly';
+
+  @override
+  String get phoneCallsUpsellFeature3 => 'Příjemci vidí vaše skutečné číslo, ne náhodné';
+
+  @override
+  String get phoneCallsUpsellFeature4 => 'Vaše hovory zůstávají soukromé a bezpečné';
+
+  @override
+  String get phoneCallsUpgradeButton => 'Upgradovat na Neomezený';
+
+  @override
+  String get phoneCallsMaybeLater => 'Možná později';
+
+  @override
+  String get deleteSynced => 'Smazat synchronizované';
+
+  @override
+  String get deleteSyncedFiles => 'Smazat synchronizované nahrávky';
+
+  @override
+  String get deleteSyncedFilesMessage =>
+      'Tyto nahrávky jsou již synchronizovány s vaším telefonem. Toto nelze vrátit zpět.';
+
+  @override
+  String get syncedFilesDeleted => 'Synchronizované nahrávky smazány';
+
+  @override
+  String get deletePending => 'Smazat čekající';
+
+  @override
+  String get deletePendingFiles => 'Smazat čekající nahrávky';
+
+  @override
+  String get deletePendingFilesWarning =>
+      'Tyto nahrávky NEJSOU synchronizovány s vaším telefonem a budou trvale ztraceny. Toto nelze vrátit zpět.';
+
+  @override
+  String get pendingFilesDeleted => 'Čekající nahrávky smazány';
+
+  @override
+  String get deleteAllFiles => 'Smazat všechny nahrávky';
+
+  @override
+  String get deleteAll => 'Smazat vše';
+
+  @override
+  String get deleteAllFilesWarning =>
+      'Toto smaže synchronizované i čekající nahrávky. Čekající nahrávky NEJSOU synchronizovány a budou trvale ztraceny.';
+
+  @override
+  String get allFilesDeleted => 'Všechny nahrávky smazány';
+
+  @override
+  String nFiles(int count) {
+    return '$count nahrávek';
+  }
+
+  @override
+  String get manageStorage => 'Správa úložiště';
+
+  @override
+  String get safelyBackedUp => 'Bezpečně zálohováno na vašem telefonu';
+
+  @override
+  String get notYetSynced => 'Zatím nesynchronizováno s vaším telefonem';
+
+  @override
+  String get clearAll => 'Vymazat vše';
+
+  @override
+  String get phoneKeypad => 'Klávesnice';
+
+  @override
+  String get phoneHideKeypad => 'Skrýt klávesnici';
+
+  @override
+  String get fairUsePolicy => 'Spravedlivé používání';
+
+  @override
+  String get fairUseLoadError => 'Nepodařilo se načíst stav spravedlivého používání. Zkuste to prosím znovu.';
+
+  @override
+  String get fairUseStatusNormal => 'Vaše používání je v normálních mezích.';
+
+  @override
+  String get fairUseStageNormal => 'Normální';
+
+  @override
+  String get fairUseStageWarning => 'Upozornění';
+
+  @override
+  String get fairUseStageThrottle => 'Omezeno';
+
+  @override
+  String get fairUseStageRestrict => 'Zakázáno';
+
+  @override
+  String get fairUseSpeechUsage => 'Využití řeči';
+
+  @override
+  String get fairUseToday => 'Dnes';
+
+  @override
+  String get fairUse3Day => '3denní období';
+
+  @override
+  String get fairUseWeekly => 'Týdenní období';
+
+  @override
+  String get fairUseAboutTitle => 'O spravedlivém používání';
+
+  @override
+  String get fairUseAboutBody =>
+      'Omi je navržen pro osobní konverzace, schůzky a živé interakce. Používání se měří skutečným detekovaným časem řeči, nikoli časem připojení. Pokud používání výrazně překročí běžné vzorce pro neosobní obsah, mohou být provedeny úpravy.';
+
+  @override
+  String fairUseCaseRefCopied(String caseRef) {
+    return '$caseRef zkopírováno';
+  }
+
+  @override
+  String get fairUseDailyTranscription => 'Daily Transcription';
+
+  @override
+  String fairUseBudgetUsed(String used, String limit) {
+    return '${used}m / ${limit}m';
+  }
+
+  @override
+  String get fairUseBudgetExhausted => 'Daily transcription limit reached';
+
+  @override
+  String fairUseBudgetResetsAt(String time) {
+    return 'Resets $time';
+  }
+
+  @override
+  String get transcriptionPaused => 'Nahrávání, připojování';
+
+  @override
+  String get transcriptionPausedReconnecting => 'Stále se nahrává — připojování k přepisu...';
+
+  @override
+  String fairUseBannerStatus(String status) {
+    return 'Spravedlivé užívání: $status';
+  }
+
+  @override
+  String get improveConnectionTitle => 'Zlepšit připojení';
+
+  @override
+  String get improveConnectionContent =>
+      'Vylepšili jsme způsob, jakým Omi zůstává připojeno k vašemu zařízení. Pro aktivaci přejděte na stránku Informace o zařízení, klepněte na \"Odpojit zařízení\" a poté zařízení znovu spárujte.';
+
+  @override
+  String get improveConnectionAction => 'Rozumím';
+
+  @override
+  String clockSkewWarning(int minutes) {
+    return 'Hodiny vašeho zařízení se liší o ~$minutes min. Zkontrolujte nastavení data a času.';
+  }
 }

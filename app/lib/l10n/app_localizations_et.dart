@@ -25,7 +25,7 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get deleteConversationMessage =>
-      'Kas olete kindel, et soovite selle vestluse kustutada? Seda toimingut ei saa tagasi võtta.';
+      'See kustutab ka seotud mälestused, ülesanded ja helifailid. Seda toimingut ei saa tagasi võtta.';
 
   @override
   String get confirm => 'Kinnita';
@@ -2673,7 +2673,7 @@ class AppLocalizationsEt extends AppLocalizations {
   String get showAll => 'Kuva kõik →';
 
   @override
-  String get noTasksForToday => 'Täna pole ülesandeid.\\nKüsi Omi käest rohkem ülesandeid või loo need käsitsi.';
+  String get noTasksForToday => 'Täna pole ülesandeid.\nKüsi Omi käest rohkem ülesandeid või loo need käsitsi.';
 
   @override
   String get dailyScore => 'PÄEVA SKOOR';
@@ -8470,4 +8470,178 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get showTasksOnHomepage => 'Kuva ülesanded avalehel';
+
+  @override
+  String get phoneCallsUnlimitedOnly => 'Telefonikõned Omi kaudu';
+
+  @override
+  String get phoneCallsUpsellSubtitle =>
+      'Tehke kõnesid Omi kaudu ja saage reaalajas transkriptsioon, automaatsed kokkuvõtted ja palju muud.';
+
+  @override
+  String get phoneCallsUpsellFeature1 => 'Iga kõne reaalajas transkriptsioon';
+
+  @override
+  String get phoneCallsUpsellFeature2 => 'Automaatsed kõnekokkuvõtted ja tegevusülesanded';
+
+  @override
+  String get phoneCallsUpsellFeature3 => 'Saajad näevad teie pärisnumbrit, mitte juhuslikku';
+
+  @override
+  String get phoneCallsUpsellFeature4 => 'Teie kõned jäävad privaatseks ja turvaliseks';
+
+  @override
+  String get phoneCallsUpgradeButton => 'Uuenda Piiramatuks';
+
+  @override
+  String get phoneCallsMaybeLater => 'Võib-olla hiljem';
+
+  @override
+  String get deleteSynced => 'Kustuta sünkroniseeritud';
+
+  @override
+  String get deleteSyncedFiles => 'Kustuta sünkroniseeritud salvestised';
+
+  @override
+  String get deleteSyncedFilesMessage =>
+      'Need salvestised on juba teie telefoniga sünkroniseeritud. Seda ei saa tagasi võtta.';
+
+  @override
+  String get syncedFilesDeleted => 'Sünkroniseeritud salvestised kustutatud';
+
+  @override
+  String get deletePending => 'Kustuta ootel olevad';
+
+  @override
+  String get deletePendingFiles => 'Kustuta ootel salvestised';
+
+  @override
+  String get deletePendingFilesWarning =>
+      'Neid salvestisi EI ole teie telefoniga sünkroniseeritud ja need lähevad jäädavalt kaotsi. Seda ei saa tagasi võtta.';
+
+  @override
+  String get pendingFilesDeleted => 'Ootel salvestised kustutatud';
+
+  @override
+  String get deleteAllFiles => 'Kustuta kõik salvestised';
+
+  @override
+  String get deleteAll => 'Kustuta kõik';
+
+  @override
+  String get deleteAllFilesWarning =>
+      'See kustutab sünkroniseeritud ja ootel salvestised. Ootel salvestisi EI ole sünkroniseeritud ja need lähevad jäädavalt kaotsi.';
+
+  @override
+  String get allFilesDeleted => 'Kõik salvestised kustutatud';
+
+  @override
+  String nFiles(int count) {
+    return '$count salvestist';
+  }
+
+  @override
+  String get manageStorage => 'Halda salvestusruumi';
+
+  @override
+  String get safelyBackedUp => 'Turvaliselt teie telefonile varundatud';
+
+  @override
+  String get notYetSynced => 'Pole veel teie telefoniga sünkroniseeritud';
+
+  @override
+  String get clearAll => 'Tühjenda kõik';
+
+  @override
+  String get phoneKeypad => 'Klahvistik';
+
+  @override
+  String get phoneHideKeypad => 'Peida klahvistik';
+
+  @override
+  String get fairUsePolicy => 'Õiglane kasutus';
+
+  @override
+  String get fairUseLoadError => 'Õiglase kasutuse olekut ei õnnestunud laadida. Palun proovige uuesti.';
+
+  @override
+  String get fairUseStatusNormal => 'Teie kasutus on tavapiirides.';
+
+  @override
+  String get fairUseStageNormal => 'Tavaline';
+
+  @override
+  String get fairUseStageWarning => 'Hoiatus';
+
+  @override
+  String get fairUseStageThrottle => 'Piiratud';
+
+  @override
+  String get fairUseStageRestrict => 'Keelatud';
+
+  @override
+  String get fairUseSpeechUsage => 'Kõne kasutus';
+
+  @override
+  String get fairUseToday => 'Täna';
+
+  @override
+  String get fairUse3Day => '3-päevane periood';
+
+  @override
+  String get fairUseWeekly => 'Nädalane periood';
+
+  @override
+  String get fairUseAboutTitle => 'Õiglase kasutuse kohta';
+
+  @override
+  String get fairUseAboutBody =>
+      'Omi on loodud isiklikeks vestlusteks, koosolekuteks ja reaalajas suhtluseks. Kasutust mõõdetakse tuvastatud tegeliku kõneaja, mitte ühenduse aja järgi. Kui kasutus ületab oluliselt tavapäraseid mustreid mitteisikliku sisu puhul, võidakse rakendada kohandusi.';
+
+  @override
+  String fairUseCaseRefCopied(String caseRef) {
+    return '$caseRef kopeeritud';
+  }
+
+  @override
+  String get fairUseDailyTranscription => 'Daily Transcription';
+
+  @override
+  String fairUseBudgetUsed(String used, String limit) {
+    return '${used}m / ${limit}m';
+  }
+
+  @override
+  String get fairUseBudgetExhausted => 'Daily transcription limit reached';
+
+  @override
+  String fairUseBudgetResetsAt(String time) {
+    return 'Resets $time';
+  }
+
+  @override
+  String get transcriptionPaused => 'Salvestamine, taasühendamine';
+
+  @override
+  String get transcriptionPausedReconnecting => 'Salvestamine jätkub — ühenduse taastamine transkriptsiooniga...';
+
+  @override
+  String fairUseBannerStatus(String status) {
+    return 'Õiglane kasutus: $status';
+  }
+
+  @override
+  String get improveConnectionTitle => 'Ühenduse parandamine';
+
+  @override
+  String get improveConnectionContent =>
+      'Oleme parandanud, kuidas Omi jääb teie seadmega ühendusse. Selle aktiveerimiseks minge seadme teabe lehele, puudutage \"Katkesta seadme ühendus\" ja ühendage seade uuesti.';
+
+  @override
+  String get improveConnectionAction => 'Selge';
+
+  @override
+  String clockSkewWarning(int minutes) {
+    return 'Teie seadme kell erineb ~$minutes min. Kontrollige kuupäeva ja kellaaja seadeid.';
+  }
 }

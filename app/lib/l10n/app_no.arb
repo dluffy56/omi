@@ -5,7 +5,7 @@
     "transcriptTab": "Transkripsjon",
     "actionItemsTab": "Handlingspunkter",
     "deleteConversationTitle": "Slette samtale?",
-    "deleteConversationMessage": "Er du sikker på at du vil slette denne samtalen? Dette kan ikke angres.",
+    "deleteConversationMessage": "Dette vil også slette tilknyttede minner, oppgaver og lydfiler. Denne handlingen kan ikke angres.",
     "confirm": "Bekreft",
     "cancel": "Avbryt",
     "ok": "OK",
@@ -798,7 +798,7 @@
     "conversationsProcessedAutomatically": "Samtaler behandles automatisk",
     "getInsightsInstantly": "Få innsikt og sammendrag øyeblikkelig",
     "showAll": "Vis alle →",
-    "noTasksForToday": "Ingen oppgaver for i dag.\\nSpør Omi om flere oppgaver eller opprett manuelt.",
+    "noTasksForToday": "Ingen oppgaver for i dag.\nSpør Omi om flere oppgaver eller opprett manuelt.",
     "dailyScore": "DAGLIG POENGSUM",
     "dailyScoreDescription": "En poengsum for å hjelpe deg\nå fokusere bedre på utførelse.",
     "searchResults": "Søkeresultater",
@@ -2660,7 +2660,7 @@
     "anyoneWithLinkCanView": "Alle med lenken kan se",
     "tasksCleanTodayTitle": "Rydde dagens oppgaver?",
     "tasksCleanTodayMessage": "Dette vil kun fjerne frister",
-"tasksOverdue": "Forfalt",
+    "tasksOverdue": "Forfalt",
     "answerTheCallFrom": "Svar pa anropet fra",
     "callAlreadyInProgress": "En samtale pagar allerede",
     "callRecordingConsentDisclaimer": "Samtaleopptak kan kreve samtykke i din jurisdiksjon",
@@ -2722,5 +2722,89 @@
     "verifyYourNumber": "Verifiser nummeret ditt",
     "yourVerifiedNumbers": "Dine verifiserte numre",
     "showDailyScoreOnHomepage": "Vis daglig poengsum på hjemmesiden",
-    "showTasksOnHomepage": "Vis oppgaver på hjemmesiden"
+    "showTasksOnHomepage": "Vis oppgaver på hjemmesiden",
+    "phoneCallsUnlimitedOnly": "Telefonsamtaler via Omi",
+    "phoneCallsUpsellSubtitle": "Ring via Omi og få sanntids transkripsjon, automatiske sammendrag og mer.",
+    "phoneCallsUpsellFeature1": "Sanntids transkripsjon av hver samtale",
+    "phoneCallsUpsellFeature2": "Automatiske samtalesammendrag og oppgaver",
+    "phoneCallsUpsellFeature3": "Mottakere ser ditt ekte nummer, ikke et tilfeldig",
+    "phoneCallsUpsellFeature4": "Samtalene dine forblir private og sikre",
+    "phoneCallsUpgradeButton": "Oppgrader til Ubegrenset",
+    "phoneCallsMaybeLater": "Kanskje senere",
+    "deleteSynced": "Slett synkroniserte",
+    "deleteSyncedFiles": "Slett synkroniserte opptak",
+    "deleteSyncedFilesMessage": "Disse opptakene er allerede synkronisert med telefonen din. Dette kan ikke angres.",
+    "syncedFilesDeleted": "Synkroniserte opptak slettet",
+    "deletePending": "Slett ventende",
+    "deletePendingFiles": "Slett ventende opptak",
+    "deletePendingFilesWarning": "Disse opptakene er IKKE synkronisert med telefonen din og vil gå permanent tapt. Dette kan ikke angres.",
+    "pendingFilesDeleted": "Ventende opptak slettet",
+    "deleteAllFiles": "Slett alle opptak",
+    "deleteAll": "Slett alle",
+    "deleteAllFilesWarning": "Dette sletter synkroniserte og ventende opptak. Ventende opptak er IKKE synkronisert og vil gå permanent tapt.",
+    "allFilesDeleted": "Alle opptak slettet",
+    "nFiles": "{count} opptak",
+    "manageStorage": "Administrer lagring",
+    "safelyBackedUp": "Sikkert sikkerhetskopiert til telefonen din",
+    "notYetSynced": "Ennå ikke synkronisert med telefonen din",
+    "clearAll": "Tøm alt",
+    "phoneKeypad": "Tastatur",
+    "phoneHideKeypad": "Skjul tastatur",
+    "transcriptionPaused": "Tar opp, kobler til på nytt",
+    "transcriptionPausedReconnecting": "Tar fortsatt opp — kobler til transkripsjon på nytt...",
+    "fairUsePolicy": "Rimelig bruk",
+    "fairUseLoadError": "Kunne ikke laste status for rimelig bruk. Vennligst prøv igjen.",
+    "fairUseStatusNormal": "Bruken din er innenfor normale grenser.",
+    "fairUseStageNormal": "Normal",
+    "fairUseStageWarning": "Advarsel",
+    "fairUseStageThrottle": "Begrenset",
+    "fairUseStageRestrict": "Blokkert",
+    "fairUseSpeechUsage": "Talebruk",
+    "fairUseToday": "I dag",
+    "fairUse3Day": "3-dagers rullende",
+    "fairUseWeekly": "Ukentlig rullende",
+    "fairUseAboutTitle": "Om rimelig bruk",
+    "fairUseAboutBody": "Omi er designet for personlige samtaler, møter og direkte interaksjoner. Bruken måles etter faktisk oppdaget taletid, ikke tilkoblingstid. Hvis bruken vesentlig overstiger normale mønstre for ikke-personlig innhold, kan justeringer gjelde.",
+    "fairUseCaseRefCopied": "{caseRef} kopiert",
+    "@fairUseCaseRefCopied": {
+        "description": "Snackbar message when case reference is copied",
+        "placeholders": {
+            "caseRef": {
+                "type": "String"
+            }
+        }
+    },
+    "fairUseDailyTranscription": "Daily Transcription",
+    "fairUseBudgetExhausted": "Daily transcription limit reached",
+    "fairUseBudgetResetsAt": "Resets {time}",
+    "fairUseBudgetUsed": "{used}m / {limit}m",
+    "@fairUseBudgetUsed": {
+        "placeholders": {
+            "used": {
+                "type": "String"
+            },
+            "limit": {
+                "type": "String"
+            }
+        }
+    },
+    "@fairUseBudgetResetsAt": {
+        "placeholders": {
+            "time": {
+                "type": "String"
+            }
+        }
+    },
+    "fairUseBannerStatus": "Rettferdig bruk: {status}",
+    "@fairUseBannerStatus": {
+        "placeholders": {
+            "status": {
+                "type": "String"
+            }
+        }
+    },
+    "improveConnectionTitle": "Forbedre tilkobling",
+    "improveConnectionContent": "Vi har forbedret hvordan Omi holder seg tilkoblet enheten din. For å aktivere dette, gå til Enhetsinformasjon-siden, trykk på \"Koble fra enhet\", og koble til enheten din på nytt.",
+    "improveConnectionAction": "Forstått",
+    "clockSkewWarning": "Enhetens klokke avviker ~{minutes} min. Sjekk dato- og tidsinnstillingene."
 }

@@ -24,7 +24,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get deleteConversationTitle => 'حذف المحادثة؟';
 
   @override
-  String get deleteConversationMessage => 'هل أنت متأكد من رغبتك في حذف هذه المحادثة؟ لا يمكن التراجع عن هذا الإجراء.';
+  String get deleteConversationMessage =>
+      'سيؤدي هذا أيضًا إلى حذف الذكريات والمهام وملفات الصوت المرتبطة. لا يمكن التراجع عن هذا الإجراء.';
 
   @override
   String get confirm => 'تأكيد';
@@ -1713,7 +1714,7 @@ class AppLocalizationsAr extends AppLocalizations {
   }
 
   @override
-  String get dontShowAgain => 'لا تظهر هذا مرة أخرى';
+  String get dontShowAgain => 'عدم الإظهار مجدداً';
 
   @override
   String get iUnderstand => 'أفهم';
@@ -2654,7 +2655,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get showAll => 'عرض الكل ←';
 
   @override
-  String get noTasksForToday => 'لا توجد مهام لليوم.\\nاسأل Omi عن المزيد من المهام أو أنشئها يدويًا.';
+  String get noTasksForToday => 'لا توجد مهام لليوم.\nاسأل Omi عن المزيد من المهام أو أنشئها يدويًا.';
 
   @override
   String get dailyScore => 'النتيجة اليومية';
@@ -8414,4 +8415,177 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get showTasksOnHomepage => 'عرض المهام على الصفحة الرئيسية';
+
+  @override
+  String get phoneCallsUnlimitedOnly => 'مكالمات هاتفية عبر Omi';
+
+  @override
+  String get phoneCallsUpsellSubtitle =>
+      'قم بإجراء مكالمات عبر Omi واحصل على نسخ نصي فوري وملخصات تلقائية والمزيد. متاح حصرياً لمشتركي خطة غير محدود.';
+
+  @override
+  String get phoneCallsUpsellFeature1 => 'نسخ نصي فوري لكل مكالمة';
+
+  @override
+  String get phoneCallsUpsellFeature2 => 'ملخصات تلقائية للمكالمات وعناصر العمل';
+
+  @override
+  String get phoneCallsUpsellFeature3 => 'يرى المتلقون رقمك الحقيقي، وليس رقماً عشوائياً';
+
+  @override
+  String get phoneCallsUpsellFeature4 => 'مكالماتك تبقى خاصة وآمنة';
+
+  @override
+  String get phoneCallsUpgradeButton => 'ترقية إلى غير محدود';
+
+  @override
+  String get phoneCallsMaybeLater => 'ربما لاحقاً';
+
+  @override
+  String get deleteSynced => 'حذف المتزامن';
+
+  @override
+  String get deleteSyncedFiles => 'حذف التسجيلات المتزامنة';
+
+  @override
+  String get deleteSyncedFilesMessage => 'تم مزامنة هذه التسجيلات مع هاتفك بالفعل. لا يمكن التراجع عن هذا.';
+
+  @override
+  String get syncedFilesDeleted => 'تم حذف التسجيلات المتزامنة';
+
+  @override
+  String get deletePending => 'حذف المعلق';
+
+  @override
+  String get deletePendingFiles => 'حذف التسجيلات المعلقة';
+
+  @override
+  String get deletePendingFilesWarning =>
+      'لم تتم مزامنة هذه التسجيلات مع هاتفك وستفقد نهائياً. لا يمكن التراجع عن هذا.';
+
+  @override
+  String get pendingFilesDeleted => 'تم حذف التسجيلات المعلقة';
+
+  @override
+  String get deleteAllFiles => 'حذف جميع التسجيلات';
+
+  @override
+  String get deleteAll => 'حذف الكل';
+
+  @override
+  String get deleteAllFilesWarning =>
+      'سيؤدي هذا إلى حذف التسجيلات المتزامنة والمعلقة. التسجيلات المعلقة لم تتم مزامنتها وستفقد نهائياً. لا يمكن التراجع عن هذا.';
+
+  @override
+  String get allFilesDeleted => 'تم حذف جميع التسجيلات';
+
+  @override
+  String nFiles(int count) {
+    return '$count تسجيل';
+  }
+
+  @override
+  String get manageStorage => 'إدارة التخزين';
+
+  @override
+  String get safelyBackedUp => 'تم النسخ الاحتياطي بأمان إلى هاتفك';
+
+  @override
+  String get notYetSynced => 'لم تتم المزامنة بعد مع هاتفك';
+
+  @override
+  String get clearAll => 'مسح الكل';
+
+  @override
+  String get phoneKeypad => 'لوحة المفاتيح';
+
+  @override
+  String get phoneHideKeypad => 'إخفاء لوحة المفاتيح';
+
+  @override
+  String get fairUsePolicy => 'الاستخدام العادل';
+
+  @override
+  String get fairUseLoadError => 'تعذر تحميل حالة الاستخدام العادل. يرجى المحاولة مرة أخرى.';
+
+  @override
+  String get fairUseStatusNormal => 'استخدامك ضمن الحدود الطبيعية.';
+
+  @override
+  String get fairUseStageNormal => 'طبيعي';
+
+  @override
+  String get fairUseStageWarning => 'تحذير';
+
+  @override
+  String get fairUseStageThrottle => 'مقيّد';
+
+  @override
+  String get fairUseStageRestrict => 'محظور';
+
+  @override
+  String get fairUseSpeechUsage => 'استخدام الكلام';
+
+  @override
+  String get fairUseToday => 'اليوم';
+
+  @override
+  String get fairUse3Day => 'آخر 3 أيام';
+
+  @override
+  String get fairUseWeekly => 'أسبوعي';
+
+  @override
+  String get fairUseAboutTitle => 'حول الاستخدام العادل';
+
+  @override
+  String get fairUseAboutBody =>
+      'تم تصميم Omi للمحادثات الشخصية والاجتماعات والتفاعلات المباشرة. يُقاس الاستخدام بوقت الكلام الفعلي المكتشف وليس بوقت الاتصال. إذا تجاوز الاستخدام بشكل كبير الأنماط الطبيعية لمحتوى غير شخصي، فقد يتم تطبيق تعديلات.';
+
+  @override
+  String fairUseCaseRefCopied(String caseRef) {
+    return 'تم نسخ $caseRef';
+  }
+
+  @override
+  String get fairUseDailyTranscription => 'النسخ اليومي';
+
+  @override
+  String fairUseBudgetUsed(String used, String limit) {
+    return '$usedد / $limitد';
+  }
+
+  @override
+  String get fairUseBudgetExhausted => 'تم الوصول إلى حد النسخ اليومي';
+
+  @override
+  String fairUseBudgetResetsAt(String time) {
+    return 'يُعاد التعيين $time';
+  }
+
+  @override
+  String get transcriptionPaused => 'جارٍ التسجيل، إعادة الاتصال';
+
+  @override
+  String get transcriptionPausedReconnecting => 'لا يزال التسجيل جاريًا — إعادة الاتصال بالنسخ...';
+
+  @override
+  String fairUseBannerStatus(String status) {
+    return 'الاستخدام العادل: $status';
+  }
+
+  @override
+  String get improveConnectionTitle => 'تحسين الاتصال';
+
+  @override
+  String get improveConnectionContent =>
+      'لقد حسّنا طريقة بقاء Omi متصلاً بجهازك. لتفعيل ذلك، يرجى الانتقال إلى صفحة معلومات الجهاز، والضغط على \"فصل الجهاز\"، ثم إعادة إقران جهازك.';
+
+  @override
+  String get improveConnectionAction => 'فهمت';
+
+  @override
+  String clockSkewWarning(int minutes) {
+    return 'ساعة جهازك متأخرة بـ ~$minutes دقيقة. تحقق من إعدادات التاريخ والوقت.';
+  }
 }

@@ -14,8 +14,6 @@ import 'package:omi/pages/speech_profile/page.dart';
 import 'package:omi/utils/analytics/mixpanel.dart';
 import 'package:omi/utils/l10n_extensions.dart';
 import 'package:omi/utils/other/temp.dart';
-import 'package:omi/backend/http/api/speech_profile.dart';
-import 'package:omi/widgets/share_speech_profile_dialog.dart';
 
 import 'package:omi/pages/settings/conversation_display_settings.dart';
 
@@ -29,33 +27,10 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
-  bool? _hasProfile;
-
-  @override
-  void initState() {
-    super.initState();
-    _prefetchProfileStatus();
-  }
-
-  void _prefetchProfileStatus() async {
-    final hasProfile = await userHasSpeakerProfile();
-    if (mounted) setState(() => _hasProfile = hasProfile);
-  }
-
-  void _showSpeechProfileSharingDialog(BuildContext context) {
-    showShareSpeechProfileDialog(context, cachedHasProfile: _hasProfile);
-  }
-
-
   Widget _buildSectionContainer({required List<Widget> children}) {
     return Container(
-      decoration: BoxDecoration(
-        color: const Color(0xFF1C1C1E),
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: Column(
-        children: children,
-      ),
+      decoration: BoxDecoration(color: const Color(0xFF1C1C1E), borderRadius: BorderRadius.circular(20)),
+      child: Column(children: children),
     );
   }
 
@@ -72,19 +47,12 @@ class _ProfilePageState extends State<ProfilePage> {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        decoration: BoxDecoration(
-          color: const Color(0xFF1C1C1E),
-          borderRadius: BorderRadius.circular(20),
-        ),
+        decoration: BoxDecoration(color: const Color(0xFF1C1C1E), borderRadius: BorderRadius.circular(20)),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 18),
           child: Row(
             children: [
-              SizedBox(
-                width: 24,
-                height: 24,
-                child: icon,
-              ),
+              SizedBox(width: 24, height: 24, child: icon),
               const SizedBox(width: 16),
               Expanded(
                 child: Column(
@@ -94,11 +62,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       children: [
                         Text(
                           title,
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 17,
-                            fontWeight: FontWeight.w400,
-                          ),
+                          style: const TextStyle(color: Colors.white, fontSize: 17, fontWeight: FontWeight.w400),
                         ),
                         if (showBetaTag) ...[
                           const SizedBox(width: 8),
@@ -125,11 +89,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       const SizedBox(height: 2),
                       Text(
                         subtitle,
-                        style: const TextStyle(
-                          color: Color(0xFF8E8E93),
-                          fontSize: 12,
-                          fontWeight: FontWeight.w400,
-                        ),
+                        style: const TextStyle(color: Color(0xFF8E8E93), fontSize: 12, fontWeight: FontWeight.w400),
                       ),
                     ],
                   ],
@@ -138,27 +98,15 @@ class _ProfilePageState extends State<ProfilePage> {
               if (chipValue != null) ...[
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                  decoration: BoxDecoration(
-                    color: const Color(0xFF2A2A2E),
-                    borderRadius: BorderRadius.circular(100),
-                  ),
+                  decoration: BoxDecoration(color: const Color(0xFF2A2A2E), borderRadius: BorderRadius.circular(100)),
                   child: Text(
                     chipValue,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 13,
-                      fontWeight: FontWeight.w500,
-                    ),
+                    style: const TextStyle(color: Colors.white, fontSize: 13, fontWeight: FontWeight.w500),
                   ),
                 ),
                 if (showChevron) const SizedBox(width: 8),
               ],
-              if (showChevron)
-                const Icon(
-                  Icons.chevron_right,
-                  color: Color(0xFF3C3C43),
-                  size: 20,
-                ),
+              if (showChevron) const Icon(Icons.chevron_right, color: Color(0xFF3C3C43), size: 20),
             ],
           ),
         ),
@@ -173,11 +121,7 @@ class _ProfilePageState extends State<ProfilePage> {
       appBar: AppBar(
         title: Text(
           context.l10n.profile,
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 18,
-            fontWeight: FontWeight.w600,
-          ),
+          style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w600),
         ),
         centerTitle: true,
         backgroundColor: const Color(0xFF000000),
@@ -212,8 +156,9 @@ class _ProfilePageState extends State<ProfilePage> {
                 const Divider(height: 1, color: Color(0xFF3C3C43)),
                 _buildProfileItem(
                   title: context.l10n.email,
-                  chipValue:
-                      SharedPreferencesUtil().email.isEmpty ? context.l10n.notSet : SharedPreferencesUtil().email,
+                  chipValue: SharedPreferencesUtil().email.isEmpty
+                      ? context.l10n.notSet
+                      : SharedPreferencesUtil().email,
                   icon: const FaIcon(FontAwesomeIcons.solidEnvelope, color: Color(0xFF8E8E93), size: 20),
                   onTap: () {},
                   showChevron: false,
@@ -251,13 +196,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
                 const Divider(height: 1, color: Color(0xFF3C3C43)),
                 _buildProfileItem(
-                  title: context.l10n.shareSpeechProfile,
-                  icon: const Icon(Icons.person_add_alt_1, color: Color(0xFF8E8E93), size: 20),
-                  onTap: () => _showSpeechProfileSharingDialog(context),
-                ),
-                const Divider(height: 1, color: Color(0xFF3C3C43)),
-                _buildProfileItem(
-                  title: context.l10n.sharedProfiles,
+                  title: context.l10n.speechProfileSharing,
                   icon: const Icon(Icons.swap_horiz, color: Color(0xFF8E8E93), size: 20),
                   onTap: () => routeToPage(context, const SpeechProfileSharingPage()),
                 ),
@@ -296,11 +235,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   title: context.l10n.dataPrivacy,
                   icon: const FaIcon(FontAwesomeIcons.shield, color: Color(0xFF8E8E93), size: 20),
                   onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const DataPrivacyPage(),
-                      ),
-                    );
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const DataPrivacyPage()));
                   },
                 ),
               ],
@@ -313,8 +248,9 @@ class _ProfilePageState extends State<ProfilePage> {
                 Builder(
                   builder: (context) {
                     final uid = SharedPreferencesUtil().uid;
-                    final truncatedUid =
-                        uid.length > 6 ? '${uid.substring(0, 3)}•••••${uid.substring(uid.length - 3)}' : uid;
+                    final truncatedUid = uid.length > 6
+                        ? '${uid.substring(0, 3)}•••••${uid.substring(uid.length - 3)}'
+                        : uid;
                     return _buildProfileItem(
                       title: context.l10n.userId,
                       chipValue: truncatedUid,

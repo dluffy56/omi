@@ -24,7 +24,8 @@ class AppLocalizationsTh extends AppLocalizations {
   String get deleteConversationTitle => 'ลบบทสนทนา?';
 
   @override
-  String get deleteConversationMessage => 'คุณแน่ใจหรือไม่ว่าต้องการลบบทสนทนานี้? การดำเนินการนี้ไม่สามารถยกเลิกได้';
+  String get deleteConversationMessage =>
+      'การดำเนินการนี้จะลบความทรงจำ งาน และไฟล์เสียงที่เกี่ยวข้องด้วย การดำเนินการนี้ไม่สามารถย้อนกลับได้';
 
   @override
   String get confirm => 'ยืนยัน';
@@ -2659,7 +2660,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get showAll => 'แสดงทั้งหมด →';
 
   @override
-  String get noTasksForToday => 'ไม่มีงานสำหรับวันนี้\\nถาม Omi เพื่อรับงานเพิ่มเติมหรือสร้างด้วยตนเอง';
+  String get noTasksForToday => 'ไม่มีงานสำหรับวันนี้\nถาม Omi เพื่อรับงานเพิ่มเติมหรือสร้างด้วยตนเอง';
 
   @override
   String get dailyScore => 'คะแนนประจำวัน';
@@ -8429,4 +8430,176 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get showTasksOnHomepage => 'แสดงงานบนหน้าหลัก';
+
+  @override
+  String get phoneCallsUnlimitedOnly => 'โทรศัพท์ผ่าน Omi';
+
+  @override
+  String get phoneCallsUpsellSubtitle => 'โทรผ่าน Omi และรับการถอดเสียงแบบเรียลไทม์ สรุปอัตโนมัติ และอื่นๆ';
+
+  @override
+  String get phoneCallsUpsellFeature1 => 'ถอดเสียงแบบเรียลไทม์ทุกสาย';
+
+  @override
+  String get phoneCallsUpsellFeature2 => 'สรุปสายอัตโนมัติและรายการดำเนินการ';
+
+  @override
+  String get phoneCallsUpsellFeature3 => 'ผู้รับเห็นหมายเลขจริงของคุณ ไม่ใช่หมายเลขสุ่ม';
+
+  @override
+  String get phoneCallsUpsellFeature4 => 'สายของคุณยังคงเป็นส่วนตัวและปลอดภัย';
+
+  @override
+  String get phoneCallsUpgradeButton => 'อัปเกรดเป็น Unlimited';
+
+  @override
+  String get phoneCallsMaybeLater => 'ไว้ทีหลัง';
+
+  @override
+  String get deleteSynced => 'ลบที่ซิงค์แล้ว';
+
+  @override
+  String get deleteSyncedFiles => 'ลบการบันทึกที่ซิงค์แล้ว';
+
+  @override
+  String get deleteSyncedFilesMessage => 'การบันทึกเหล่านี้ซิงค์กับโทรศัพท์ของคุณแล้ว ไม่สามารถย้อนกลับได้';
+
+  @override
+  String get syncedFilesDeleted => 'ลบการบันทึกที่ซิงค์แล้ว';
+
+  @override
+  String get deletePending => 'ลบที่รอดำเนินการ';
+
+  @override
+  String get deletePendingFiles => 'ลบการบันทึกที่รอดำเนินการ';
+
+  @override
+  String get deletePendingFilesWarning =>
+      'การบันทึกเหล่านี้ยังไม่ได้ซิงค์กับโทรศัพท์ของคุณและจะสูญหายถาวร ไม่สามารถย้อนกลับได้';
+
+  @override
+  String get pendingFilesDeleted => 'ลบการบันทึกที่รอดำเนินการแล้ว';
+
+  @override
+  String get deleteAllFiles => 'ลบการบันทึกทั้งหมด';
+
+  @override
+  String get deleteAll => 'ลบทั้งหมด';
+
+  @override
+  String get deleteAllFilesWarning =>
+      'การดำเนินการนี้จะลบการบันทึกที่ซิงค์แล้วและที่รอดำเนินการ การบันทึกที่รอดำเนินการยังไม่ได้ซิงค์และจะสูญหายถาวร';
+
+  @override
+  String get allFilesDeleted => 'ลบการบันทึกทั้งหมดแล้ว';
+
+  @override
+  String nFiles(int count) {
+    return '$count การบันทึก';
+  }
+
+  @override
+  String get manageStorage => 'จัดการพื้นที่จัดเก็บ';
+
+  @override
+  String get safelyBackedUp => 'สำรองข้อมูลไว้ในโทรศัพท์อย่างปลอดภัย';
+
+  @override
+  String get notYetSynced => 'ยังไม่ได้ซิงค์กับโทรศัพท์ของคุณ';
+
+  @override
+  String get clearAll => 'ล้างทั้งหมด';
+
+  @override
+  String get phoneKeypad => 'แป้นกด';
+
+  @override
+  String get phoneHideKeypad => 'ซ่อนแป้นกด';
+
+  @override
+  String get fairUsePolicy => 'การใช้งานอย่างเป็นธรรม';
+
+  @override
+  String get fairUseLoadError => 'ไม่สามารถโหลดสถานะการใช้งานอย่างเป็นธรรมได้ กรุณาลองอีกครั้ง';
+
+  @override
+  String get fairUseStatusNormal => 'การใช้งานของคุณอยู่ในขีดจำกัดปกติ';
+
+  @override
+  String get fairUseStageNormal => 'ปกติ';
+
+  @override
+  String get fairUseStageWarning => 'คำเตือน';
+
+  @override
+  String get fairUseStageThrottle => 'ถูกจำกัด';
+
+  @override
+  String get fairUseStageRestrict => 'ถูกระงับ';
+
+  @override
+  String get fairUseSpeechUsage => 'การใช้งานเสียงพูด';
+
+  @override
+  String get fairUseToday => 'วันนี้';
+
+  @override
+  String get fairUse3Day => '3 วันต่อเนื่อง';
+
+  @override
+  String get fairUseWeekly => 'รายสัปดาห์ต่อเนื่อง';
+
+  @override
+  String get fairUseAboutTitle => 'เกี่ยวกับการใช้งานอย่างเป็นธรรม';
+
+  @override
+  String get fairUseAboutBody =>
+      'Omi ออกแบบมาสำหรับการสนทนาส่วนตัว การประชุม และการโต้ตอบสด การใช้งานวัดจากเวลาพูดจริงที่ตรวจพบ ไม่ใช่เวลาเชื่อมต่อ หากการใช้งานเกินรูปแบบปกติอย่างมากสำหรับเนื้อหาที่ไม่ใช่ส่วนบุคคล อาจมีการปรับเปลี่ยน';
+
+  @override
+  String fairUseCaseRefCopied(String caseRef) {
+    return 'คัดลอก $caseRef แล้ว';
+  }
+
+  @override
+  String get fairUseDailyTranscription => 'Daily Transcription';
+
+  @override
+  String fairUseBudgetUsed(String used, String limit) {
+    return '${used}m / ${limit}m';
+  }
+
+  @override
+  String get fairUseBudgetExhausted => 'Daily transcription limit reached';
+
+  @override
+  String fairUseBudgetResetsAt(String time) {
+    return 'Resets $time';
+  }
+
+  @override
+  String get transcriptionPaused => 'กำลังบันทึก, กำลังเชื่อมต่อใหม่';
+
+  @override
+  String get transcriptionPausedReconnecting => 'ยังคงบันทึกอยู่ — กำลังเชื่อมต่อกับการถอดเสียงใหม่...';
+
+  @override
+  String fairUseBannerStatus(String status) {
+    return 'การใช้งานอย่างเป็นธรรม: $status';
+  }
+
+  @override
+  String get improveConnectionTitle => 'ปรับปรุงการเชื่อมต่อ';
+
+  @override
+  String get improveConnectionContent =>
+      'เราได้ปรับปรุงวิธีที่ Omi เชื่อมต่อกับอุปกรณ์ของคุณ เพื่อเปิดใช้งาน ให้ไปที่หน้าข้อมูลอุปกรณ์ แตะ \"ยกเลิกการเชื่อมต่ออุปกรณ์\" แล้วจับคู่อุปกรณ์อีกครั้ง';
+
+  @override
+  String get improveConnectionAction => 'เข้าใจแล้ว';
+
+  @override
+  String clockSkewWarning(int minutes) {
+    return 'นาฬิกาอุปกรณ์ของคุณคลาดเคลื่อน ~$minutes นาที ตรวจสอบการตั้งค่าวันที่และเวลา';
+  }
 }

@@ -5,7 +5,7 @@
     "transcriptTab": "प्रतिलेख",
     "actionItemsTab": "कार्य",
     "deleteConversationTitle": "बातचीत हटाएं?",
-    "deleteConversationMessage": "क्या आप वाकई इस बातचीत को हटाना चाहते हैं? यह क्रिया पूर्ववत नहीं की जा सकती।",
+    "deleteConversationMessage": "इससे संबंधित यादें, कार्य और ऑडियो फ़ाइलें भी हटा दी जाएंगी। यह क्रिया पूर्ववत नहीं की जा सकती।",
     "confirm": "पुष्टि करें",
     "cancel": "रद्द करें",
     "ok": "ठीक है",
@@ -526,7 +526,7 @@
     "devicesFoundNearby": "{count} डिवाइस आस-पास मिले",
     "pairingSuccessful": "पेयरिंग सफल",
     "errorConnectingAppleWatch": "Apple Watch कनेक्ट करने में त्रुटि: {error}",
-    "dontShowAgain": "फिर से न दिखाएं",
+    "dontShowAgain": "दोबारा न दिखाएं",
     "iUnderstand": "मैं समझता हूं",
     "enableBluetooth": "ब्लूटूथ सक्षम करें",
     "bluetoothNeeded": "आपके वियरेबल से कनेक्ट करने के लिए Omi को ब्लूटूथ की आवश्यकता है।",
@@ -799,7 +799,7 @@
     "conversationsProcessedAutomatically": "बातचीत स्वचालित रूप से प्रोसेस की जाती है",
     "getInsightsInstantly": "तुरंत जानकारी और सारांश प्राप्त करें",
     "showAll": "सभी दिखाएं →",
-    "noTasksForToday": "आज के लिए कोई कार्य नहीं।\\nअधिक कार्यों के लिए Omi से पूछें या मैन्युअल रूप से बनाएं।",
+    "noTasksForToday": "आज के लिए कोई कार्य नहीं।\nअधिक कार्यों के लिए Omi से पूछें या मैन्युअल रूप से बनाएं।",
     "dailyScore": "दैनिक स्कोर",
     "dailyScoreDescription": "एक स्कोर जो आपको बेहतर तरीके से\nनिष्पादन पर ध्यान केंद्रित करने में मदद करता है।",
     "searchResults": "खोज परिणाम",
@@ -2661,7 +2661,7 @@
     "anyoneWithLinkCanView": "लिंक वाला कोई भी व्यक्ति देख सकता है",
     "tasksCleanTodayTitle": "आज के कार्य साफ़ करें?",
     "tasksCleanTodayMessage": "यह केवल समय-सीमाएँ हटाएगा",
-"tasksOverdue": "अतिदेय",
+    "tasksOverdue": "अतिदेय",
     "answerTheCallFrom": "इस नंबर से आने वाली कॉल का जवाब दें",
     "callAlreadyInProgress": "एक कॉल पहले से चल रही है",
     "callRecordingConsentDisclaimer": "कॉल रिकॉर्डिंग के लिए आपके क्षेत्र में सहमति आवश्यक हो सकती है",
@@ -2723,5 +2723,89 @@
     "verifyYourNumber": "अपना नंबर सत्यापित करें",
     "yourVerifiedNumbers": "आपके सत्यापित नंबर",
     "showDailyScoreOnHomepage": "होमपेज पर दैनिक स्कोर दिखाएं",
-    "showTasksOnHomepage": "होमपेज पर कार्य दिखाएं"
+    "showTasksOnHomepage": "होमपेज पर कार्य दिखाएं",
+    "phoneCallsUnlimitedOnly": "Omi से फ़ोन कॉल",
+    "phoneCallsUpsellSubtitle": "Omi से कॉल करें और रियल-टाइम ट्रांसक्रिप्शन, स्वचालित सारांश और बहुत कुछ पाएं।",
+    "phoneCallsUpsellFeature1": "हर कॉल की रियल-टाइम ट्रांसक्रिप्शन",
+    "phoneCallsUpsellFeature2": "स्वचालित कॉल सारांश और कार्य सूची",
+    "phoneCallsUpsellFeature3": "प्राप्तकर्ता आपका असली नंबर देखते हैं, कोई रैंडम नंबर नहीं",
+    "phoneCallsUpsellFeature4": "आपकी कॉल निजी और सुरक्षित रहती हैं",
+    "phoneCallsUpgradeButton": "अनलिमिटेड में अपग्रेड करें",
+    "phoneCallsMaybeLater": "शायद बाद में",
+    "deleteSynced": "सिंक किए गए हटाएं",
+    "deleteSyncedFiles": "सिंक की गई रिकॉर्डिंग हटाएं",
+    "deleteSyncedFilesMessage": "ये रिकॉर्डिंग पहले से आपके फोन पर सिंक हो चुकी हैं। यह पूर्ववत नहीं किया जा सकता।",
+    "syncedFilesDeleted": "सिंक की गई रिकॉर्डिंग हटाई गईं",
+    "deletePending": "लंबित हटाएं",
+    "deletePendingFiles": "लंबित रिकॉर्डिंग हटाएं",
+    "deletePendingFilesWarning": "ये रिकॉर्डिंग आपके फोन पर सिंक नहीं हुई हैं और स्थायी रूप से खो जाएंगी। यह पूर्ववत नहीं किया जा सकता।",
+    "pendingFilesDeleted": "लंबित रिकॉर्डिंग हटाई गईं",
+    "deleteAllFiles": "सभी रिकॉर्डिंग हटाएं",
+    "deleteAll": "सब हटाएं",
+    "deleteAllFilesWarning": "यह सिंक की गई और लंबित दोनों रिकॉर्डिंग हटा देगा। लंबित रिकॉर्डिंग सिंक नहीं हुई हैं और स्थायी रूप से खो जाएंगी।",
+    "allFilesDeleted": "सभी रिकॉर्डिंग हटाई गईं",
+    "nFiles": "{count} रिकॉर्डिंग",
+    "manageStorage": "स्टोरेज प्रबंधित करें",
+    "safelyBackedUp": "आपके फोन पर सुरक्षित बैकअप",
+    "notYetSynced": "अभी तक आपके फोन पर सिंक नहीं हुआ",
+    "clearAll": "सब हटाएं",
+    "phoneKeypad": "कीपैड",
+    "phoneHideKeypad": "कीपैड छुपाएं",
+    "transcriptionPaused": "रिकॉर्डिंग जारी, पुन: कनेक्ट हो रहा है",
+    "transcriptionPausedReconnecting": "अभी भी रिकॉर्ड हो रहा है — ट्रांसक्रिप्शन से पुनः कनेक्ट हो रहा है...",
+    "fairUsePolicy": "उचित उपयोग",
+    "fairUseLoadError": "उचित उपयोग की स्थिति लोड नहीं हो सकी। कृपया पुनः प्रयास करें।",
+    "fairUseStatusNormal": "आपका उपयोग सामान्य सीमा के भीतर है।",
+    "fairUseStageNormal": "सामान्य",
+    "fairUseStageWarning": "चेतावनी",
+    "fairUseStageThrottle": "सीमित",
+    "fairUseStageRestrict": "प्रतिबंधित",
+    "fairUseSpeechUsage": "वाक् उपयोग",
+    "fairUseToday": "आज",
+    "fairUse3Day": "3-दिन की अवधि",
+    "fairUseWeekly": "साप्ताहिक अवधि",
+    "fairUseAboutTitle": "उचित उपयोग के बारे में",
+    "fairUseAboutBody": "Omi व्यक्तिगत वार्तालाप, बैठकों और लाइव इंटरैक्शन के लिए डिज़ाइन किया गया है। उपयोग को वास्तविक पहचानी गई वाक् समय से मापा जाता है, कनेक्शन समय से नहीं। यदि उपयोग गैर-व्यक्तिगत सामग्री के लिए सामान्य पैटर्न से काफी अधिक हो जाता है, तो समायोजन लागू हो सकते हैं।",
+    "fairUseCaseRefCopied": "{caseRef} कॉपी किया गया",
+    "@fairUseCaseRefCopied": {
+        "description": "Snackbar message when case reference is copied",
+        "placeholders": {
+            "caseRef": {
+                "type": "String"
+            }
+        }
+    },
+    "fairUseDailyTranscription": "दैनिक ट्रांसक्रिप्शन",
+    "fairUseBudgetExhausted": "दैनिक ट्रांसक्रिप्शन सीमा पूरी हुई",
+    "fairUseBudgetResetsAt": "रीसेट {time}",
+    "fairUseBudgetUsed": "{used}मि / {limit}मि",
+    "@fairUseBudgetUsed": {
+        "placeholders": {
+            "used": {
+                "type": "String"
+            },
+            "limit": {
+                "type": "String"
+            }
+        }
+    },
+    "@fairUseBudgetResetsAt": {
+        "placeholders": {
+            "time": {
+                "type": "String"
+            }
+        }
+    },
+    "fairUseBannerStatus": "उचित उपयोग: {status}",
+    "@fairUseBannerStatus": {
+        "placeholders": {
+            "status": {
+                "type": "String"
+            }
+        }
+    },
+    "improveConnectionTitle": "कनेक्शन सुधारें",
+    "improveConnectionContent": "हमने Omi के आपके डिवाइस से जुड़े रहने के तरीके में सुधार किया है। इसे सक्रिय करने के लिए, डिवाइस जानकारी पृष्ठ पर जाएं, \"डिवाइस डिस्कनेक्ट करें\" पर टैप करें, और अपने डिवाइस को फिर से पेयर करें।",
+    "improveConnectionAction": "समझ गया",
+    "clockSkewWarning": "आपके डिवाइस की घड़ी ~{minutes} मिनट गलत है। अपनी तारीख और समय सेटिंग जांचें।"
 }

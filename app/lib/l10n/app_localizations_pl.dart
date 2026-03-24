@@ -25,7 +25,7 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get deleteConversationMessage =>
-      'Czy na pewno chcesz usunąć tę rozmowę? Ta czynność nie może zostać cofnięta.';
+      'Spowoduje to również usunięcie powiązanych wspomnień, zadań i plików audio. Tej czynności nie można cofnąć.';
 
   @override
   String get confirm => 'Potwierdź';
@@ -2677,7 +2677,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get showAll => 'Pokaż wszystko →';
 
   @override
-  String get noTasksForToday => 'Brak zadań na dziś.\\nZapytaj Omi o więcej zadań lub utwórz je ręcznie.';
+  String get noTasksForToday => 'Brak zadań na dziś.\nZapytaj Omi o więcej zadań lub utwórz je ręcznie.';
 
   @override
   String get dailyScore => 'DZIENNY WYNIK';
@@ -8491,4 +8491,178 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get showTasksOnHomepage => 'Pokaż zadania na stronie głównej';
+
+  @override
+  String get phoneCallsUnlimitedOnly => 'Połączenia telefoniczne przez Omi';
+
+  @override
+  String get phoneCallsUpsellSubtitle =>
+      'Dzwoń przez Omi i otrzymuj transkrypcję w czasie rzeczywistym, automatyczne podsumowania i wiele więcej.';
+
+  @override
+  String get phoneCallsUpsellFeature1 => 'Transkrypcja w czasie rzeczywistym każdego połączenia';
+
+  @override
+  String get phoneCallsUpsellFeature2 => 'Automatyczne podsumowania połączeń i zadania';
+
+  @override
+  String get phoneCallsUpsellFeature3 => 'Odbiorcy widzą twój prawdziwy numer, nie losowy';
+
+  @override
+  String get phoneCallsUpsellFeature4 => 'Twoje połączenia pozostają prywatne i bezpieczne';
+
+  @override
+  String get phoneCallsUpgradeButton => 'Przejdź na Bez limitu';
+
+  @override
+  String get phoneCallsMaybeLater => 'Może później';
+
+  @override
+  String get deleteSynced => 'Usuń zsynchronizowane';
+
+  @override
+  String get deleteSyncedFiles => 'Usuń zsynchronizowane nagrania';
+
+  @override
+  String get deleteSyncedFilesMessage =>
+      'Te nagrania zostały już zsynchronizowane z telefonem. Tej operacji nie można cofnąć.';
+
+  @override
+  String get syncedFilesDeleted => 'Zsynchronizowane nagrania usunięte';
+
+  @override
+  String get deletePending => 'Usuń oczekujące';
+
+  @override
+  String get deletePendingFiles => 'Usuń oczekujące nagrania';
+
+  @override
+  String get deletePendingFilesWarning =>
+      'Te nagrania NIE zostały zsynchronizowane z telefonem i zostaną trwale utracone. Tej operacji nie można cofnąć.';
+
+  @override
+  String get pendingFilesDeleted => 'Oczekujące nagrania usunięte';
+
+  @override
+  String get deleteAllFiles => 'Usuń wszystkie nagrania';
+
+  @override
+  String get deleteAll => 'Usuń wszystko';
+
+  @override
+  String get deleteAllFilesWarning =>
+      'To usunie zsynchronizowane i oczekujące nagrania. Oczekujące nagrania NIE zostały zsynchronizowane i zostaną trwale utracone.';
+
+  @override
+  String get allFilesDeleted => 'Wszystkie nagrania usunięte';
+
+  @override
+  String nFiles(int count) {
+    return '$count nagrań';
+  }
+
+  @override
+  String get manageStorage => 'Zarządzaj pamięcią';
+
+  @override
+  String get safelyBackedUp => 'Bezpiecznie zapisane na Twoim telefonie';
+
+  @override
+  String get notYetSynced => 'Jeszcze nie zsynchronizowano z Twoim telefonem';
+
+  @override
+  String get clearAll => 'Wyczyść wszystko';
+
+  @override
+  String get phoneKeypad => 'Klawiatura';
+
+  @override
+  String get phoneHideKeypad => 'Ukryj klawiaturę';
+
+  @override
+  String get fairUsePolicy => 'Uczciwe korzystanie';
+
+  @override
+  String get fairUseLoadError => 'Nie udało się załadować statusu uczciwego korzystania. Spróbuj ponownie.';
+
+  @override
+  String get fairUseStatusNormal => 'Twoje użytkowanie mieści się w normalnych granicach.';
+
+  @override
+  String get fairUseStageNormal => 'Normalne';
+
+  @override
+  String get fairUseStageWarning => 'Ostrzeżenie';
+
+  @override
+  String get fairUseStageThrottle => 'Ograniczone';
+
+  @override
+  String get fairUseStageRestrict => 'Zablokowane';
+
+  @override
+  String get fairUseSpeechUsage => 'Użycie mowy';
+
+  @override
+  String get fairUseToday => 'Dzisiaj';
+
+  @override
+  String get fairUse3Day => '3-dniowy okres';
+
+  @override
+  String get fairUseWeekly => 'Tygodniowy okres';
+
+  @override
+  String get fairUseAboutTitle => 'O uczciwym korzystaniu';
+
+  @override
+  String get fairUseAboutBody =>
+      'Omi jest zaprojektowany do osobistych rozmów, spotkań i interakcji na żywo. Użytkowanie mierzone jest na podstawie wykrytego rzeczywistego czasu mowy, a nie czasu połączenia. Jeśli użytkowanie znacząco przekracza normalne wzorce dla treści nieosobistych, mogą zostać zastosowane korekty.';
+
+  @override
+  String fairUseCaseRefCopied(String caseRef) {
+    return '$caseRef skopiowano';
+  }
+
+  @override
+  String get fairUseDailyTranscription => 'Dzienna transkrypcja';
+
+  @override
+  String fairUseBudgetUsed(String used, String limit) {
+    return '${used}m / ${limit}m';
+  }
+
+  @override
+  String get fairUseBudgetExhausted => 'Osiągnięto dzienny limit transkrypcji';
+
+  @override
+  String fairUseBudgetResetsAt(String time) {
+    return 'Resetuje się $time';
+  }
+
+  @override
+  String get transcriptionPaused => 'Nagrywanie, ponowne łączenie';
+
+  @override
+  String get transcriptionPausedReconnecting => 'Nadal nagrywa — ponowne łączenie z transkrypcją...';
+
+  @override
+  String fairUseBannerStatus(String status) {
+    return 'Uczciwe użytkowanie: $status';
+  }
+
+  @override
+  String get improveConnectionTitle => 'Popraw połączenie';
+
+  @override
+  String get improveConnectionContent =>
+      'Poprawiliśmy sposób, w jaki Omi utrzymuje połączenie z Twoim urządzeniem. Aby to aktywować, przejdź na stronę Informacje o urządzeniu, dotknij \"Odłącz urządzenie\" i ponownie sparuj urządzenie.';
+
+  @override
+  String get improveConnectionAction => 'Rozumiem';
+
+  @override
+  String clockSkewWarning(int minutes) {
+    return 'Zegar urządzenia różni się o ~$minutes min. Sprawdź ustawienia daty i godziny.';
+  }
 }

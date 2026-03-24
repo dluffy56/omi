@@ -25,7 +25,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get deleteConversationMessage =>
-      'Bạn có chắc chắn muốn xóa cuộc trò chuyện này? Hành động này không thể hoàn tác.';
+      'Thao tác này cũng sẽ xóa các kỷ niệm, nhiệm vụ và tệp âm thanh liên quan. Hành động này không thể hoàn tác.';
 
   @override
   String get confirm => 'Xác nhận';
@@ -2677,7 +2677,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get showAll => 'Hiển thị tất cả →';
 
   @override
-  String get noTasksForToday => 'Không có nhiệm vụ cho hôm nay.\\nHỏi Omi để có thêm nhiệm vụ hoặc tạo thủ công.';
+  String get noTasksForToday => 'Không có nhiệm vụ cho hôm nay.\nHỏi Omi để có thêm nhiệm vụ hoặc tạo thủ công.';
 
   @override
   String get dailyScore => 'ĐIỂM HÀNG NGÀY';
@@ -8476,4 +8476,177 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get showTasksOnHomepage => 'Hiển thị Nhiệm vụ trên trang chủ';
+
+  @override
+  String get phoneCallsUnlimitedOnly => 'Cuộc gọi điện thoại qua Omi';
+
+  @override
+  String get phoneCallsUpsellSubtitle =>
+      'Gọi điện qua Omi và nhận phiên âm thời gian thực, tóm tắt tự động và nhiều hơn nữa.';
+
+  @override
+  String get phoneCallsUpsellFeature1 => 'Phiên âm thời gian thực mọi cuộc gọi';
+
+  @override
+  String get phoneCallsUpsellFeature2 => 'Tóm tắt cuộc gọi tự động và danh sách hành động';
+
+  @override
+  String get phoneCallsUpsellFeature3 => 'Người nhận thấy số thật của bạn, không phải số ngẫu nhiên';
+
+  @override
+  String get phoneCallsUpsellFeature4 => 'Cuộc gọi của bạn luôn riêng tư và an toàn';
+
+  @override
+  String get phoneCallsUpgradeButton => 'Nâng cấp lên Không giới hạn';
+
+  @override
+  String get phoneCallsMaybeLater => 'Để sau';
+
+  @override
+  String get deleteSynced => 'Xóa đã đồng bộ';
+
+  @override
+  String get deleteSyncedFiles => 'Xóa bản ghi đã đồng bộ';
+
+  @override
+  String get deleteSyncedFilesMessage => 'Các bản ghi này đã được đồng bộ với điện thoại của bạn. Không thể hoàn tác.';
+
+  @override
+  String get syncedFilesDeleted => 'Đã xóa bản ghi đồng bộ';
+
+  @override
+  String get deletePending => 'Xóa đang chờ';
+
+  @override
+  String get deletePendingFiles => 'Xóa bản ghi đang chờ';
+
+  @override
+  String get deletePendingFilesWarning =>
+      'Các bản ghi này CHƯA được đồng bộ với điện thoại của bạn và sẽ bị mất vĩnh viễn. Không thể hoàn tác.';
+
+  @override
+  String get pendingFilesDeleted => 'Đã xóa bản ghi đang chờ';
+
+  @override
+  String get deleteAllFiles => 'Xóa tất cả bản ghi';
+
+  @override
+  String get deleteAll => 'Xóa tất cả';
+
+  @override
+  String get deleteAllFilesWarning =>
+      'Thao tác này sẽ xóa các bản ghi đã đồng bộ và đang chờ. Bản ghi đang chờ CHƯA được đồng bộ và sẽ bị mất vĩnh viễn.';
+
+  @override
+  String get allFilesDeleted => 'Đã xóa tất cả bản ghi';
+
+  @override
+  String nFiles(int count) {
+    return '$count bản ghi';
+  }
+
+  @override
+  String get manageStorage => 'Quản lý lưu trữ';
+
+  @override
+  String get safelyBackedUp => 'Đã sao lưu an toàn vào điện thoại';
+
+  @override
+  String get notYetSynced => 'Chưa đồng bộ với điện thoại của bạn';
+
+  @override
+  String get clearAll => 'Xóa tất cả';
+
+  @override
+  String get phoneKeypad => 'Bàn phím';
+
+  @override
+  String get phoneHideKeypad => 'Ẩn bàn phím';
+
+  @override
+  String get fairUsePolicy => 'Sử dụng hợp lý';
+
+  @override
+  String get fairUseLoadError => 'Không thể tải trạng thái sử dụng hợp lý. Vui lòng thử lại.';
+
+  @override
+  String get fairUseStatusNormal => 'Mức sử dụng của bạn trong giới hạn bình thường.';
+
+  @override
+  String get fairUseStageNormal => 'Bình thường';
+
+  @override
+  String get fairUseStageWarning => 'Cảnh báo';
+
+  @override
+  String get fairUseStageThrottle => 'Bị hạn chế';
+
+  @override
+  String get fairUseStageRestrict => 'Bị chặn';
+
+  @override
+  String get fairUseSpeechUsage => 'Sử dụng giọng nói';
+
+  @override
+  String get fairUseToday => 'Hôm nay';
+
+  @override
+  String get fairUse3Day => '3 ngày liên tục';
+
+  @override
+  String get fairUseWeekly => 'Hàng tuần liên tục';
+
+  @override
+  String get fairUseAboutTitle => 'Về sử dụng hợp lý';
+
+  @override
+  String get fairUseAboutBody =>
+      'Omi được thiết kế cho các cuộc trò chuyện cá nhân, cuộc họp và tương tác trực tiếp. Mức sử dụng được đo bằng thời gian nói thực tế được phát hiện, không phải thời gian kết nối. Nếu mức sử dụng vượt quá đáng kể các mẫu bình thường cho nội dung không cá nhân, có thể áp dụng các điều chỉnh.';
+
+  @override
+  String fairUseCaseRefCopied(String caseRef) {
+    return 'Đã sao chép $caseRef';
+  }
+
+  @override
+  String get fairUseDailyTranscription => 'Chuyển giọng hàng ngày';
+
+  @override
+  String fairUseBudgetUsed(String used, String limit) {
+    return '${used}p / ${limit}p';
+  }
+
+  @override
+  String get fairUseBudgetExhausted => 'Đã đạt giới hạn chuyển giọng hàng ngày';
+
+  @override
+  String fairUseBudgetResetsAt(String time) {
+    return 'Đặt lại $time';
+  }
+
+  @override
+  String get transcriptionPaused => 'Đang ghi, đang kết nối lại';
+
+  @override
+  String get transcriptionPausedReconnecting => 'Vẫn đang ghi — đang kết nối lại với phiên âm...';
+
+  @override
+  String fairUseBannerStatus(String status) {
+    return 'Sử dụng hợp lý: $status';
+  }
+
+  @override
+  String get improveConnectionTitle => 'Cải thiện kết nối';
+
+  @override
+  String get improveConnectionContent =>
+      'Chúng tôi đã cải thiện cách Omi duy trì kết nối với thiết bị của bạn. Để kích hoạt, hãy vào trang Thông tin thiết bị, nhấn \"Ngắt kết nối thiết bị\", rồi ghép nối lại thiết bị.';
+
+  @override
+  String get improveConnectionAction => 'Đã hiểu';
+
+  @override
+  String clockSkewWarning(int minutes) {
+    return 'Đồng hồ thiết bị của bạn lệch ~$minutes phút. Kiểm tra cài đặt ngày và giờ.';
+  }
 }

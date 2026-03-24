@@ -25,7 +25,7 @@ class AppLocalizationsBg extends AppLocalizations {
 
   @override
   String get deleteConversationMessage =>
-      'Сигурни ли сте, че искате да изтриете този разговор? Това действие не може да бъде отменено.';
+      'Това ще изтрие и свързаните спомени, задачи и аудио файлове. Това действие не може да бъде отменено.';
 
   @override
   String get confirm => 'Потвърди';
@@ -2678,7 +2678,7 @@ class AppLocalizationsBg extends AppLocalizations {
   String get showAll => 'Покажи всички →';
 
   @override
-  String get noTasksForToday => 'Няма задачи за днес.\\nПопитайте Omi за повече задачи или създайте ръчно.';
+  String get noTasksForToday => 'Няма задачи за днес.\nПопитайте Omi за повече задачи или създайте ръчно.';
 
   @override
   String get dailyScore => 'ДНЕВЕН РЕЗУЛТАТ';
@@ -8508,4 +8508,178 @@ class AppLocalizationsBg extends AppLocalizations {
 
   @override
   String get showTasksOnHomepage => 'Покажи задачите на началната страница';
+
+  @override
+  String get phoneCallsUnlimitedOnly => 'Телефонни обаждания чрез Omi';
+
+  @override
+  String get phoneCallsUpsellSubtitle =>
+      'Правете обаждания чрез Omi и получавайте транскрипция в реално време, автоматични резюмета и още. Достъпно само за абонати на план Неограничен.';
+
+  @override
+  String get phoneCallsUpsellFeature1 => 'Транскрипция в реално време на всяко обаждане';
+
+  @override
+  String get phoneCallsUpsellFeature2 => 'Автоматични резюмета и задачи от обаждания';
+
+  @override
+  String get phoneCallsUpsellFeature3 => 'Получателите виждат истинския ви номер, не случаен';
+
+  @override
+  String get phoneCallsUpsellFeature4 => 'Вашите обаждания остават лични и сигурни';
+
+  @override
+  String get phoneCallsUpgradeButton => 'Надградете до Неограничен';
+
+  @override
+  String get phoneCallsMaybeLater => 'Може би по-късно';
+
+  @override
+  String get deleteSynced => 'Изтриване на синхронизираните';
+
+  @override
+  String get deleteSyncedFiles => 'Изтрий синхронизираните записи';
+
+  @override
+  String get deleteSyncedFilesMessage =>
+      'Тези записи вече са синхронизирани с телефона ви. Това не може да бъде отменено.';
+
+  @override
+  String get syncedFilesDeleted => 'Синхронизираните записи са изтрити';
+
+  @override
+  String get deletePending => 'Изтриване на чакащите';
+
+  @override
+  String get deletePendingFiles => 'Изтрий чакащите записи';
+
+  @override
+  String get deletePendingFilesWarning =>
+      'Тези записи НЕ са синхронизирани с телефона ви и ще бъдат загубени завинаги. Това не може да бъде отменено.';
+
+  @override
+  String get pendingFilesDeleted => 'Чакащите записи са изтрити';
+
+  @override
+  String get deleteAllFiles => 'Изтрий всички записи';
+
+  @override
+  String get deleteAll => 'Изтриване на всички';
+
+  @override
+  String get deleteAllFilesWarning =>
+      'Това ще изтрие синхронизираните и чакащите записи. Чакащите записи НЕ са синхронизирани и ще бъдат загубени завинаги.';
+
+  @override
+  String get allFilesDeleted => 'Всички записи са изтрити';
+
+  @override
+  String nFiles(int count) {
+    return '$count записа';
+  }
+
+  @override
+  String get manageStorage => 'Управление на хранилището';
+
+  @override
+  String get safelyBackedUp => 'Безопасно запазено на телефона ви';
+
+  @override
+  String get notYetSynced => 'Все още не е синхронизирано с телефона ви';
+
+  @override
+  String get clearAll => 'Изчисти всичко';
+
+  @override
+  String get phoneKeypad => 'Клавиатура';
+
+  @override
+  String get phoneHideKeypad => 'Скрий клавиатурата';
+
+  @override
+  String get fairUsePolicy => 'Честна употреба';
+
+  @override
+  String get fairUseLoadError => 'Неуспешно зареждане на статуса на честна употреба. Моля, опитайте отново.';
+
+  @override
+  String get fairUseStatusNormal => 'Вашата употреба е в нормалните граници.';
+
+  @override
+  String get fairUseStageNormal => 'Нормална';
+
+  @override
+  String get fairUseStageWarning => 'Предупреждение';
+
+  @override
+  String get fairUseStageThrottle => 'Ограничена';
+
+  @override
+  String get fairUseStageRestrict => 'Забранена';
+
+  @override
+  String get fairUseSpeechUsage => 'Употреба на реч';
+
+  @override
+  String get fairUseToday => 'Днес';
+
+  @override
+  String get fairUse3Day => '3-дневен период';
+
+  @override
+  String get fairUseWeekly => 'Седмичен период';
+
+  @override
+  String get fairUseAboutTitle => 'Относно честната употреба';
+
+  @override
+  String get fairUseAboutBody =>
+      'Omi е проектиран за лични разговори, срещи и взаимодействия на живо. Употребата се измерва по реалното открито време на реч, а не по времето на връзка. Ако употребата значително надвишава нормалните модели за неличностно съдържание, може да се приложат корекции.';
+
+  @override
+  String fairUseCaseRefCopied(String caseRef) {
+    return '$caseRef копирано';
+  }
+
+  @override
+  String get fairUseDailyTranscription => 'Daily Transcription';
+
+  @override
+  String fairUseBudgetUsed(String used, String limit) {
+    return '${used}m / ${limit}m';
+  }
+
+  @override
+  String get fairUseBudgetExhausted => 'Daily transcription limit reached';
+
+  @override
+  String fairUseBudgetResetsAt(String time) {
+    return 'Resets $time';
+  }
+
+  @override
+  String get transcriptionPaused => 'Записва се, свързване отново';
+
+  @override
+  String get transcriptionPausedReconnecting => 'Все още се записва — свързване с транскрипцията...';
+
+  @override
+  String fairUseBannerStatus(String status) {
+    return 'Добросъвестно ползване: $status';
+  }
+
+  @override
+  String get improveConnectionTitle => 'Подобряване на връзката';
+
+  @override
+  String get improveConnectionContent =>
+      'Подобрихме начина, по който Omi остава свързан с вашето устройство. За да активирате това, моля, отидете на страницата с информация за устройството, натиснете \"Изключване на устройството\" и сдвоете устройството си отново.';
+
+  @override
+  String get improveConnectionAction => 'Разбрах';
+
+  @override
+  String clockSkewWarning(int minutes) {
+    return 'Часовникът на устройството ви е разместен с ~$minutes мин. Проверете настройките за дата и час.';
+  }
 }

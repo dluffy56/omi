@@ -192,7 +192,7 @@ abstract class AppLocalizations {
   /// Message for delete confirmation dialog
   ///
   /// In en, this message translates to:
-  /// **'Are you sure you want to delete this conversation? This action cannot be undone.'**
+  /// **'This will also delete associated memories, tasks, and audio files. This action cannot be undone.'**
   String get deleteConversationMessage;
 
   /// Confirm button label
@@ -249,7 +249,7 @@ abstract class AppLocalizations {
   /// **'Close'**
   String get close;
 
-  /// Clear button
+  /// Button label to clear files
   ///
   /// In en, this message translates to:
   /// **'Clear'**
@@ -3348,7 +3348,7 @@ abstract class AppLocalizations {
   /// Checkbox text to prevent showing dialog again
   ///
   /// In en, this message translates to:
-  /// **'Don\'t show it again'**
+  /// **'Don\'t show again'**
   String get dontShowAgain;
 
   /// Button to acknowledge warning
@@ -5142,7 +5142,7 @@ abstract class AppLocalizations {
   /// Message shown when there are no tasks due today
   ///
   /// In en, this message translates to:
-  /// **'No tasks for today.\\nAsk Omi for more tasks or create manually.'**
+  /// **'No tasks for today.\nAsk Omi for more tasks or create manually.'**
   String get noTasksForToday;
 
   /// Header for daily score widget
@@ -15830,6 +15830,318 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Show Tasks on homepage'**
   String get showTasksOnHomepage;
+
+  /// Title for the phone calls upsell sheet shown to non-unlimited users
+  ///
+  /// In en, this message translates to:
+  /// **'Phone Calls via Omi'**
+  String get phoneCallsUnlimitedOnly;
+
+  /// Subtitle explaining phone calls feature on upsell sheet
+  ///
+  /// In en, this message translates to:
+  /// **'Make calls through Omi and get real-time transcription, automatic summaries, and more. Available exclusively for Unlimited plan subscribers.'**
+  String get phoneCallsUpsellSubtitle;
+
+  /// Phone calls upsell feature 1
+  ///
+  /// In en, this message translates to:
+  /// **'Real-time transcription of every call'**
+  String get phoneCallsUpsellFeature1;
+
+  /// Phone calls upsell feature 2
+  ///
+  /// In en, this message translates to:
+  /// **'Automatic call summaries and action items'**
+  String get phoneCallsUpsellFeature2;
+
+  /// Phone calls upsell feature 3
+  ///
+  /// In en, this message translates to:
+  /// **'Recipients see your real number, not a random one'**
+  String get phoneCallsUpsellFeature3;
+
+  /// Phone calls upsell feature 4
+  ///
+  /// In en, this message translates to:
+  /// **'Your calls stay private and secure'**
+  String get phoneCallsUpsellFeature4;
+
+  /// Button text to upgrade to unlimited plan from phone calls upsell
+  ///
+  /// In en, this message translates to:
+  /// **'Upgrade to Unlimited'**
+  String get phoneCallsUpgradeButton;
+
+  /// Dismiss button text on phone calls upsell sheet
+  ///
+  /// In en, this message translates to:
+  /// **'Maybe later'**
+  String get phoneCallsMaybeLater;
+
+  /// Menu option to delete synced recordings
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Synced'**
+  String get deleteSynced;
+
+  /// Dialog title for deleting synced files
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Synced Recordings'**
+  String get deleteSyncedFiles;
+
+  /// Confirmation message for deleting synced files
+  ///
+  /// In en, this message translates to:
+  /// **'These recordings have already been synced to your phone. This cannot be undone.'**
+  String get deleteSyncedFilesMessage;
+
+  /// Snackbar message after synced files deleted
+  ///
+  /// In en, this message translates to:
+  /// **'Synced recordings deleted'**
+  String get syncedFilesDeleted;
+
+  /// Menu option to delete pending recordings
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Pending'**
+  String get deletePending;
+
+  /// Dialog title for deleting pending files
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Pending Recordings'**
+  String get deletePendingFiles;
+
+  /// Warning message for deleting pending files
+  ///
+  /// In en, this message translates to:
+  /// **'These recordings have NOT been synced to your phone and will be permanently lost. This cannot be undone.'**
+  String get deletePendingFilesWarning;
+
+  /// Snackbar message after pending files deleted
+  ///
+  /// In en, this message translates to:
+  /// **'Pending recordings deleted'**
+  String get pendingFilesDeleted;
+
+  /// Dialog title for deleting all files
+  ///
+  /// In en, this message translates to:
+  /// **'Delete All Recordings'**
+  String get deleteAllFiles;
+
+  /// Menu option to delete all recordings
+  ///
+  /// In en, this message translates to:
+  /// **'Delete All'**
+  String get deleteAll;
+
+  /// Warning message for deleting all files
+  ///
+  /// In en, this message translates to:
+  /// **'This will delete both synced and pending recordings. Pending recordings have NOT been synced and will be permanently lost. This cannot be undone.'**
+  String get deleteAllFilesWarning;
+
+  /// Snackbar message after all files deleted
+  ///
+  /// In en, this message translates to:
+  /// **'All recordings deleted'**
+  String get allFilesDeleted;
+
+  /// Count of files
+  ///
+  /// In en, this message translates to:
+  /// **'{count} recordings'**
+  String nFiles(int count);
+
+  /// Menu option and sheet title for managing recording storage
+  ///
+  /// In en, this message translates to:
+  /// **'Manage Storage'**
+  String get manageStorage;
+
+  /// Description for synced files in manage storage sheet
+  ///
+  /// In en, this message translates to:
+  /// **'Safely backed up to your phone'**
+  String get safelyBackedUp;
+
+  /// Description for pending files in manage storage sheet
+  ///
+  /// In en, this message translates to:
+  /// **'Not yet synced to your phone'**
+  String get notYetSynced;
+
+  /// Button label to clear all files
+  ///
+  /// In en, this message translates to:
+  /// **'Clear All'**
+  String get clearAll;
+
+  /// Label for the keypad/dialpad button during an active phone call
+  ///
+  /// In en, this message translates to:
+  /// **'Keypad'**
+  String get phoneKeypad;
+
+  /// Label for the button to dismiss the in-call keypad
+  ///
+  /// In en, this message translates to:
+  /// **'Hide Keypad'**
+  String get phoneHideKeypad;
+
+  /// No description provided for @fairUsePolicy.
+  ///
+  /// In en, this message translates to:
+  /// **'Fair Use'**
+  String get fairUsePolicy;
+
+  /// No description provided for @fairUseLoadError.
+  ///
+  /// In en, this message translates to:
+  /// **'Unable to load fair use status. Please try again.'**
+  String get fairUseLoadError;
+
+  /// No description provided for @fairUseStatusNormal.
+  ///
+  /// In en, this message translates to:
+  /// **'Your usage is within normal limits.'**
+  String get fairUseStatusNormal;
+
+  /// No description provided for @fairUseStageNormal.
+  ///
+  /// In en, this message translates to:
+  /// **'Normal'**
+  String get fairUseStageNormal;
+
+  /// No description provided for @fairUseStageWarning.
+  ///
+  /// In en, this message translates to:
+  /// **'Warning'**
+  String get fairUseStageWarning;
+
+  /// No description provided for @fairUseStageThrottle.
+  ///
+  /// In en, this message translates to:
+  /// **'Throttled'**
+  String get fairUseStageThrottle;
+
+  /// No description provided for @fairUseStageRestrict.
+  ///
+  /// In en, this message translates to:
+  /// **'Restricted'**
+  String get fairUseStageRestrict;
+
+  /// No description provided for @fairUseSpeechUsage.
+  ///
+  /// In en, this message translates to:
+  /// **'Speech Usage'**
+  String get fairUseSpeechUsage;
+
+  /// No description provided for @fairUseToday.
+  ///
+  /// In en, this message translates to:
+  /// **'Today'**
+  String get fairUseToday;
+
+  /// No description provided for @fairUse3Day.
+  ///
+  /// In en, this message translates to:
+  /// **'3-Day Rolling'**
+  String get fairUse3Day;
+
+  /// No description provided for @fairUseWeekly.
+  ///
+  /// In en, this message translates to:
+  /// **'Weekly Rolling'**
+  String get fairUseWeekly;
+
+  /// No description provided for @fairUseAboutTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'About Fair Use'**
+  String get fairUseAboutTitle;
+
+  /// No description provided for @fairUseAboutBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Omi is designed for personal conversations, meetings, and live interactions. Usage is measured by real speech time detected, not connection time. If usage significantly exceeds normal patterns for non-personal content, adjustments may apply.'**
+  String get fairUseAboutBody;
+
+  /// Snackbar message when case reference is copied to clipboard
+  ///
+  /// In en, this message translates to:
+  /// **'{caseRef} copied'**
+  String fairUseCaseRefCopied(String caseRef);
+
+  /// No description provided for @fairUseDailyTranscription.
+  ///
+  /// In en, this message translates to:
+  /// **'Daily Transcription'**
+  String get fairUseDailyTranscription;
+
+  /// No description provided for @fairUseBudgetUsed.
+  ///
+  /// In en, this message translates to:
+  /// **'{used}m / {limit}m'**
+  String fairUseBudgetUsed(String used, String limit);
+
+  /// No description provided for @fairUseBudgetExhausted.
+  ///
+  /// In en, this message translates to:
+  /// **'Daily transcription limit reached'**
+  String get fairUseBudgetExhausted;
+
+  /// No description provided for @fairUseBudgetResetsAt.
+  ///
+  /// In en, this message translates to:
+  /// **'Resets {time}'**
+  String fairUseBudgetResetsAt(String time);
+
+  /// No description provided for @transcriptionPaused.
+  ///
+  /// In en, this message translates to:
+  /// **'Recording, reconnecting'**
+  String get transcriptionPaused;
+
+  /// No description provided for @transcriptionPausedReconnecting.
+  ///
+  /// In en, this message translates to:
+  /// **'Still recording — reconnecting to transcription...'**
+  String get transcriptionPausedReconnecting;
+
+  /// No description provided for @fairUseBannerStatus.
+  ///
+  /// In en, this message translates to:
+  /// **'Fair Use: {status}'**
+  String fairUseBannerStatus(String status);
+
+  /// No description provided for @improveConnectionTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Improve Connection'**
+  String get improveConnectionTitle;
+
+  /// No description provided for @improveConnectionContent.
+  ///
+  /// In en, this message translates to:
+  /// **'We\'ve improved how Omi stays connected to your device. To activate this, please go to the Device Info page, tap \"Disconnect Device\", and then pair your device again.'**
+  String get improveConnectionContent;
+
+  /// No description provided for @improveConnectionAction.
+  ///
+  /// In en, this message translates to:
+  /// **'Got it'**
+  String get improveConnectionAction;
+
+  /// No description provided for @clockSkewWarning.
+  ///
+  /// In en, this message translates to:
+  /// **'Your device clock is off by ~{minutes} min. Check your date & time settings.'**
+  String clockSkewWarning(int minutes);
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

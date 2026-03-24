@@ -24,7 +24,8 @@ class AppLocalizationsUk extends AppLocalizations {
   String get deleteConversationTitle => 'Видалити розмову?';
 
   @override
-  String get deleteConversationMessage => 'Ви впевнені, що хочете видалити цю розмову? Цю дію не можна скасувати.';
+  String get deleteConversationMessage =>
+      'Це також видалить пов\'язані спогади, завдання та аудіофайли. Цю дію не можна скасувати.';
 
   @override
   String get confirm => 'Підтвердити';
@@ -2677,7 +2678,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get showAll => 'Показати все →';
 
   @override
-  String get noTasksForToday => 'Немає завдань на сьогодні.\\nЗапитайте Omi про більше завдань або створіть вручну.';
+  String get noTasksForToday => 'Немає завдань на сьогодні.\nЗапитайте Omi про більше завдань або створіть вручну.';
 
   @override
   String get dailyScore => 'ДЕННИЙ РАХУНОК';
@@ -8485,4 +8486,178 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get showTasksOnHomepage => 'Показати завдання на головній сторінці';
+
+  @override
+  String get phoneCallsUnlimitedOnly => 'Телефонні дзвінки через Omi';
+
+  @override
+  String get phoneCallsUpsellSubtitle =>
+      'Здійснюйте дзвінки через Omi та отримуйте транскрипцію в реальному часі, автоматичні зведення та багато іншого.';
+
+  @override
+  String get phoneCallsUpsellFeature1 => 'Транскрипція кожного дзвінка в реальному часі';
+
+  @override
+  String get phoneCallsUpsellFeature2 => 'Автоматичні зведення дзвінків та завдання';
+
+  @override
+  String get phoneCallsUpsellFeature3 => 'Одержувачі бачать ваш справжній номер, а не випадковий';
+
+  @override
+  String get phoneCallsUpsellFeature4 => 'Ваші дзвінки залишаються приватними та захищеними';
+
+  @override
+  String get phoneCallsUpgradeButton => 'Перейти на Безлімітний';
+
+  @override
+  String get phoneCallsMaybeLater => 'Можливо пізніше';
+
+  @override
+  String get deleteSynced => 'Видалити синхронізовані';
+
+  @override
+  String get deleteSyncedFiles => 'Видалити синхронізовані записи';
+
+  @override
+  String get deleteSyncedFilesMessage => 'Ці записи вже синхронізовані з вашим телефоном. Це не можна скасувати.';
+
+  @override
+  String get syncedFilesDeleted => 'Синхронізовані записи видалено';
+
+  @override
+  String get deletePending => 'Видалити очікувані';
+
+  @override
+  String get deletePendingFiles => 'Видалити очікувані записи';
+
+  @override
+  String get deletePendingFilesWarning =>
+      'Ці записи НЕ синхронізовані з вашим телефоном і будуть безповоротно втрачені. Це не можна скасувати.';
+
+  @override
+  String get pendingFilesDeleted => 'Очікувані записи видалено';
+
+  @override
+  String get deleteAllFiles => 'Видалити всі записи';
+
+  @override
+  String get deleteAll => 'Видалити все';
+
+  @override
+  String get deleteAllFilesWarning =>
+      'Це видалить синхронізовані та очікувані записи. Очікувані записи НЕ синхронізовані і будуть безповоротно втрачені.';
+
+  @override
+  String get allFilesDeleted => 'Всі записи видалено';
+
+  @override
+  String nFiles(int count) {
+    return '$count записів';
+  }
+
+  @override
+  String get manageStorage => 'Керування сховищем';
+
+  @override
+  String get safelyBackedUp => 'Безпечно збережено на вашому телефоні';
+
+  @override
+  String get notYetSynced => 'Ще не синхронізовано з вашим телефоном';
+
+  @override
+  String get clearAll => 'Очистити все';
+
+  @override
+  String get phoneKeypad => 'Клавіатура';
+
+  @override
+  String get phoneHideKeypad => 'Сховати клавіатуру';
+
+  @override
+  String get fairUsePolicy => 'Справедливе використання';
+
+  @override
+  String get fairUseLoadError =>
+      'Не вдалося завантажити статус справедливого використання. Будь ласка, спробуйте ще раз.';
+
+  @override
+  String get fairUseStatusNormal => 'Ваше використання в межах норми.';
+
+  @override
+  String get fairUseStageNormal => 'Нормальне';
+
+  @override
+  String get fairUseStageWarning => 'Попередження';
+
+  @override
+  String get fairUseStageThrottle => 'Обмежене';
+
+  @override
+  String get fairUseStageRestrict => 'Заблоковане';
+
+  @override
+  String get fairUseSpeechUsage => 'Використання мовлення';
+
+  @override
+  String get fairUseToday => 'Сьогодні';
+
+  @override
+  String get fairUse3Day => '3-денний період';
+
+  @override
+  String get fairUseWeekly => 'Тижневий період';
+
+  @override
+  String get fairUseAboutTitle => 'Про справедливе використання';
+
+  @override
+  String get fairUseAboutBody =>
+      'Omi призначений для особистих розмов, зустрічей та живої взаємодії. Використання вимірюється за фактичним виявленим часом мовлення, а не за часом підключення. Якщо використання значно перевищує звичайні шаблони для неособистого контенту, можуть бути застосовані коригування.';
+
+  @override
+  String fairUseCaseRefCopied(String caseRef) {
+    return '$caseRef скопійовано';
+  }
+
+  @override
+  String get fairUseDailyTranscription => 'Щоденна транскрипція';
+
+  @override
+  String fairUseBudgetUsed(String used, String limit) {
+    return '$usedхв / $limitхв';
+  }
+
+  @override
+  String get fairUseBudgetExhausted => 'Досягнуто денний ліміт транскрипції';
+
+  @override
+  String fairUseBudgetResetsAt(String time) {
+    return 'Скидання $time';
+  }
+
+  @override
+  String get transcriptionPaused => 'Запис, повторне підключення';
+
+  @override
+  String get transcriptionPausedReconnecting => 'Запис продовжується — повторне підключення до транскрипції...';
+
+  @override
+  String fairUseBannerStatus(String status) {
+    return 'Справедливе використання: $status';
+  }
+
+  @override
+  String get improveConnectionTitle => 'Покращити з\'єднання';
+
+  @override
+  String get improveConnectionContent =>
+      'Ми покращили спосіб підключення Omi до вашого пристрою. Щоб активувати це, перейдіть на сторінку інформації про пристрій, натисніть \"Від\'єднати пристрій\" і знову підключіть ваш пристрій.';
+
+  @override
+  String get improveConnectionAction => 'Зрозуміло';
+
+  @override
+  String clockSkewWarning(int minutes) {
+    return 'Годинник вашого пристрою відрізняється на ~$minutes хв. Перевірте налаштування дати та часу.';
+  }
 }

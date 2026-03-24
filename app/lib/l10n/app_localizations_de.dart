@@ -25,7 +25,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get deleteConversationMessage =>
-      'Sind Sie sicher, dass Sie diese Unterhaltung löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.';
+      'Dadurch werden auch zugehörige Erinnerungen, Aufgaben und Audiodateien gelöscht. Diese Aktion kann nicht rückgängig gemacht werden.';
 
   @override
   String get confirm => 'Bestätigen';
@@ -1740,7 +1740,7 @@ class AppLocalizationsDe extends AppLocalizations {
   }
 
   @override
-  String get dontShowAgain => 'Nicht mehr anzeigen';
+  String get dontShowAgain => 'Nicht erneut anzeigen';
 
   @override
   String get iUnderstand => 'Ich verstehe';
@@ -2695,7 +2695,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get showAll => 'Alle anzeigen →';
 
   @override
-  String get noTasksForToday => 'Keine Aufgaben für heute.\\nFrage Omi nach mehr Aufgaben oder erstelle sie manuell.';
+  String get noTasksForToday => 'Keine Aufgaben für heute.\nFrage Omi nach mehr Aufgaben oder erstelle sie manuell.';
 
   @override
   String get dailyScore => 'TAGES-SCORE';
@@ -8544,4 +8544,180 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get showTasksOnHomepage => 'Aufgaben auf der Startseite anzeigen';
+
+  @override
+  String get phoneCallsUnlimitedOnly => 'Telefonanrufe über Omi';
+
+  @override
+  String get phoneCallsUpsellSubtitle =>
+      'Telefoniere über Omi und erhalte Echtzeit-Transkription, automatische Zusammenfassungen und mehr.';
+
+  @override
+  String get phoneCallsUpsellFeature1 => 'Echtzeit-Transkription jedes Anrufs';
+
+  @override
+  String get phoneCallsUpsellFeature2 => 'Automatische Anrufzusammenfassungen und Aufgaben';
+
+  @override
+  String get phoneCallsUpsellFeature3 => 'Empfänger sehen deine echte Nummer, keine zufällige';
+
+  @override
+  String get phoneCallsUpsellFeature4 => 'Deine Anrufe bleiben privat und sicher';
+
+  @override
+  String get phoneCallsUpgradeButton => 'Auf Unlimited upgraden';
+
+  @override
+  String get phoneCallsMaybeLater => 'Vielleicht später';
+
+  @override
+  String get deleteSynced => 'Synchronisierte löschen';
+
+  @override
+  String get deleteSyncedFiles => 'Synchronisierte Aufnahmen löschen';
+
+  @override
+  String get deleteSyncedFilesMessage =>
+      'Diese Aufnahmen wurden bereits mit Ihrem Telefon synchronisiert. Dies kann nicht rückgängig gemacht werden.';
+
+  @override
+  String get syncedFilesDeleted => 'Synchronisierte Aufnahmen gelöscht';
+
+  @override
+  String get deletePending => 'Ausstehende löschen';
+
+  @override
+  String get deletePendingFiles => 'Ausstehende Aufnahmen löschen';
+
+  @override
+  String get deletePendingFilesWarning =>
+      'Diese Aufnahmen wurden NICHT mit Ihrem Telefon synchronisiert und gehen dauerhaft verloren. Dies kann nicht rückgängig gemacht werden.';
+
+  @override
+  String get pendingFilesDeleted => 'Ausstehende Aufnahmen gelöscht';
+
+  @override
+  String get deleteAllFiles => 'Alle Aufnahmen löschen';
+
+  @override
+  String get deleteAll => 'Alle löschen';
+
+  @override
+  String get deleteAllFilesWarning =>
+      'Dies löscht sowohl synchronisierte als auch ausstehende Aufnahmen. Ausstehende Aufnahmen wurden NICHT synchronisiert und gehen dauerhaft verloren.';
+
+  @override
+  String get allFilesDeleted => 'Alle Aufnahmen gelöscht';
+
+  @override
+  String nFiles(int count) {
+    return '$count Aufnahmen';
+  }
+
+  @override
+  String get manageStorage => 'Speicher verwalten';
+
+  @override
+  String get safelyBackedUp => 'Sicher auf Ihrem Telefon gesichert';
+
+  @override
+  String get notYetSynced => 'Noch nicht mit Ihrem Telefon synchronisiert';
+
+  @override
+  String get clearAll => 'Alles löschen';
+
+  @override
+  String get phoneKeypad => 'Tastatur';
+
+  @override
+  String get phoneHideKeypad => 'Tastatur ausblenden';
+
+  @override
+  String get fairUsePolicy => 'Faire Nutzung';
+
+  @override
+  String get fairUseLoadError =>
+      'Der Status der fairen Nutzung konnte nicht geladen werden. Bitte versuchen Sie es erneut.';
+
+  @override
+  String get fairUseStatusNormal => 'Ihre Nutzung liegt im normalen Bereich.';
+
+  @override
+  String get fairUseStageNormal => 'Normal';
+
+  @override
+  String get fairUseStageWarning => 'Warnung';
+
+  @override
+  String get fairUseStageThrottle => 'Gedrosselt';
+
+  @override
+  String get fairUseStageRestrict => 'Eingeschränkt';
+
+  @override
+  String get fairUseSpeechUsage => 'Sprachnutzung';
+
+  @override
+  String get fairUseToday => 'Heute';
+
+  @override
+  String get fairUse3Day => '3-Tage-Zeitraum';
+
+  @override
+  String get fairUseWeekly => 'Wöchentlich';
+
+  @override
+  String get fairUseAboutTitle => 'Über faire Nutzung';
+
+  @override
+  String get fairUseAboutBody =>
+      'Omi ist für persönliche Gespräche, Meetings und Live-Interaktionen konzipiert. Die Nutzung wird an der tatsächlich erkannten Sprechzeit gemessen, nicht an der Verbindungszeit. Wenn die Nutzung die normalen Muster für nicht-persönliche Inhalte erheblich überschreitet, können Anpassungen vorgenommen werden.';
+
+  @override
+  String fairUseCaseRefCopied(String caseRef) {
+    return '$caseRef kopiert';
+  }
+
+  @override
+  String get fairUseDailyTranscription => 'Tägliche Transkription';
+
+  @override
+  String fairUseBudgetUsed(String used, String limit) {
+    return '${used}m / ${limit}m';
+  }
+
+  @override
+  String get fairUseBudgetExhausted => 'Tägliches Transkriptionslimit erreicht';
+
+  @override
+  String fairUseBudgetResetsAt(String time) {
+    return 'Zurücksetzung $time';
+  }
+
+  @override
+  String get transcriptionPaused => 'Aufnahme läuft, verbinde neu';
+
+  @override
+  String get transcriptionPausedReconnecting =>
+      'Nimmt weiterhin auf — Verbindung zur Transkription wird wiederhergestellt...';
+
+  @override
+  String fairUseBannerStatus(String status) {
+    return 'Faire Nutzung: $status';
+  }
+
+  @override
+  String get improveConnectionTitle => 'Verbindung verbessern';
+
+  @override
+  String get improveConnectionContent =>
+      'Wir haben verbessert, wie Omi mit deinem Gerät verbunden bleibt. Um dies zu aktivieren, gehe zur Geräteinfo-Seite, tippe auf \"Gerät trennen\" und verbinde dein Gerät erneut.';
+
+  @override
+  String get improveConnectionAction => 'Verstanden';
+
+  @override
+  String clockSkewWarning(int minutes) {
+    return 'Die Uhr deines Geräts weicht um ~$minutes Min. ab. Überprüfe deine Datums- und Uhrzeiteinstellungen.';
+  }
 }

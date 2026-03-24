@@ -24,7 +24,8 @@ class AppLocalizationsLv extends AppLocalizations {
   String get deleteConversationTitle => 'Dzēst sarunu?';
 
   @override
-  String get deleteConversationMessage => 'Vai tiešām vēlaties dzēst šo sarunu? Šo darbību nevar atsaukt.';
+  String get deleteConversationMessage =>
+      'Tas arī izdzēsīs saistītās atmiņas, uzdevumus un audio failus. Šo darbību nevar atsaukt.';
 
   @override
   String get confirm => 'Apstiprināt';
@@ -1729,7 +1730,7 @@ class AppLocalizationsLv extends AppLocalizations {
   }
 
   @override
-  String get dontShowAgain => 'Vairs nerādīt';
+  String get dontShowAgain => 'Nerādīt vēlreiz';
 
   @override
   String get iUnderstand => 'Es saprotu';
@@ -2678,7 +2679,7 @@ class AppLocalizationsLv extends AppLocalizations {
 
   @override
   String get noTasksForToday =>
-      'Šodien nav uzdevumu.\\nJautājiet Omi par vairāk uzdevumiem vai izveidojiet tos manuāli.';
+      'Šodien nav uzdevumu.\nJautājiet Omi par vairāk uzdevumiem vai izveidojiet tos manuāli.';
 
   @override
   String get dailyScore => 'DIENAS REZULTĀTS';
@@ -8490,4 +8491,177 @@ class AppLocalizationsLv extends AppLocalizations {
 
   @override
   String get showTasksOnHomepage => 'Rādīt uzdevumus sākumlapā';
+
+  @override
+  String get phoneCallsUnlimitedOnly => 'Tālruņa zvani caur Omi';
+
+  @override
+  String get phoneCallsUpsellSubtitle =>
+      'Veiciet zvanus caur Omi un saņemiet reāllaika transkripciju, automātiskus kopsavilkumus un daudz ko citu.';
+
+  @override
+  String get phoneCallsUpsellFeature1 => 'Katra zvana reāllaika transkripcija';
+
+  @override
+  String get phoneCallsUpsellFeature2 => 'Automātiski zvanu kopsavilkumi un uzdevumi';
+
+  @override
+  String get phoneCallsUpsellFeature3 => 'Saņēmēji redz jūsu īsto numuru, nevis nejaušu';
+
+  @override
+  String get phoneCallsUpsellFeature4 => 'Jūsu zvani paliek privāti un droši';
+
+  @override
+  String get phoneCallsUpgradeButton => 'Jaunināt uz Neierobežoto';
+
+  @override
+  String get phoneCallsMaybeLater => 'Varbūt vēlāk';
+
+  @override
+  String get deleteSynced => 'Dzēst sinhronizētos';
+
+  @override
+  String get deleteSyncedFiles => 'Dzēst sinhronizētos ierakstus';
+
+  @override
+  String get deleteSyncedFilesMessage => 'Šie ieraksti jau ir sinhronizēti ar jūsu tālruni. To nevar atsaukt.';
+
+  @override
+  String get syncedFilesDeleted => 'Sinhronizētie ieraksti dzēsti';
+
+  @override
+  String get deletePending => 'Dzēst gaidošos';
+
+  @override
+  String get deletePendingFiles => 'Dzēst gaidošos ierakstus';
+
+  @override
+  String get deletePendingFilesWarning =>
+      'Šie ieraksti NAV sinhronizēti ar jūsu tālruni un tiks neatgriezeniski zaudēti. To nevar atsaukt.';
+
+  @override
+  String get pendingFilesDeleted => 'Gaidošie ieraksti dzēsti';
+
+  @override
+  String get deleteAllFiles => 'Dzēst visus ierakstus';
+
+  @override
+  String get deleteAll => 'Dzēst visu';
+
+  @override
+  String get deleteAllFilesWarning =>
+      'Tas dzēsīs sinhronizētos un gaidošos ierakstus. Gaidošie ieraksti NAV sinhronizēti un tiks neatgriezeniski zaudēti.';
+
+  @override
+  String get allFilesDeleted => 'Visi ieraksti dzēsti';
+
+  @override
+  String nFiles(int count) {
+    return '$count ierakstu';
+  }
+
+  @override
+  String get manageStorage => 'Pārvaldīt krātuvi';
+
+  @override
+  String get safelyBackedUp => 'Droši dublēts jūsu tālrunī';
+
+  @override
+  String get notYetSynced => 'Vēl nav sinhronizēts ar jūsu tālruni';
+
+  @override
+  String get clearAll => 'Notīrīt visu';
+
+  @override
+  String get phoneKeypad => 'Tastatūra';
+
+  @override
+  String get phoneHideKeypad => 'Paslēpt tastatūru';
+
+  @override
+  String get fairUsePolicy => 'Godīga lietošana';
+
+  @override
+  String get fairUseLoadError => 'Nevarēja ielādēt godīgas lietošanas statusu. Lūdzu, mēģiniet vēlreiz.';
+
+  @override
+  String get fairUseStatusNormal => 'Jūsu lietojums ir normas robežās.';
+
+  @override
+  String get fairUseStageNormal => 'Normāls';
+
+  @override
+  String get fairUseStageWarning => 'Brīdinājums';
+
+  @override
+  String get fairUseStageThrottle => 'Ierobežots';
+
+  @override
+  String get fairUseStageRestrict => 'Bloķēts';
+
+  @override
+  String get fairUseSpeechUsage => 'Runas lietojums';
+
+  @override
+  String get fairUseToday => 'Šodien';
+
+  @override
+  String get fairUse3Day => '3 dienu periods';
+
+  @override
+  String get fairUseWeekly => 'Nedēļas periods';
+
+  @override
+  String get fairUseAboutTitle => 'Par godīgu lietošanu';
+
+  @override
+  String get fairUseAboutBody =>
+      'Omi ir izstrādāts personīgām sarunām, sanāksmēm un tiešsaistes mijiedarbībai. Lietojums tiek mērīts pēc konstatētā reālā runas laika, nevis savienojuma laika. Ja lietojums ievērojami pārsniedz parastos modeļus nepersoniskam saturam, var tikt piemēroti pielāgojumi.';
+
+  @override
+  String fairUseCaseRefCopied(String caseRef) {
+    return '$caseRef nokopēts';
+  }
+
+  @override
+  String get fairUseDailyTranscription => 'Daily Transcription';
+
+  @override
+  String fairUseBudgetUsed(String used, String limit) {
+    return '${used}m / ${limit}m';
+  }
+
+  @override
+  String get fairUseBudgetExhausted => 'Daily transcription limit reached';
+
+  @override
+  String fairUseBudgetResetsAt(String time) {
+    return 'Resets $time';
+  }
+
+  @override
+  String get transcriptionPaused => 'Ierakstīšana, atkārtota savienošana';
+
+  @override
+  String get transcriptionPausedReconnecting => 'Joprojām ieraksta — atkārtoti savienojas ar transkripciju...';
+
+  @override
+  String fairUseBannerStatus(String status) {
+    return 'Godprātīga izmantošana: $status';
+  }
+
+  @override
+  String get improveConnectionTitle => 'Uzlabot savienojumu';
+
+  @override
+  String get improveConnectionContent =>
+      'Mēs esam uzlabojuši veidu, kā Omi paliek savienots ar jūsu ierīci. Lai to aktivizētu, dodieties uz ierīces informācijas lapu, pieskarieties \"Atvienot ierīci\" un savienojiet ierīci pārī no jauna.';
+
+  @override
+  String get improveConnectionAction => 'Sapratu';
+
+  @override
+  String clockSkewWarning(int minutes) {
+    return 'Jūsu ierīces pulkstenis atšķiras par ~$minutes min. Pārbaudiet datuma un laika iestatījumus.';
+  }
 }

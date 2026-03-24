@@ -25,7 +25,7 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get deleteConversationMessage =>
-      'Weet je zeker dat je dit gesprek wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.';
+      'Dit zal ook de bijbehorende herinneringen, taken en audiobestanden verwijderen. Deze actie kan niet ongedaan worden gemaakt.';
 
   @override
   String get confirm => 'Bevestigen';
@@ -2680,7 +2680,7 @@ class AppLocalizationsNl extends AppLocalizations {
   String get showAll => 'Alles tonen →';
 
   @override
-  String get noTasksForToday => 'Geen taken voor vandaag.\\nVraag Omi om meer taken of maak ze handmatig aan.';
+  String get noTasksForToday => 'Geen taken voor vandaag.\nVraag Omi om meer taken of maak ze handmatig aan.';
 
   @override
   String get dailyScore => 'DAGELIJKSE SCORE';
@@ -8500,4 +8500,178 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get showTasksOnHomepage => 'Taken weergeven op startpagina';
+
+  @override
+  String get phoneCallsUnlimitedOnly => 'Telefoongesprekken via Omi';
+
+  @override
+  String get phoneCallsUpsellSubtitle =>
+      'Bel via Omi en krijg realtime transcriptie, automatische samenvattingen en meer.';
+
+  @override
+  String get phoneCallsUpsellFeature1 => 'Realtime transcriptie van elk gesprek';
+
+  @override
+  String get phoneCallsUpsellFeature2 => 'Automatische gesprekssamenvattingen en actiepunten';
+
+  @override
+  String get phoneCallsUpsellFeature3 => 'Ontvangers zien je echte nummer, niet een willekeurig';
+
+  @override
+  String get phoneCallsUpsellFeature4 => 'Je gesprekken blijven privé en veilig';
+
+  @override
+  String get phoneCallsUpgradeButton => 'Upgraden naar Onbeperkt';
+
+  @override
+  String get phoneCallsMaybeLater => 'Misschien later';
+
+  @override
+  String get deleteSynced => 'Gesynchroniseerde verwijderen';
+
+  @override
+  String get deleteSyncedFiles => 'Gesynchroniseerde opnames verwijderen';
+
+  @override
+  String get deleteSyncedFilesMessage =>
+      'Deze opnames zijn al gesynchroniseerd met uw telefoon. Dit kan niet ongedaan worden gemaakt.';
+
+  @override
+  String get syncedFilesDeleted => 'Gesynchroniseerde opnames verwijderd';
+
+  @override
+  String get deletePending => 'Wachtende verwijderen';
+
+  @override
+  String get deletePendingFiles => 'Wachtende opnames verwijderen';
+
+  @override
+  String get deletePendingFilesWarning =>
+      'Deze opnames zijn NIET gesynchroniseerd met uw telefoon en gaan permanent verloren. Dit kan niet ongedaan worden gemaakt.';
+
+  @override
+  String get pendingFilesDeleted => 'Wachtende opnames verwijderd';
+
+  @override
+  String get deleteAllFiles => 'Alle opnames verwijderen';
+
+  @override
+  String get deleteAll => 'Alles verwijderen';
+
+  @override
+  String get deleteAllFilesWarning =>
+      'Dit verwijdert gesynchroniseerde en wachtende opnames. Wachtende opnames zijn NIET gesynchroniseerd en gaan permanent verloren.';
+
+  @override
+  String get allFilesDeleted => 'Alle opnames verwijderd';
+
+  @override
+  String nFiles(int count) {
+    return '$count opnames';
+  }
+
+  @override
+  String get manageStorage => 'Opslag beheren';
+
+  @override
+  String get safelyBackedUp => 'Veilig opgeslagen op uw telefoon';
+
+  @override
+  String get notYetSynced => 'Nog niet gesynchroniseerd met uw telefoon';
+
+  @override
+  String get clearAll => 'Alles wissen';
+
+  @override
+  String get phoneKeypad => 'Toetsenbord';
+
+  @override
+  String get phoneHideKeypad => 'Toetsenbord verbergen';
+
+  @override
+  String get fairUsePolicy => 'Redelijk gebruik';
+
+  @override
+  String get fairUseLoadError => 'Kan de status van redelijk gebruik niet laden. Probeer het opnieuw.';
+
+  @override
+  String get fairUseStatusNormal => 'Uw gebruik is binnen de normale grenzen.';
+
+  @override
+  String get fairUseStageNormal => 'Normaal';
+
+  @override
+  String get fairUseStageWarning => 'Waarschuwing';
+
+  @override
+  String get fairUseStageThrottle => 'Beperkt';
+
+  @override
+  String get fairUseStageRestrict => 'Geblokkeerd';
+
+  @override
+  String get fairUseSpeechUsage => 'Spraakgebruik';
+
+  @override
+  String get fairUseToday => 'Vandaag';
+
+  @override
+  String get fairUse3Day => '3-daags voortschrijdend';
+
+  @override
+  String get fairUseWeekly => 'Wekelijks voortschrijdend';
+
+  @override
+  String get fairUseAboutTitle => 'Over redelijk gebruik';
+
+  @override
+  String get fairUseAboutBody =>
+      'Omi is ontworpen voor persoonlijke gesprekken, vergaderingen en live interacties. Het gebruik wordt gemeten aan de hand van de werkelijke gedetecteerde spreektijd, niet de verbindingstijd. Als het gebruik de normale patronen voor niet-persoonlijke inhoud aanzienlijk overschrijdt, kunnen aanpassingen worden toegepast.';
+
+  @override
+  String fairUseCaseRefCopied(String caseRef) {
+    return '$caseRef gekopieerd';
+  }
+
+  @override
+  String get fairUseDailyTranscription => 'Daily Transcription';
+
+  @override
+  String fairUseBudgetUsed(String used, String limit) {
+    return '${used}m / ${limit}m';
+  }
+
+  @override
+  String get fairUseBudgetExhausted => 'Daily transcription limit reached';
+
+  @override
+  String fairUseBudgetResetsAt(String time) {
+    return 'Resets $time';
+  }
+
+  @override
+  String get transcriptionPaused => 'Opname, opnieuw verbinden';
+
+  @override
+  String get transcriptionPausedReconnecting => 'Neemt nog steeds op — opnieuw verbinden met transcriptie...';
+
+  @override
+  String fairUseBannerStatus(String status) {
+    return 'Eerlijk gebruik: $status';
+  }
+
+  @override
+  String get improveConnectionTitle => 'Verbinding verbeteren';
+
+  @override
+  String get improveConnectionContent =>
+      'We hebben verbeterd hoe Omi verbonden blijft met je apparaat. Om dit te activeren, ga naar de Apparaatinfo-pagina, tik op \"Apparaat loskoppelen\" en koppel je apparaat opnieuw.';
+
+  @override
+  String get improveConnectionAction => 'Begrepen';
+
+  @override
+  String clockSkewWarning(int minutes) {
+    return 'De klok van je apparaat wijkt ~$minutes min. af. Controleer je datum- en tijdinstellingen.';
+  }
 }

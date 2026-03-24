@@ -753,7 +753,7 @@ A screenshot may be attached — use it silently only if relevant. Never mention
         }
 
         sessions = []
-        sessionsLoadError = lastError?.localizedDescription ?? "Unknown error"
+        sessionsLoadError = lastError?.localizedDescription ?? "Failed to load chats. Check your connection and try again."
     }
 
     /// Toggle the starred filter and reload sessions
@@ -1386,11 +1386,10 @@ A screenshot may be attached — use it silently only if relevant. Never mention
                 // Always trust the server value — it's the authoritative total
                 self.omiAICumulativeCostUsd = serverCost
                 log("ChatProvider: Seeded Omi AI cumulative cost from backend: $\(String(format: "%.4f", serverCost))")
-                // Auto-switch if already over threshold on startup
+                // Show upgrade prompt if over threshold but don't block chat
                 if self.bridgeMode == BridgeMode.omiAI.rawValue && serverCost >= 50.0 {
-                    log("ChatProvider: Omi AI cost already at $\(String(format: "%.2f", serverCost)) on startup — switching to user Claude account")
+                    log("ChatProvider: Omi AI cost at $\(String(format: "%.2f", serverCost)) on startup — showing upgrade prompt")
                     self.showOmiThresholdAlert = true
-                    Task { await self.switchBridgeMode(to: .userClaude) }
                 }
             }
         }
@@ -1650,7 +1649,7 @@ A screenshot may be attached — use it silently only if relevant. Never mention
         }
 
         messages = []
-        sessionsLoadError = lastError?.localizedDescription ?? "Unknown error"
+        sessionsLoadError = lastError?.localizedDescription ?? "Failed to load messages. Check your connection and try again."
         isLoading = false
     }
 
@@ -1661,6 +1660,8 @@ A screenshot may be attached — use it silently only if relevant. Never mention
     private func pollForNewMessages() async {
         // Skip if user is signed out (tokens are cleared)
         guard AuthState.shared.isSignedIn else { return }
+        // Skip if in auth backoff period (recent 401 errors)
+        guard !AuthBackoffTracker.shared.shouldSkipRequest() else { return }
         // Skip if we're actively sending. Note: isSending is released *before* the AI
         // message is saved to the backend (to unblock the next query). This means the
         // poll can run while saveMessage() is still in-flight — see the race note below.
@@ -1728,7 +1729,11 @@ A screenshot may be attached — use it silently only if relevant. Never mention
                 messages.append(contentsOf: genuinelyNewMessages)
                 messages.sort(by: { $0.createdAt < $1.createdAt })
             }
+            AuthBackoffTracker.shared.reportSuccess()
         } catch {
+            if case APIError.unauthorized = error {
+                AuthBackoffTracker.shared.reportAuthFailure()
+            }
             // Silent failure — polling errors shouldn't disrupt the user
             logError("ChatProvider poll failed", error: error)
         }
@@ -1821,11 +1826,9 @@ A screenshot may be attached — use it silently only if relevant. Never mention
             return
         }
 
-        // Guard: Block query if Omi account $50 usage threshold already reached
+        // Show upgrade prompt if over threshold but don't block the message
         if bridgeMode == BridgeMode.omiAI.rawValue && omiAICumulativeCostUsd >= 50.0 {
             showOmiThresholdAlert = true
-            Task { await self.switchBridgeMode(to: .userClaude) }
-            return
         }
 
         // Determine session ID based on mode
@@ -1967,7 +1970,7 @@ A screenshot may be attached — use it silently only if relevant. Never mention
                                 if sessionKey != "floating" {
                                     // Bring the app to the foreground so the setup sheet is visible
                                     // (the failed browser attempt may have opened Chrome, stealing focus)
-                                    NSApp.activate(ignoringOtherApps: true)
+                                    NSApp.activate()
                                     for window in NSApp.windows where window.title.hasPrefix("Omi") {
                                         window.makeKeyAndOrderFront(nil)
                                     }
@@ -2129,10 +2132,9 @@ A screenshot may be attached — use it silently only if relevant. Never mention
             if isOmiMode {
                 sessionTokensUsed += queryResult.inputTokens + queryResult.outputTokens
                 omiAICumulativeCostUsd += queryResult.costUsd
-                // Auto-switch to the user's Claude account when the $50 Omi usage threshold is reached
+                // Show the upgrade flow when the free Omi usage threshold is reached.
                 if omiAICumulativeCostUsd >= 50.0 {
                     showOmiThresholdAlert = true
-                    Task { await self.switchBridgeMode(to: .userClaude) }
                 }
             }
 
