@@ -8684,4 +8684,62 @@ class AppLocalizationsHu extends AppLocalizations {
   String clockSkewWarning(int minutes) {
     return 'Az eszköz órája ~$minutes perccel eltér. Ellenőrizze a dátum- és időbeállításokat.';
   }
+
+  @override
+  String get shareSpeechProfile => 'Beszédprofil megosztása';
+
+  @override
+  String get enterUserIdToShare =>
+      'Add meg annak a felhasználónak az azonosítóját, akivel meg szeretnéd osztani a beszédprofilodat';
+
+  @override
+  String get profileSharedSuccess => 'A beszédprofil sikeresen megosztva';
+
+  @override
+  String get profileSharedFail => 'Nem sikerült megosztani a beszédprofilt';
+
+  @override
+  String get cannotShareWithSelf => 'Nem oszthatod meg a beszédprofilodat saját magaddal';
+
+  @override
+  String get userNotFound => 'Felhasználó nem található';
+
+  @override
+  String get noSharedProfiles => 'Még nem osztottad meg a beszédprofilodat senkivel';
+
+  @override
+  String get noProfilesSharedWithYou => 'Még senki sem osztotta meg veled a beszédprofilját';
+
+  @override
+  String get revokeShareConfirmation => 'Megosztás leállítása ezzel a felhasználóval?';
+
+  @override
+  String get speechProfileSharing => 'Beszédprofil megosztása';
+
+  @override
+  String get noSpeechProfileRecorded => 'Megosztás előtt rögzítened kell a beszédprofilodat';
+
+  @override
+  String get recordNow => 'Rögzítés most';
+
+  @override
+  String get sharedWithSection => 'Megosztva vele';
+
+  @override
+  String get sharedWithYouSection => 'Veled megosztva';
+
+  @override
+  String get removeSharedProfile => 'Eltávolítás';
+
+  @override
+  String get removeSharedProfileConfirmation => 'Leállítod ennek a megosztott beszédprofilnak a használatát?';
+
+  @override
+  String get alreadySharedWithUser => 'Már megosztottad a beszédprofilodat ezzel a felhasználóval';
+
+  @override
+  String get revokeShareFail => 'Nem sikerült visszavonni a megosztott profilt';
+
+  @override
+  String get removeShareFail => 'Nem sikerült eltávolítani a megosztott profilt';
 }

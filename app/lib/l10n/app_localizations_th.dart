@@ -8602,4 +8602,61 @@ class AppLocalizationsTh extends AppLocalizations {
   String clockSkewWarning(int minutes) {
     return 'นาฬิกาอุปกรณ์ของคุณคลาดเคลื่อน ~$minutes นาที ตรวจสอบการตั้งค่าวันที่และเวลา';
   }
+
+  @override
+  String get shareSpeechProfile => 'แชร์โปรไฟล์เสียง';
+
+  @override
+  String get enterUserIdToShare => 'กรอกรหัสผู้ใช้ที่ต้องการแชร์โปรไฟล์เสียงของคุณด้วย';
+
+  @override
+  String get profileSharedSuccess => 'แชร์โปรไฟล์เสียงสำเร็จ';
+
+  @override
+  String get profileSharedFail => 'แชร์โปรไฟล์เสียงไม่สำเร็จ';
+
+  @override
+  String get cannotShareWithSelf => 'คุณไม่สามารถแชร์โปรไฟล์เสียงให้ตัวเองได้';
+
+  @override
+  String get userNotFound => 'ไม่พบผู้ใช้';
+
+  @override
+  String get noSharedProfiles => 'คุณยังไม่ได้แชร์โปรไฟล์เสียงกับใคร';
+
+  @override
+  String get noProfilesSharedWithYou => 'ยังไม่มีใครแชร์โปรไฟล์เสียงให้คุณ';
+
+  @override
+  String get revokeShareConfirmation => 'หยุดแชร์โปรไฟล์เสียงกับผู้ใช้นี้หรือไม่?';
+
+  @override
+  String get speechProfileSharing => 'การแชร์โปรไฟล์เสียง';
+
+  @override
+  String get noSpeechProfileRecorded => 'คุณต้องบันทึกโปรไฟล์เสียงก่อนแชร์';
+
+  @override
+  String get recordNow => 'บันทึกตอนนี้';
+
+  @override
+  String get sharedWithSection => 'แชร์กับ';
+
+  @override
+  String get sharedWithYouSection => 'แชร์ให้คุณ';
+
+  @override
+  String get removeSharedProfile => 'นำออก';
+
+  @override
+  String get removeSharedProfileConfirmation => 'หยุดใช้โปรไฟล์เสียงที่แชร์นี้หรือไม่?';
+
+  @override
+  String get alreadySharedWithUser => 'คุณได้แชร์โปรไฟล์เสียงกับผู้ใช้นี้แล้ว';
+
+  @override
+  String get revokeShareFail => 'ยกเลิกโปรไฟล์ที่แชร์ไม่สำเร็จ';
+
+  @override
+  String get removeShareFail => 'นำโปรไฟล์ที่แชร์ออกไม่สำเร็จ';
 }

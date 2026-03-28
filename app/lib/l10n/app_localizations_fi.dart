@@ -8645,4 +8645,61 @@ class AppLocalizationsFi extends AppLocalizations {
   String clockSkewWarning(int minutes) {
     return 'Laitteesi kello on ~$minutes min. väärässä. Tarkista päivämäärä- ja aika-asetukset.';
   }
+
+  @override
+  String get shareSpeechProfile => 'Jaa puheprofiili';
+
+  @override
+  String get enterUserIdToShare => 'Anna käyttäjätunnus, jolle haluat jakaa puheprofiilisi';
+
+  @override
+  String get profileSharedSuccess => 'Puheprofiili jaettu onnistuneesti';
+
+  @override
+  String get profileSharedFail => 'Puheprofiilin jakaminen epäonnistui';
+
+  @override
+  String get cannotShareWithSelf => 'Et voi jakaa puheprofiiliasi itsesi kanssa';
+
+  @override
+  String get userNotFound => 'Käyttäjää ei löytynyt';
+
+  @override
+  String get noSharedProfiles => 'Et ole vielä jakanut puheprofiiliasi kenellekään';
+
+  @override
+  String get noProfilesSharedWithYou => 'Kukaan ei ole vielä jakanut puheprofiiliaan kanssasi';
+
+  @override
+  String get revokeShareConfirmation => 'Lopetetaanko puheprofiilin jakaminen tämän käyttäjän kanssa?';
+
+  @override
+  String get speechProfileSharing => 'Puheprofiilin jakaminen';
+
+  @override
+  String get noSpeechProfileRecorded => 'Sinun täytyy tallentaa puheprofiilisi ennen jakamista';
+
+  @override
+  String get recordNow => 'Tallenna nyt';
+
+  @override
+  String get sharedWithSection => 'Jaettu käyttäjille';
+
+  @override
+  String get sharedWithYouSection => 'Jaettu sinulle';
+
+  @override
+  String get removeSharedProfile => 'Poista';
+
+  @override
+  String get removeSharedProfileConfirmation => 'Lopetetaanko tämän jaetun puheprofiilin käyttö?';
+
+  @override
+  String get alreadySharedWithUser => 'Olet jo jakanut puheprofiilisi tämän käyttäjän kanssa';
+
+  @override
+  String get revokeShareFail => 'Jaetun profiilin peruminen epäonnistui';
+
+  @override
+  String get removeShareFail => 'Jaetun profiilin poistaminen epäonnistui';
 }

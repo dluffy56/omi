@@ -8626,4 +8626,61 @@ class AppLocalizationsHi extends AppLocalizations {
   String clockSkewWarning(int minutes) {
     return 'आपके डिवाइस की घड़ी ~$minutes मिनट गलत है। अपनी तारीख और समय सेटिंग जांचें।';
   }
+
+  @override
+  String get shareSpeechProfile => 'स्पीच प्रोफ़ाइल साझा करें';
+
+  @override
+  String get enterUserIdToShare => 'जिस उपयोगकर्ता के साथ अपनी स्पीच प्रोफ़ाइल साझा करनी है उसका यूज़र आईडी दर्ज करें';
+
+  @override
+  String get profileSharedSuccess => 'स्पीच प्रोफ़ाइल सफलतापूर्वक साझा की गई';
+
+  @override
+  String get profileSharedFail => 'स्पीच प्रोफ़ाइल साझा करने में विफल';
+
+  @override
+  String get cannotShareWithSelf => 'आप अपनी स्पीच प्रोफ़ाइल स्वयं के साथ साझा नहीं कर सकते';
+
+  @override
+  String get userNotFound => 'उपयोगकर्ता नहीं मिला';
+
+  @override
+  String get noSharedProfiles => 'आपने अभी तक अपनी स्पीच प्रोफ़ाइल किसी के साथ साझा नहीं की है';
+
+  @override
+  String get noProfilesSharedWithYou => 'अभी तक किसी ने अपनी स्पीच प्रोफ़ाइल आपके साथ साझा नहीं की है';
+
+  @override
+  String get revokeShareConfirmation => 'क्या इस उपयोगकर्ता के साथ अपनी स्पीच प्रोफ़ाइल साझा करना बंद करें?';
+
+  @override
+  String get speechProfileSharing => 'स्पीच प्रोफ़ाइल साझाकरण';
+
+  @override
+  String get noSpeechProfileRecorded => 'साझा करने से पहले आपको अपनी स्पीच प्रोफ़ाइल रिकॉर्ड करनी होगी';
+
+  @override
+  String get recordNow => 'अभी रिकॉर्ड करें';
+
+  @override
+  String get sharedWithSection => 'के साथ साझा किया गया';
+
+  @override
+  String get sharedWithYouSection => 'आपके साथ साझा किया गया';
+
+  @override
+  String get removeSharedProfile => 'हटाएँ';
+
+  @override
+  String get removeSharedProfileConfirmation => 'क्या इस साझा स्पीच प्रोफ़ाइल का उपयोग बंद करें?';
+
+  @override
+  String get alreadySharedWithUser => 'आप पहले ही इस उपयोगकर्ता के साथ अपनी स्पीच प्रोफ़ाइल साझा कर चुके हैं';
+
+  @override
+  String get revokeShareFail => 'साझा प्रोफ़ाइल निरस्त करने में विफल';
+
+  @override
+  String get removeShareFail => 'साझा प्रोफ़ाइल हटाने में विफल';
 }

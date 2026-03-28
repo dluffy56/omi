@@ -8504,4 +8504,61 @@ class AppLocalizationsKo extends AppLocalizations {
   String clockSkewWarning(int minutes) {
     return '기기 시계가 ~$minutes분 차이납니다. 날짜 및 시간 설정을 확인하세요.';
   }
+
+  @override
+  String get shareSpeechProfile => '음성 프로필 공유';
+
+  @override
+  String get enterUserIdToShare => '음성 프로필을 공유할 사용자 ID를 입력하세요';
+
+  @override
+  String get profileSharedSuccess => '음성 프로필을 성공적으로 공유했습니다';
+
+  @override
+  String get profileSharedFail => '음성 프로필 공유에 실패했습니다';
+
+  @override
+  String get cannotShareWithSelf => '본인에게는 음성 프로필을 공유할 수 없습니다';
+
+  @override
+  String get userNotFound => '사용자를 찾을 수 없습니다';
+
+  @override
+  String get noSharedProfiles => '아직 음성 프로필을 누구와도 공유하지 않았습니다';
+
+  @override
+  String get noProfilesSharedWithYou => '아직 아무도 음성 프로필을 공유하지 않았습니다';
+
+  @override
+  String get revokeShareConfirmation => '이 사용자와의 음성 프로필 공유를 중지하시겠습니까?';
+
+  @override
+  String get speechProfileSharing => '음성 프로필 공유';
+
+  @override
+  String get noSpeechProfileRecorded => '공유하기 전에 음성 프로필을 녹음해야 합니다';
+
+  @override
+  String get recordNow => '지금 녹음';
+
+  @override
+  String get sharedWithSection => '공유 대상';
+
+  @override
+  String get sharedWithYouSection => '나와 공유됨';
+
+  @override
+  String get removeSharedProfile => '제거';
+
+  @override
+  String get removeSharedProfileConfirmation => '이 공유 음성 프로필 사용을 중지하시겠습니까?';
+
+  @override
+  String get alreadySharedWithUser => '이미 이 사용자와 음성 프로필을 공유했습니다';
+
+  @override
+  String get revokeShareFail => '공유 프로필 취소에 실패했습니다';
+
+  @override
+  String get removeShareFail => '공유 프로필 제거에 실패했습니다';
 }

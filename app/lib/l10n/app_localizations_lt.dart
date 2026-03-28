@@ -8654,4 +8654,61 @@ class AppLocalizationsLt extends AppLocalizations {
   String clockSkewWarning(int minutes) {
     return 'Jūsų įrenginio laikrodis skiriasi ~$minutes min. Patikrinkite datos ir laiko nustatymus.';
   }
+
+  @override
+  String get shareSpeechProfile => 'Bendrinti kalbos profilį';
+
+  @override
+  String get enterUserIdToShare => 'Įveskite naudotojo ID, su kuriuo norite bendrinti savo kalbos profilį';
+
+  @override
+  String get profileSharedSuccess => 'Kalbos profilis sėkmingai bendrintas';
+
+  @override
+  String get profileSharedFail => 'Nepavyko bendrinti kalbos profilio';
+
+  @override
+  String get cannotShareWithSelf => 'Negalite bendrinti savo kalbos profilio su savimi';
+
+  @override
+  String get userNotFound => 'Naudotojas nerastas';
+
+  @override
+  String get noSharedProfiles => 'Dar nebendrinote savo kalbos profilio su niekuo';
+
+  @override
+  String get noProfilesSharedWithYou => 'Dar niekas nebendrino savo kalbos profilio su jumis';
+
+  @override
+  String get revokeShareConfirmation => 'Nebebendrinti savo kalbos profilio su šiuo naudotoju?';
+
+  @override
+  String get speechProfileSharing => 'Kalbos profilio bendrinimas';
+
+  @override
+  String get noSpeechProfileRecorded => 'Prieš bendrinant turite įrašyti savo kalbos profilį';
+
+  @override
+  String get recordNow => 'Įrašyti dabar';
+
+  @override
+  String get sharedWithSection => 'Bendrinta su';
+
+  @override
+  String get sharedWithYouSection => 'Bendrinta su jumis';
+
+  @override
+  String get removeSharedProfile => 'Pašalinti';
+
+  @override
+  String get removeSharedProfileConfirmation => 'Nebenaudoti šio bendrinto kalbos profilio?';
+
+  @override
+  String get alreadySharedWithUser => 'Jau bendrinote savo kalbos profilį su šiuo naudotoju';
+
+  @override
+  String get revokeShareFail => 'Nepavyko atšaukti bendrinto profilio';
+
+  @override
+  String get removeShareFail => 'Nepavyko pašalinti bendrinto profilio';
 }

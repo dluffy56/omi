@@ -8644,4 +8644,61 @@ class AppLocalizationsEt extends AppLocalizations {
   String clockSkewWarning(int minutes) {
     return 'Teie seadme kell erineb ~$minutes min. Kontrollige kuupäeva ja kellaaja seadeid.';
   }
+
+  @override
+  String get shareSpeechProfile => 'Jaga kõneprofiili';
+
+  @override
+  String get enterUserIdToShare => 'Sisesta kasutaja ID, kellega soovid oma kõneprofiili jagada';
+
+  @override
+  String get profileSharedSuccess => 'Kõneprofiil jagatud';
+
+  @override
+  String get profileSharedFail => 'Kõneprofiili jagamine ebaõnnestus';
+
+  @override
+  String get cannotShareWithSelf => 'Sa ei saa oma kõneprofiili endaga jagada';
+
+  @override
+  String get userNotFound => 'Kasutajat ei leitud';
+
+  @override
+  String get noSharedProfiles => 'Sa pole veel oma kõneprofiili kellegagi jaganud';
+
+  @override
+  String get noProfilesSharedWithYou => 'Keegi pole veel sinuga oma kõneprofiili jaganud';
+
+  @override
+  String get revokeShareConfirmation => 'Kas lõpetada kõneprofiili jagamine selle kasutajaga?';
+
+  @override
+  String get speechProfileSharing => 'Kõneprofiili jagamine';
+
+  @override
+  String get noSpeechProfileRecorded => 'Enne jagamist pead salvestama oma kõneprofiili';
+
+  @override
+  String get recordNow => 'Salvesta nüüd';
+
+  @override
+  String get sharedWithSection => 'Jagatud kasutajatega';
+
+  @override
+  String get sharedWithYouSection => 'Sinuga jagatud';
+
+  @override
+  String get removeSharedProfile => 'Eemalda';
+
+  @override
+  String get removeSharedProfileConfirmation => 'Kas lõpetada selle jagatud kõneprofiili kasutamine?';
+
+  @override
+  String get alreadySharedWithUser => 'Oled juba selle kasutajaga oma kõneprofiili jaganud';
+
+  @override
+  String get revokeShareFail => 'Jagatud profiili tühistamine ebaõnnestus';
+
+  @override
+  String get removeShareFail => 'Jagatud profiili eemaldamine ebaõnnestus';
 }

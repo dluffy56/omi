@@ -8656,4 +8656,61 @@ class AppLocalizationsId extends AppLocalizations {
   String clockSkewWarning(int minutes) {
     return 'Jam perangkat Anda melenceng ~$minutes menit. Periksa pengaturan tanggal & waktu.';
   }
+
+  @override
+  String get shareSpeechProfile => 'Bagikan Profil Suara';
+
+  @override
+  String get enterUserIdToShare => 'Masukkan ID pengguna untuk berbagi profil suara Anda';
+
+  @override
+  String get profileSharedSuccess => 'Profil suara berhasil dibagikan';
+
+  @override
+  String get profileSharedFail => 'Gagal membagikan profil suara';
+
+  @override
+  String get cannotShareWithSelf => 'Anda tidak dapat membagikan profil suara kepada diri sendiri';
+
+  @override
+  String get userNotFound => 'Pengguna tidak ditemukan';
+
+  @override
+  String get noSharedProfiles => 'Anda belum membagikan profil suara Anda kepada siapa pun';
+
+  @override
+  String get noProfilesSharedWithYou => 'Belum ada yang membagikan profil suara mereka kepada Anda';
+
+  @override
+  String get revokeShareConfirmation => 'Berhenti membagikan profil suara Anda kepada pengguna ini?';
+
+  @override
+  String get speechProfileSharing => 'Berbagi Profil Suara';
+
+  @override
+  String get noSpeechProfileRecorded => 'Anda perlu merekam profil suara sebelum membagikannya';
+
+  @override
+  String get recordNow => 'Rekam Sekarang';
+
+  @override
+  String get sharedWithSection => 'Dibagikan dengan';
+
+  @override
+  String get sharedWithYouSection => 'Dibagikan kepada Anda';
+
+  @override
+  String get removeSharedProfile => 'Hapus';
+
+  @override
+  String get removeSharedProfileConfirmation => 'Berhenti menggunakan profil suara bersama ini?';
+
+  @override
+  String get alreadySharedWithUser => 'Anda sudah membagikan profil suara Anda kepada pengguna ini';
+
+  @override
+  String get revokeShareFail => 'Gagal mencabut profil bersama';
+
+  @override
+  String get removeShareFail => 'Gagal menghapus profil bersama';
 }

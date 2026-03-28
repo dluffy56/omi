@@ -8698,4 +8698,61 @@ class AppLocalizationsCa extends AppLocalizations {
   String clockSkewWarning(int minutes) {
     return 'El rellotge del dispositiu va desajustat ~$minutes min. Comproveu la configuració de data i hora.';
   }
+
+  @override
+  String get shareSpeechProfile => 'Comparteix el perfil de veu';
+
+  @override
+  String get enterUserIdToShare => 'Introdueix l’ID d’usuari amb qui vols compartir el teu perfil de veu';
+
+  @override
+  String get profileSharedSuccess => 'Perfil de veu compartit correctament';
+
+  @override
+  String get profileSharedFail => 'No s’ha pogut compartir el perfil de veu';
+
+  @override
+  String get cannotShareWithSelf => 'No pots compartir el teu perfil de veu amb tu mateix';
+
+  @override
+  String get userNotFound => 'Usuari no trobat';
+
+  @override
+  String get noSharedProfiles => 'Encara no has compartit el teu perfil de veu amb ningú';
+
+  @override
+  String get noProfilesSharedWithYou => 'Encara ningú ha compartit el seu perfil de veu amb tu';
+
+  @override
+  String get revokeShareConfirmation => 'Vols deixar de compartir el teu perfil de veu amb aquest usuari?';
+
+  @override
+  String get speechProfileSharing => 'Compartició del perfil de veu';
+
+  @override
+  String get noSpeechProfileRecorded => 'Has de gravar el teu perfil de veu abans de compartir-lo';
+
+  @override
+  String get recordNow => 'Grava ara';
+
+  @override
+  String get sharedWithSection => 'Compartit amb';
+
+  @override
+  String get sharedWithYouSection => 'Compartit amb tu';
+
+  @override
+  String get removeSharedProfile => 'Elimina';
+
+  @override
+  String get removeSharedProfileConfirmation => 'Vols deixar d’utilitzar aquest perfil de veu compartit?';
+
+  @override
+  String get alreadySharedWithUser => 'Ja has compartit el teu perfil de veu amb aquest usuari';
+
+  @override
+  String get revokeShareFail => 'No s’ha pogut revocar el perfil compartit';
+
+  @override
+  String get removeShareFail => 'No s’ha pogut eliminar el perfil compartit';
 }

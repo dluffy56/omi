@@ -8670,4 +8670,61 @@ class AppLocalizationsMs extends AppLocalizations {
   String clockSkewWarning(int minutes) {
     return 'Jam peranti anda berbeza ~$minutes min. Semak tetapan tarikh & masa anda.';
   }
+
+  @override
+  String get shareSpeechProfile => 'Kongsi Profil Pertuturan';
+
+  @override
+  String get enterUserIdToShare => 'Masukkan ID pengguna untuk berkongsi profil pertuturan anda';
+
+  @override
+  String get profileSharedSuccess => 'Profil pertuturan berjaya dikongsi';
+
+  @override
+  String get profileSharedFail => 'Gagal berkongsi profil pertuturan';
+
+  @override
+  String get cannotShareWithSelf => 'Anda tidak boleh berkongsi profil pertuturan dengan diri sendiri';
+
+  @override
+  String get userNotFound => 'Pengguna tidak ditemui';
+
+  @override
+  String get noSharedProfiles => 'Anda belum berkongsi profil pertuturan anda dengan sesiapa lagi';
+
+  @override
+  String get noProfilesSharedWithYou => 'Belum ada sesiapa yang berkongsi profil pertuturan mereka dengan anda';
+
+  @override
+  String get revokeShareConfirmation => 'Hentikan perkongsian profil pertuturan anda dengan pengguna ini?';
+
+  @override
+  String get speechProfileSharing => 'Perkongsian Profil Pertuturan';
+
+  @override
+  String get noSpeechProfileRecorded => 'Anda perlu merakam profil pertuturan sebelum berkongsi';
+
+  @override
+  String get recordNow => 'Rakam Sekarang';
+
+  @override
+  String get sharedWithSection => 'Dikongsi Dengan';
+
+  @override
+  String get sharedWithYouSection => 'Dikongsi Dengan Anda';
+
+  @override
+  String get removeSharedProfile => 'Buang';
+
+  @override
+  String get removeSharedProfileConfirmation => 'Hentikan penggunaan profil pertuturan yang dikongsi ini?';
+
+  @override
+  String get alreadySharedWithUser => 'Anda telah pun berkongsi profil pertuturan anda dengan pengguna ini';
+
+  @override
+  String get revokeShareFail => 'Gagal membatalkan profil yang dikongsi';
+
+  @override
+  String get removeShareFail => 'Gagal membuang profil yang dikongsi';
 }

@@ -8675,4 +8675,61 @@ class AppLocalizationsRu extends AppLocalizations {
   String clockSkewWarning(int minutes) {
     return 'Часы вашего устройства отличаются на ~$minutes мин. Проверьте настройки даты и времени.';
   }
+
+  @override
+  String get shareSpeechProfile => 'Поделиться речевым профилем';
+
+  @override
+  String get enterUserIdToShare => 'Введите ID пользователя, с которым хотите поделиться речевым профилем';
+
+  @override
+  String get profileSharedSuccess => 'Речевой профиль успешно отправлен';
+
+  @override
+  String get profileSharedFail => 'Не удалось поделиться речевым профилем';
+
+  @override
+  String get cannotShareWithSelf => 'Нельзя поделиться речевым профилем с самим собой';
+
+  @override
+  String get userNotFound => 'Пользователь не найден';
+
+  @override
+  String get noSharedProfiles => 'Вы ещё ни с кем не поделились своим речевым профилем';
+
+  @override
+  String get noProfilesSharedWithYou => 'С вами ещё никто не поделился своим речевым профилем';
+
+  @override
+  String get revokeShareConfirmation => 'Прекратить делиться речевым профилем с этим пользователем?';
+
+  @override
+  String get speechProfileSharing => 'Общий доступ к речевому профилю';
+
+  @override
+  String get noSpeechProfileRecorded => 'Перед отправкой нужно записать речевой профиль';
+
+  @override
+  String get recordNow => 'Записать сейчас';
+
+  @override
+  String get sharedWithSection => 'Поделились с';
+
+  @override
+  String get sharedWithYouSection => 'Поделились с вами';
+
+  @override
+  String get removeSharedProfile => 'Удалить';
+
+  @override
+  String get removeSharedProfileConfirmation => 'Прекратить использовать этот общий речевой профиль?';
+
+  @override
+  String get alreadySharedWithUser => 'Вы уже поделились речевым профилем с этим пользователем';
+
+  @override
+  String get revokeShareFail => 'Не удалось отозвать общий профиль';
+
+  @override
+  String get removeShareFail => 'Не удалось удалить общий профиль';
 }

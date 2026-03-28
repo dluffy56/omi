@@ -8643,4 +8643,61 @@ class AppLocalizationsCs extends AppLocalizations {
   String clockSkewWarning(int minutes) {
     return 'Hodiny vašeho zařízení se liší o ~$minutes min. Zkontrolujte nastavení data a času.';
   }
+
+  @override
+  String get shareSpeechProfile => 'Sdílet hlasový profil';
+
+  @override
+  String get enterUserIdToShare => 'Zadejte ID uživatele, se kterým chcete sdílet svůj hlasový profil';
+
+  @override
+  String get profileSharedSuccess => 'Hlasový profil byl úspěšně sdílen';
+
+  @override
+  String get profileSharedFail => 'Sdílení hlasového profilu se nezdařilo';
+
+  @override
+  String get cannotShareWithSelf => 'Nemůžete sdílet svůj hlasový profil sami se sebou';
+
+  @override
+  String get userNotFound => 'Uživatel nebyl nalezen';
+
+  @override
+  String get noSharedProfiles => 'Svůj hlasový profil jste zatím s nikým nesdíleli';
+
+  @override
+  String get noProfilesSharedWithYou => 'S vámi zatím nikdo nesdílel svůj hlasový profil';
+
+  @override
+  String get revokeShareConfirmation => 'Přestat sdílet svůj hlasový profil s tímto uživatelem?';
+
+  @override
+  String get speechProfileSharing => 'Sdílení hlasového profilu';
+
+  @override
+  String get noSpeechProfileRecorded => 'Před sdílením musíte nahrát svůj hlasový profil';
+
+  @override
+  String get recordNow => 'Nahrát nyní';
+
+  @override
+  String get sharedWithSection => 'Sdíleno s';
+
+  @override
+  String get sharedWithYouSection => 'Sdíleno s vámi';
+
+  @override
+  String get removeSharedProfile => 'Odstranit';
+
+  @override
+  String get removeSharedProfileConfirmation => 'Přestat používat tento sdílený hlasový profil?';
+
+  @override
+  String get alreadySharedWithUser => 'S tímto uživatelem už jste svůj hlasový profil sdíleli';
+
+  @override
+  String get revokeShareFail => 'Nepodařilo se zrušit sdílený profil';
+
+  @override
+  String get removeShareFail => 'Nepodařilo se odstranit sdílený profil';
 }

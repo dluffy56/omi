@@ -8588,4 +8588,61 @@ class AppLocalizationsAr extends AppLocalizations {
   String clockSkewWarning(int minutes) {
     return 'ساعة جهازك متأخرة بـ ~$minutes دقيقة. تحقق من إعدادات التاريخ والوقت.';
   }
+
+  @override
+  String get shareSpeechProfile => 'مشاركة ملف التعريف الصوتي';
+
+  @override
+  String get enterUserIdToShare => 'أدخل معرف المستخدم لمشاركة ملفك الصوتي معه';
+
+  @override
+  String get profileSharedSuccess => 'تمت مشاركة ملف التعريف الصوتي بنجاح';
+
+  @override
+  String get profileSharedFail => 'فشل في مشاركة ملف التعريف الصوتي';
+
+  @override
+  String get cannotShareWithSelf => 'لا يمكنك مشاركة ملفك الصوتي مع نفسك';
+
+  @override
+  String get userNotFound => 'المستخدم غير موجود';
+
+  @override
+  String get noSharedProfiles => 'لم تشارك ملفك الصوتي مع أي شخص بعد';
+
+  @override
+  String get noProfilesSharedWithYou => 'لم يشارك أحد ملفه الصوتي معك بعد';
+
+  @override
+  String get revokeShareConfirmation => 'إيقاف مشاركة ملفك الصوتي مع هذا المستخدم؟';
+
+  @override
+  String get speechProfileSharing => 'مشاركة ملف التعريف الصوتي';
+
+  @override
+  String get noSpeechProfileRecorded => 'تحتاج إلى تسجيل ملفك الصوتي قبل المشاركة';
+
+  @override
+  String get recordNow => 'سجّل الآن';
+
+  @override
+  String get sharedWithSection => 'تمت المشاركة مع';
+
+  @override
+  String get sharedWithYouSection => 'تمت مشاركته معك';
+
+  @override
+  String get removeSharedProfile => 'إزالة';
+
+  @override
+  String get removeSharedProfileConfirmation => 'إيقاف استخدام ملف التعريف الصوتي المُشارك هذا؟';
+
+  @override
+  String get alreadySharedWithUser => 'لقد شاركت ملفك الصوتي بالفعل مع هذا المستخدم';
+
+  @override
+  String get revokeShareFail => 'فشل في إلغاء مشاركة الملف';
+
+  @override
+  String get removeShareFail => 'فشل في إزالة الملف المُشارك';
 }

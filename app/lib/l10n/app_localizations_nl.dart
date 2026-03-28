@@ -8674,4 +8674,61 @@ class AppLocalizationsNl extends AppLocalizations {
   String clockSkewWarning(int minutes) {
     return 'De klok van je apparaat wijkt ~$minutes min. af. Controleer je datum- en tijdinstellingen.';
   }
+
+  @override
+  String get shareSpeechProfile => 'Spraakprofiel delen';
+
+  @override
+  String get enterUserIdToShare => 'Voer de gebruikers-ID in om je spraakprofiel mee te delen';
+
+  @override
+  String get profileSharedSuccess => 'Spraakprofiel succesvol gedeeld';
+
+  @override
+  String get profileSharedFail => 'Delen van spraakprofiel mislukt';
+
+  @override
+  String get cannotShareWithSelf => 'Je kunt je spraakprofiel niet met jezelf delen';
+
+  @override
+  String get userNotFound => 'Gebruiker niet gevonden';
+
+  @override
+  String get noSharedProfiles => 'Je hebt je spraakprofiel nog met niemand gedeeld';
+
+  @override
+  String get noProfilesSharedWithYou => 'Nog niemand heeft zijn spraakprofiel met jou gedeeld';
+
+  @override
+  String get revokeShareConfirmation => 'Stoppen met het delen van je spraakprofiel met deze gebruiker?';
+
+  @override
+  String get speechProfileSharing => 'Spraakprofiel delen';
+
+  @override
+  String get noSpeechProfileRecorded => 'Je moet je spraakprofiel opnemen voordat je het deelt';
+
+  @override
+  String get recordNow => 'Nu opnemen';
+
+  @override
+  String get sharedWithSection => 'Gedeeld met';
+
+  @override
+  String get sharedWithYouSection => 'Met jou gedeeld';
+
+  @override
+  String get removeSharedProfile => 'Verwijderen';
+
+  @override
+  String get removeSharedProfileConfirmation => 'Stoppen met het gebruiken van dit gedeelde spraakprofiel?';
+
+  @override
+  String get alreadySharedWithUser => 'Je hebt je spraakprofiel al met deze gebruiker gedeeld';
+
+  @override
+  String get revokeShareFail => 'Intrekken van gedeeld profiel mislukt';
+
+  @override
+  String get removeShareFail => 'Verwijderen van gedeeld profiel mislukt';
 }

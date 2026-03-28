@@ -8502,4 +8502,61 @@ class AppLocalizationsJa extends AppLocalizations {
   String clockSkewWarning(int minutes) {
     return 'デバイスの時計が約$minutes分ずれています。日付と時刻の設定を確認してください。';
   }
+
+  @override
+  String get shareSpeechProfile => '音声プロフィールを共有';
+
+  @override
+  String get enterUserIdToShare => '音声プロフィールを共有する相手のユーザーIDを入力してください';
+
+  @override
+  String get profileSharedSuccess => '音声プロフィールを共有しました';
+
+  @override
+  String get profileSharedFail => '音声プロフィールの共有に失敗しました';
+
+  @override
+  String get cannotShareWithSelf => '自分自身には音声プロフィールを共有できません';
+
+  @override
+  String get userNotFound => 'ユーザーが見つかりません';
+
+  @override
+  String get noSharedProfiles => 'まだ誰にも音声プロフィールを共有していません';
+
+  @override
+  String get noProfilesSharedWithYou => 'まだ誰もあなたに音声プロフィールを共有していません';
+
+  @override
+  String get revokeShareConfirmation => 'このユーザーへの音声プロフィール共有を停止しますか？';
+
+  @override
+  String get speechProfileSharing => '音声プロフィール共有';
+
+  @override
+  String get noSpeechProfileRecorded => '共有する前に音声プロフィールを録音する必要があります';
+
+  @override
+  String get recordNow => '今すぐ録音';
+
+  @override
+  String get sharedWithSection => '共有先';
+
+  @override
+  String get sharedWithYouSection => 'あなたに共有';
+
+  @override
+  String get removeSharedProfile => '削除';
+
+  @override
+  String get removeSharedProfileConfirmation => 'この共有音声プロフィールの利用を停止しますか？';
+
+  @override
+  String get alreadySharedWithUser => 'このユーザーにはすでに音声プロフィールを共有しています';
+
+  @override
+  String get revokeShareFail => '共有プロフィールの取り消しに失敗しました';
+
+  @override
+  String get removeShareFail => '共有プロフィールの削除に失敗しました';
 }

@@ -8660,4 +8660,61 @@ class AppLocalizationsUk extends AppLocalizations {
   String clockSkewWarning(int minutes) {
     return 'Годинник вашого пристрою відрізняється на ~$minutes хв. Перевірте налаштування дати та часу.';
   }
+
+  @override
+  String get shareSpeechProfile => 'Поділитися мовним профілем';
+
+  @override
+  String get enterUserIdToShare => 'Введіть ID користувача, з яким хочете поділитися своїм мовним профілем';
+
+  @override
+  String get profileSharedSuccess => 'Мовний профіль успішно надіслано';
+
+  @override
+  String get profileSharedFail => 'Не вдалося поділитися мовним профілем';
+
+  @override
+  String get cannotShareWithSelf => 'Ви не можете поділитися мовним профілем із собою';
+
+  @override
+  String get userNotFound => 'Користувача не знайдено';
+
+  @override
+  String get noSharedProfiles => 'Ви ще ні з ким не поділилися своїм мовним профілем';
+
+  @override
+  String get noProfilesSharedWithYou => 'Ще ніхто не поділився з вами своїм мовним профілем';
+
+  @override
+  String get revokeShareConfirmation => 'Припинити ділитися мовним профілем із цим користувачем?';
+
+  @override
+  String get speechProfileSharing => 'Спільний доступ до мовного профілю';
+
+  @override
+  String get noSpeechProfileRecorded => 'Перед поширенням потрібно записати мовний профіль';
+
+  @override
+  String get recordNow => 'Записати зараз';
+
+  @override
+  String get sharedWithSection => 'Поділилися з';
+
+  @override
+  String get sharedWithYouSection => 'Поділилися з вами';
+
+  @override
+  String get removeSharedProfile => 'Видалити';
+
+  @override
+  String get removeSharedProfileConfirmation => 'Припинити використовувати цей спільний мовний профіль?';
+
+  @override
+  String get alreadySharedWithUser => 'Ви вже поділилися мовним профілем із цим користувачем';
+
+  @override
+  String get revokeShareFail => 'Не вдалося скасувати спільний профіль';
+
+  @override
+  String get removeShareFail => 'Не вдалося видалити спільний профіль';
 }

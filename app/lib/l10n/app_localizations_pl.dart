@@ -8665,4 +8665,61 @@ class AppLocalizationsPl extends AppLocalizations {
   String clockSkewWarning(int minutes) {
     return 'Zegar urządzenia różni się o ~$minutes min. Sprawdź ustawienia daty i godziny.';
   }
+
+  @override
+  String get shareSpeechProfile => 'Udostępnij profil mowy';
+
+  @override
+  String get enterUserIdToShare => 'Wprowadź ID użytkownika, z którym chcesz udostępnić swój profil mowy';
+
+  @override
+  String get profileSharedSuccess => 'Profil mowy został udostępniony';
+
+  @override
+  String get profileSharedFail => 'Nie udało się udostępnić profilu mowy';
+
+  @override
+  String get cannotShareWithSelf => 'Nie możesz udostępnić swojego profilu mowy samemu sobie';
+
+  @override
+  String get userNotFound => 'Nie znaleziono użytkownika';
+
+  @override
+  String get noSharedProfiles => 'Nie udostępniasz jeszcze swojego profilu mowy nikomu';
+
+  @override
+  String get noProfilesSharedWithYou => 'Nikt jeszcze nie udostępnił Ci swojego profilu mowy';
+
+  @override
+  String get revokeShareConfirmation => 'Przestać udostępniać profil mowy temu użytkownikowi?';
+
+  @override
+  String get speechProfileSharing => 'Udostępnianie profilu mowy';
+
+  @override
+  String get noSpeechProfileRecorded => 'Musisz nagrać swój profil mowy przed udostępnieniem';
+
+  @override
+  String get recordNow => 'Nagraj teraz';
+
+  @override
+  String get sharedWithSection => 'Udostępniono';
+
+  @override
+  String get sharedWithYouSection => 'Udostępniono Tobie';
+
+  @override
+  String get removeSharedProfile => 'Usuń';
+
+  @override
+  String get removeSharedProfileConfirmation => 'Przestać używać tego udostępnionego profilu mowy?';
+
+  @override
+  String get alreadySharedWithUser => 'Już udostępniłeś swój profil mowy temu użytkownikowi';
+
+  @override
+  String get revokeShareFail => 'Nie udało się cofnąć udostępnionego profilu';
+
+  @override
+  String get removeShareFail => 'Nie udało się usunąć udostępnionego profilu';
 }

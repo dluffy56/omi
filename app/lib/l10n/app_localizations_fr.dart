@@ -8725,4 +8725,61 @@ class AppLocalizationsFr extends AppLocalizations {
   String clockSkewWarning(int minutes) {
     return 'L\'horloge de votre appareil est décalée de ~$minutes min. Vérifiez vos paramètres de date et heure.';
   }
+
+  @override
+  String get shareSpeechProfile => 'Partager le profil vocal';
+
+  @override
+  String get enterUserIdToShare => 'Saisissez l’ID utilisateur avec qui partager votre profil vocal';
+
+  @override
+  String get profileSharedSuccess => 'Profil vocal partagé avec succès';
+
+  @override
+  String get profileSharedFail => 'Échec du partage du profil vocal';
+
+  @override
+  String get cannotShareWithSelf => 'Vous ne pouvez pas partager votre profil vocal avec vous-même';
+
+  @override
+  String get userNotFound => 'Utilisateur introuvable';
+
+  @override
+  String get noSharedProfiles => 'Vous n’avez encore partagé votre profil vocal avec personne';
+
+  @override
+  String get noProfilesSharedWithYou => 'Personne n’a encore partagé son profil vocal avec vous';
+
+  @override
+  String get revokeShareConfirmation => 'Arrêter de partager votre profil vocal avec cet utilisateur ?';
+
+  @override
+  String get speechProfileSharing => 'Partage du profil vocal';
+
+  @override
+  String get noSpeechProfileRecorded => 'Vous devez enregistrer votre profil vocal avant de le partager';
+
+  @override
+  String get recordNow => 'Enregistrer maintenant';
+
+  @override
+  String get sharedWithSection => 'Partagé avec';
+
+  @override
+  String get sharedWithYouSection => 'Partagé avec vous';
+
+  @override
+  String get removeSharedProfile => 'Supprimer';
+
+  @override
+  String get removeSharedProfileConfirmation => 'Arrêter d’utiliser ce profil vocal partagé ?';
+
+  @override
+  String get alreadySharedWithUser => 'Vous avez déjà partagé votre profil vocal avec cet utilisateur';
+
+  @override
+  String get revokeShareFail => 'Échec de la révocation du profil partagé';
+
+  @override
+  String get removeShareFail => 'Échec de la suppression du profil partagé';
 }

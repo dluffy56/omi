@@ -8649,4 +8649,61 @@ class AppLocalizationsPt extends AppLocalizations {
   String clockSkewWarning(int minutes) {
     return 'O relógio do dispositivo está desajustado ~$minutes min. Verifique as configurações de data e hora.';
   }
+
+  @override
+  String get shareSpeechProfile => 'Partilhar perfil de voz';
+
+  @override
+  String get enterUserIdToShare => 'Introduza o ID do utilizador com quem pretende partilhar o seu perfil de voz';
+
+  @override
+  String get profileSharedSuccess => 'Perfil de voz partilhado com sucesso';
+
+  @override
+  String get profileSharedFail => 'Falha ao partilhar o perfil de voz';
+
+  @override
+  String get cannotShareWithSelf => 'Não pode partilhar o seu perfil de voz consigo mesmo';
+
+  @override
+  String get userNotFound => 'Utilizador não encontrado';
+
+  @override
+  String get noSharedProfiles => 'Ainda não partilhou o seu perfil de voz com ninguém';
+
+  @override
+  String get noProfilesSharedWithYou => 'Ainda ninguém partilhou o seu perfil de voz consigo';
+
+  @override
+  String get revokeShareConfirmation => 'Parar de partilhar o seu perfil de voz com este utilizador?';
+
+  @override
+  String get speechProfileSharing => 'Partilha de perfil de voz';
+
+  @override
+  String get noSpeechProfileRecorded => 'Tem de gravar o seu perfil de voz antes de o partilhar';
+
+  @override
+  String get recordNow => 'Gravar agora';
+
+  @override
+  String get sharedWithSection => 'Partilhado com';
+
+  @override
+  String get sharedWithYouSection => 'Partilhado consigo';
+
+  @override
+  String get removeSharedProfile => 'Remover';
+
+  @override
+  String get removeSharedProfileConfirmation => 'Parar de usar este perfil de voz partilhado?';
+
+  @override
+  String get alreadySharedWithUser => 'Já partilhou o seu perfil de voz com este utilizador';
+
+  @override
+  String get revokeShareFail => 'Falha ao revogar perfil partilhado';
+
+  @override
+  String get removeShareFail => 'Falha ao remover perfil partilhado';
 }

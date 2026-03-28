@@ -8689,4 +8689,61 @@ class AppLocalizationsRo extends AppLocalizations {
   String clockSkewWarning(int minutes) {
     return 'Ceasul dispozitivului diferă cu ~$minutes min. Verificați setările de dată și oră.';
   }
+
+  @override
+  String get shareSpeechProfile => 'Partajează profilul vocal';
+
+  @override
+  String get enterUserIdToShare => 'Introduceți ID-ul utilizatorului cu care doriți să partajați profilul vocal';
+
+  @override
+  String get profileSharedSuccess => 'Profilul vocal a fost partajat cu succes';
+
+  @override
+  String get profileSharedFail => 'Partajarea profilului vocal a eșuat';
+
+  @override
+  String get cannotShareWithSelf => 'Nu vă puteți partaja profilul vocal cu dvs. înșivă';
+
+  @override
+  String get userNotFound => 'Utilizator negăsit';
+
+  @override
+  String get noSharedProfiles => 'Încă nu v-ați partajat profilul vocal cu nimeni';
+
+  @override
+  String get noProfilesSharedWithYou => 'Nimeni nu și-a partajat încă profilul vocal cu dvs.';
+
+  @override
+  String get revokeShareConfirmation => 'Opriți partajarea profilului vocal cu acest utilizator?';
+
+  @override
+  String get speechProfileSharing => 'Partajarea profilului vocal';
+
+  @override
+  String get noSpeechProfileRecorded => 'Trebuie să înregistrați profilul vocal înainte de partajare';
+
+  @override
+  String get recordNow => 'Înregistrează acum';
+
+  @override
+  String get sharedWithSection => 'Partajat cu';
+
+  @override
+  String get sharedWithYouSection => 'Partajat cu dvs.';
+
+  @override
+  String get removeSharedProfile => 'Elimină';
+
+  @override
+  String get removeSharedProfileConfirmation => 'Opriți utilizarea acestui profil vocal partajat?';
+
+  @override
+  String get alreadySharedWithUser => 'Ați partajat deja profilul vocal cu acest utilizator';
+
+  @override
+  String get revokeShareFail => 'Revocarea profilului partajat a eșuat';
+
+  @override
+  String get removeShareFail => 'Eliminarea profilului partajat a eșuat';
 }

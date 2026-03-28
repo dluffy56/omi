@@ -8643,4 +8643,61 @@ class AppLocalizationsEn extends AppLocalizations {
   String clockSkewWarning(int minutes) {
     return 'Your device clock is off by ~$minutes min. Check your date & time settings.';
   }
+
+  @override
+  String get shareSpeechProfile => 'Share Speech Profile';
+
+  @override
+  String get enterUserIdToShare => 'Enter the user ID to share your speech profile with';
+
+  @override
+  String get profileSharedSuccess => 'Speech profile shared successfully';
+
+  @override
+  String get profileSharedFail => 'Failed to share speech profile';
+
+  @override
+  String get cannotShareWithSelf => 'You cannot share your speech profile with yourself';
+
+  @override
+  String get userNotFound => 'User not found';
+
+  @override
+  String get noSharedProfiles => 'You haven\'t shared your speech profile with anyone yet';
+
+  @override
+  String get noProfilesSharedWithYou => 'No one has shared their speech profile with you yet';
+
+  @override
+  String get revokeShareConfirmation => 'Stop sharing your speech profile with this user?';
+
+  @override
+  String get speechProfileSharing => 'Speech Profile Sharing';
+
+  @override
+  String get noSpeechProfileRecorded => 'You need to record your speech profile before sharing';
+
+  @override
+  String get recordNow => 'Record Now';
+
+  @override
+  String get sharedWithSection => 'Shared With';
+
+  @override
+  String get sharedWithYouSection => 'Shared With You';
+
+  @override
+  String get removeSharedProfile => 'Remove';
+
+  @override
+  String get removeSharedProfileConfirmation => 'Stop using this shared speech profile?';
+
+  @override
+  String get alreadySharedWithUser => 'You have already shared your speech profile with this user';
+
+  @override
+  String get revokeShareFail => 'Failed to revoke shared profile';
+
+  @override
+  String get removeShareFail => 'Failed to remove shared profile';
 }

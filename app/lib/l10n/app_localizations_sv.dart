@@ -8650,4 +8650,61 @@ class AppLocalizationsSv extends AppLocalizations {
   String clockSkewWarning(int minutes) {
     return 'Enhetens klocka avviker ~$minutes min. Kontrollera dina datum- och tidsinställningar.';
   }
+
+  @override
+  String get shareSpeechProfile => 'Dela talprofil';
+
+  @override
+  String get enterUserIdToShare => 'Ange användar-ID för personen du vill dela din talprofil med';
+
+  @override
+  String get profileSharedSuccess => 'Talprofilen delades';
+
+  @override
+  String get profileSharedFail => 'Det gick inte att dela talprofilen';
+
+  @override
+  String get cannotShareWithSelf => 'Du kan inte dela din talprofil med dig själv';
+
+  @override
+  String get userNotFound => 'Användaren hittades inte';
+
+  @override
+  String get noSharedProfiles => 'Du har inte delat din talprofil med någon ännu';
+
+  @override
+  String get noProfilesSharedWithYou => 'Ingen har delat sin talprofil med dig ännu';
+
+  @override
+  String get revokeShareConfirmation => 'Sluta dela din talprofil med den här användaren?';
+
+  @override
+  String get speechProfileSharing => 'Delning av talprofil';
+
+  @override
+  String get noSpeechProfileRecorded => 'Du måste spela in din talprofil innan du delar den';
+
+  @override
+  String get recordNow => 'Spela in nu';
+
+  @override
+  String get sharedWithSection => 'Delad med';
+
+  @override
+  String get sharedWithYouSection => 'Delad med dig';
+
+  @override
+  String get removeSharedProfile => 'Ta bort';
+
+  @override
+  String get removeSharedProfileConfirmation => 'Sluta använda den här delade talprofilen?';
+
+  @override
+  String get alreadySharedWithUser => 'Du har redan delat din talprofil med den här användaren';
+
+  @override
+  String get revokeShareFail => 'Det gick inte att återkalla delad profil';
+
+  @override
+  String get removeShareFail => 'Det gick inte att ta bort delad profil';
 }

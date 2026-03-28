@@ -8664,4 +8664,61 @@ class AppLocalizationsLv extends AppLocalizations {
   String clockSkewWarning(int minutes) {
     return 'Jūsu ierīces pulkstenis atšķiras par ~$minutes min. Pārbaudiet datuma un laika iestatījumus.';
   }
+
+  @override
+  String get shareSpeechProfile => 'Kopīgot runas profilu';
+
+  @override
+  String get enterUserIdToShare => 'Ievadiet lietotāja ID, ar kuru kopīgot savu runas profilu';
+
+  @override
+  String get profileSharedSuccess => 'Runas profils veiksmīgi kopīgots';
+
+  @override
+  String get profileSharedFail => 'Neizdevās kopīgot runas profilu';
+
+  @override
+  String get cannotShareWithSelf => 'Jūs nevarat kopīgot savu runas profilu ar sevi';
+
+  @override
+  String get userNotFound => 'Lietotājs nav atrasts';
+
+  @override
+  String get noSharedProfiles => 'Jūs vēl neesat kopīgojis savu runas profilu ne ar vienu';
+
+  @override
+  String get noProfilesSharedWithYou => 'Neviens vēl nav kopīgojis savu runas profilu ar jums';
+
+  @override
+  String get revokeShareConfirmation => 'Pārtraukt runas profila kopīgošanu ar šo lietotāju?';
+
+  @override
+  String get speechProfileSharing => 'Runas profila kopīgošana';
+
+  @override
+  String get noSpeechProfileRecorded => 'Pirms kopīgošanas jums jāieraksta savs runas profils';
+
+  @override
+  String get recordNow => 'Ierakstīt tagad';
+
+  @override
+  String get sharedWithSection => 'Kopīgots ar';
+
+  @override
+  String get sharedWithYouSection => 'Kopīgots ar jums';
+
+  @override
+  String get removeSharedProfile => 'Noņemt';
+
+  @override
+  String get removeSharedProfileConfirmation => 'Pārtraukt izmantot šo kopīgoto runas profilu?';
+
+  @override
+  String get alreadySharedWithUser => 'Jūs jau esat kopīgojis savu runas profilu ar šo lietotāju';
+
+  @override
+  String get revokeShareFail => 'Neizdevās atsaukt kopīgoto profilu';
+
+  @override
+  String get removeShareFail => 'Neizdevās noņemt kopīgoto profilu';
 }

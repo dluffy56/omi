@@ -8490,4 +8490,61 @@ class AppLocalizationsZh extends AppLocalizations {
   String clockSkewWarning(int minutes) {
     return '您的设备时钟偏差约$minutes分钟。请检查日期和时间设置。';
   }
+
+  @override
+  String get shareSpeechProfile => '共享语音档案';
+
+  @override
+  String get enterUserIdToShare => '输入要共享语音档案的用户 ID';
+
+  @override
+  String get profileSharedSuccess => '语音档案共享成功';
+
+  @override
+  String get profileSharedFail => '语音档案共享失败';
+
+  @override
+  String get cannotShareWithSelf => '你不能将语音档案共享给自己';
+
+  @override
+  String get userNotFound => '未找到用户';
+
+  @override
+  String get noSharedProfiles => '你还没有将语音档案共享给任何人';
+
+  @override
+  String get noProfilesSharedWithYou => '还没有人与你共享他们的语音档案';
+
+  @override
+  String get revokeShareConfirmation => '停止与该用户共享你的语音档案？';
+
+  @override
+  String get speechProfileSharing => '语音档案共享';
+
+  @override
+  String get noSpeechProfileRecorded => '共享前你需要先录制语音档案';
+
+  @override
+  String get recordNow => '立即录制';
+
+  @override
+  String get sharedWithSection => '已共享给';
+
+  @override
+  String get sharedWithYouSection => '与你共享';
+
+  @override
+  String get removeSharedProfile => '移除';
+
+  @override
+  String get removeSharedProfileConfirmation => '停止使用这个共享的语音档案？';
+
+  @override
+  String get alreadySharedWithUser => '你已经与该用户共享过语音档案';
+
+  @override
+  String get revokeShareFail => '撤销共享档案失败';
+
+  @override
+  String get removeShareFail => '移除共享档案失败';
 }

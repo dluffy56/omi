@@ -8710,4 +8710,62 @@ class AppLocalizationsEl extends AppLocalizations {
   String clockSkewWarning(int minutes) {
     return 'Το ρολόι της συσκευής σας αποκλίνει κατά ~$minutes λεπτά. Ελέγξτε τις ρυθμίσεις ημερομηνίας και ώρας.';
   }
+
+  @override
+  String get shareSpeechProfile => 'Κοινοποίηση προφίλ φωνής';
+
+  @override
+  String get enterUserIdToShare =>
+      'Εισάγετε το αναγνωριστικό χρήστη με το οποίο θέλετε να μοιραστείτε το προφίλ φωνής σας';
+
+  @override
+  String get profileSharedSuccess => 'Το προφίλ φωνής κοινοποιήθηκε με επιτυχία';
+
+  @override
+  String get profileSharedFail => 'Αποτυχία κοινοποίησης προφίλ φωνής';
+
+  @override
+  String get cannotShareWithSelf => 'Δεν μπορείτε να κοινοποιήσετε το προφίλ φωνής σας στον εαυτό σας';
+
+  @override
+  String get userNotFound => 'Ο χρήστης δεν βρέθηκε';
+
+  @override
+  String get noSharedProfiles => 'Δεν έχετε κοινοποιήσει ακόμη το προφίλ φωνής σας σε κανέναν';
+
+  @override
+  String get noProfilesSharedWithYou => 'Κανείς δεν έχει κοινοποιήσει ακόμη το προφίλ φωνής του σε εσάς';
+
+  @override
+  String get revokeShareConfirmation => 'Διακοπή κοινοποίησης του προφίλ φωνής σας με αυτόν τον χρήστη;';
+
+  @override
+  String get speechProfileSharing => 'Κοινοποίηση προφίλ φωνής';
+
+  @override
+  String get noSpeechProfileRecorded => 'Πρέπει να καταγράψετε το προφίλ φωνής σας πριν από την κοινοποίηση';
+
+  @override
+  String get recordNow => 'Καταγραφή τώρα';
+
+  @override
+  String get sharedWithSection => 'Κοινοποιήθηκε σε';
+
+  @override
+  String get sharedWithYouSection => 'Κοινοποιήθηκε σε εσάς';
+
+  @override
+  String get removeSharedProfile => 'Αφαίρεση';
+
+  @override
+  String get removeSharedProfileConfirmation => 'Διακοπή χρήσης αυτού του κοινοποιημένου προφίλ φωνής;';
+
+  @override
+  String get alreadySharedWithUser => 'Έχετε ήδη κοινοποιήσει το προφίλ φωνής σας σε αυτόν τον χρήστη';
+
+  @override
+  String get revokeShareFail => 'Αποτυχία ανάκλησης κοινοποιημένου προφίλ';
+
+  @override
+  String get removeShareFail => 'Αποτυχία αφαίρεσης κοινοποιημένου προφίλ';
 }

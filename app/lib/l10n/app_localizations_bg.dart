@@ -8682,4 +8682,61 @@ class AppLocalizationsBg extends AppLocalizations {
   String clockSkewWarning(int minutes) {
     return 'Часовникът на устройството ви е разместен с ~$minutes мин. Проверете настройките за дата и час.';
   }
+
+  @override
+  String get shareSpeechProfile => 'Споделяне на гласов профил';
+
+  @override
+  String get enterUserIdToShare => 'Въведете потребителския ID, с който да споделите гласовия си профил';
+
+  @override
+  String get profileSharedSuccess => 'Гласовият профил е споделен успешно';
+
+  @override
+  String get profileSharedFail => 'Неуспешно споделяне на гласов профил';
+
+  @override
+  String get cannotShareWithSelf => 'Не можете да споделите гласовия си профил със себе си';
+
+  @override
+  String get userNotFound => 'Потребителят не е намерен';
+
+  @override
+  String get noSharedProfiles => 'Все още не сте споделили гласовия си профил с никого';
+
+  @override
+  String get noProfilesSharedWithYou => 'Все още никой не е споделил гласовия си профил с вас';
+
+  @override
+  String get revokeShareConfirmation => 'Да спрете споделянето на гласовия си профил с този потребител?';
+
+  @override
+  String get speechProfileSharing => 'Споделяне на гласов профил';
+
+  @override
+  String get noSpeechProfileRecorded => 'Трябва да запишете гласовия си профил преди споделяне';
+
+  @override
+  String get recordNow => 'Запиши сега';
+
+  @override
+  String get sharedWithSection => 'Споделено с';
+
+  @override
+  String get sharedWithYouSection => 'Споделено с вас';
+
+  @override
+  String get removeSharedProfile => 'Премахване';
+
+  @override
+  String get removeSharedProfileConfirmation => 'Да спрете използването на този споделен гласов профил?';
+
+  @override
+  String get alreadySharedWithUser => 'Вече сте споделили гласовия си профил с този потребител';
+
+  @override
+  String get revokeShareFail => 'Неуспешно оттегляне на споделения профил';
+
+  @override
+  String get removeShareFail => 'Неуспешно премахване на споделен профил';
 }

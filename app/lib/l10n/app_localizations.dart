@@ -16142,6 +16142,120 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Your device clock is off by ~{minutes} min. Check your date & time settings.'**
   String clockSkewWarning(int minutes);
+
+  /// Title for the share speech profile dialog
+  ///
+  /// In en, this message translates to:
+  /// **'Share Speech Profile'**
+  String get shareSpeechProfile;
+
+  /// Instruction text in the share speech profile dialog
+  ///
+  /// In en, this message translates to:
+  /// **'Enter the user ID to share your speech profile with'**
+  String get enterUserIdToShare;
+
+  /// Snackbar message after successfully sharing a speech profile
+  ///
+  /// In en, this message translates to:
+  /// **'Speech profile shared successfully'**
+  String get profileSharedSuccess;
+
+  /// Snackbar message when sharing a speech profile fails
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to share speech profile'**
+  String get profileSharedFail;
+
+  /// Error message when user tries to share with their own ID
+  ///
+  /// In en, this message translates to:
+  /// **'You cannot share your speech profile with yourself'**
+  String get cannotShareWithSelf;
+
+  /// Error when the target user ID does not exist
+  ///
+  /// In en, this message translates to:
+  /// **'User not found'**
+  String get userNotFound;
+
+  /// Empty state text when user has not shared their profile
+  ///
+  /// In en, this message translates to:
+  /// **'You haven\'t shared your speech profile with anyone yet'**
+  String get noSharedProfiles;
+
+  /// Empty state text when no profiles shared with user
+  ///
+  /// In en, this message translates to:
+  /// **'No one has shared their speech profile with you yet'**
+  String get noProfilesSharedWithYou;
+
+  /// Confirmation message for revoking speech profile sharing
+  ///
+  /// In en, this message translates to:
+  /// **'Stop sharing your speech profile with this user?'**
+  String get revokeShareConfirmation;
+
+  /// Menu title and page title for speech profile sharing management
+  ///
+  /// In en, this message translates to:
+  /// **'Speech Profile Sharing'**
+  String get speechProfileSharing;
+
+  /// Message when user tries to share without a speech profile
+  ///
+  /// In en, this message translates to:
+  /// **'You need to record your speech profile before sharing'**
+  String get noSpeechProfileRecorded;
+
+  /// Button text to navigate to speech profile recording
+  ///
+  /// In en, this message translates to:
+  /// **'Record Now'**
+  String get recordNow;
+
+  /// Section header for users you have shared your profile with
+  ///
+  /// In en, this message translates to:
+  /// **'Shared With'**
+  String get sharedWithSection;
+
+  /// Section header for users who shared their profile with you
+  ///
+  /// In en, this message translates to:
+  /// **'Shared With You'**
+  String get sharedWithYouSection;
+
+  /// Button text to remove a shared profile
+  ///
+  /// In en, this message translates to:
+  /// **'Remove'**
+  String get removeSharedProfile;
+
+  /// Confirmation message for removing a shared profile
+  ///
+  /// In en, this message translates to:
+  /// **'Stop using this shared speech profile?'**
+  String get removeSharedProfileConfirmation;
+
+  /// Error when trying to share with someone you already shared with
+  ///
+  /// In en, this message translates to:
+  /// **'You have already shared your speech profile with this user'**
+  String get alreadySharedWithUser;
+
+  /// Error message when revoking a shared speech profile fails
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to revoke shared profile'**
+  String get revokeShareFail;
+
+  /// Error message when removing a shared speech profile fails
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to remove shared profile'**
+  String get removeShareFail;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -8649,4 +8649,61 @@ class AppLocalizationsVi extends AppLocalizations {
   String clockSkewWarning(int minutes) {
     return 'Đồng hồ thiết bị của bạn lệch ~$minutes phút. Kiểm tra cài đặt ngày và giờ.';
   }
+
+  @override
+  String get shareSpeechProfile => 'Chia sẻ hồ sơ giọng nói';
+
+  @override
+  String get enterUserIdToShare => 'Nhập ID người dùng để chia sẻ hồ sơ giọng nói của bạn';
+
+  @override
+  String get profileSharedSuccess => 'Đã chia sẻ hồ sơ giọng nói thành công';
+
+  @override
+  String get profileSharedFail => 'Không thể chia sẻ hồ sơ giọng nói';
+
+  @override
+  String get cannotShareWithSelf => 'Bạn không thể chia sẻ hồ sơ giọng nói với chính mình';
+
+  @override
+  String get userNotFound => 'Không tìm thấy người dùng';
+
+  @override
+  String get noSharedProfiles => 'Bạn chưa chia sẻ hồ sơ giọng nói của mình với ai';
+
+  @override
+  String get noProfilesSharedWithYou => 'Chưa có ai chia sẻ hồ sơ giọng nói của họ với bạn';
+
+  @override
+  String get revokeShareConfirmation => 'Dừng chia sẻ hồ sơ giọng nói với người dùng này?';
+
+  @override
+  String get speechProfileSharing => 'Chia sẻ hồ sơ giọng nói';
+
+  @override
+  String get noSpeechProfileRecorded => 'Bạn cần ghi hồ sơ giọng nói trước khi chia sẻ';
+
+  @override
+  String get recordNow => 'Ghi ngay';
+
+  @override
+  String get sharedWithSection => 'Đã chia sẻ với';
+
+  @override
+  String get sharedWithYouSection => 'Đã chia sẻ với bạn';
+
+  @override
+  String get removeSharedProfile => 'Gỡ';
+
+  @override
+  String get removeSharedProfileConfirmation => 'Dừng sử dụng hồ sơ giọng nói được chia sẻ này?';
+
+  @override
+  String get alreadySharedWithUser => 'Bạn đã chia sẻ hồ sơ giọng nói với người dùng này rồi';
+
+  @override
+  String get revokeShareFail => 'Không thể thu hồi hồ sơ đã chia sẻ';
+
+  @override
+  String get removeShareFail => 'Không thể xóa hồ sơ đã chia sẻ';
 }

@@ -8630,4 +8630,61 @@ class AppLocalizationsDa extends AppLocalizations {
   String clockSkewWarning(int minutes) {
     return 'Dit enheds ur er forskudt ~$minutes min. Tjek dine dato- og tidsindstillinger.';
   }
+
+  @override
+  String get shareSpeechProfile => 'Del taleprofil';
+
+  @override
+  String get enterUserIdToShare => 'Indtast bruger-ID’et, du vil dele din taleprofil med';
+
+  @override
+  String get profileSharedSuccess => 'Taleprofil delt';
+
+  @override
+  String get profileSharedFail => 'Kunne ikke dele taleprofil';
+
+  @override
+  String get cannotShareWithSelf => 'Du kan ikke dele din taleprofil med dig selv';
+
+  @override
+  String get userNotFound => 'Bruger ikke fundet';
+
+  @override
+  String get noSharedProfiles => 'Du har endnu ikke delt din taleprofil med nogen';
+
+  @override
+  String get noProfilesSharedWithYou => 'Ingen har delt deres taleprofil med dig endnu';
+
+  @override
+  String get revokeShareConfirmation => 'Stop med at dele din taleprofil med denne bruger?';
+
+  @override
+  String get speechProfileSharing => 'Deling af taleprofil';
+
+  @override
+  String get noSpeechProfileRecorded => 'Du skal optage din taleprofil før deling';
+
+  @override
+  String get recordNow => 'Optag nu';
+
+  @override
+  String get sharedWithSection => 'Delt med';
+
+  @override
+  String get sharedWithYouSection => 'Delt med dig';
+
+  @override
+  String get removeSharedProfile => 'Fjern';
+
+  @override
+  String get removeSharedProfileConfirmation => 'Stop med at bruge denne delte taleprofil?';
+
+  @override
+  String get alreadySharedWithUser => 'Du har allerede delt din taleprofil med denne bruger';
+
+  @override
+  String get revokeShareFail => 'Kunne ikke tilbagekalde delt profil';
+
+  @override
+  String get removeShareFail => 'Kunne ikke fjerne delt profil';
 }

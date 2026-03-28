@@ -8659,4 +8659,61 @@ class AppLocalizationsTr extends AppLocalizations {
   String clockSkewWarning(int minutes) {
     return 'Cihazınızın saati ~$minutes dk. farklı. Tarih ve saat ayarlarınızı kontrol edin.';
   }
+
+  @override
+  String get shareSpeechProfile => 'Konuşma profilini paylaş';
+
+  @override
+  String get enterUserIdToShare => 'Konuşma profilinizi paylaşmak istediğiniz kullanıcı kimliğini girin';
+
+  @override
+  String get profileSharedSuccess => 'Konuşma profili başarıyla paylaşıldı';
+
+  @override
+  String get profileSharedFail => 'Konuşma profili paylaşılamadı';
+
+  @override
+  String get cannotShareWithSelf => 'Konuşma profilinizi kendinizle paylaşamazsınız';
+
+  @override
+  String get userNotFound => 'Kullanıcı bulunamadı';
+
+  @override
+  String get noSharedProfiles => 'Konuşma profilinizi henüz kimseyle paylaşmadınız';
+
+  @override
+  String get noProfilesSharedWithYou => 'Henüz kimse konuşma profilini sizinle paylaşmadı';
+
+  @override
+  String get revokeShareConfirmation => 'Bu kullanıcıyla konuşma profilinizi paylaşmayı durdurmak istiyor musunuz?';
+
+  @override
+  String get speechProfileSharing => 'Konuşma Profili Paylaşımı';
+
+  @override
+  String get noSpeechProfileRecorded => 'Paylaşmadan önce konuşma profilinizi kaydetmeniz gerekiyor';
+
+  @override
+  String get recordNow => 'Şimdi Kaydet';
+
+  @override
+  String get sharedWithSection => 'Şununla paylaşıldı';
+
+  @override
+  String get sharedWithYouSection => 'Sizinle paylaşılan';
+
+  @override
+  String get removeSharedProfile => 'Kaldır';
+
+  @override
+  String get removeSharedProfileConfirmation => 'Bu paylaşılan konuşma profilini kullanmayı durdurmak istiyor musunuz?';
+
+  @override
+  String get alreadySharedWithUser => 'Konuşma profilinizi bu kullanıcıyla zaten paylaştınız';
+
+  @override
+  String get revokeShareFail => 'Paylaşılan profil geri alınamadı';
+
+  @override
+  String get removeShareFail => 'Paylaşılan profil kaldırılamadı';
 }

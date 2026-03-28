@@ -8720,4 +8720,61 @@ class AppLocalizationsDe extends AppLocalizations {
   String clockSkewWarning(int minutes) {
     return 'Die Uhr deines Geräts weicht um ~$minutes Min. ab. Überprüfe deine Datums- und Uhrzeiteinstellungen.';
   }
+
+  @override
+  String get shareSpeechProfile => 'Sprachprofil teilen';
+
+  @override
+  String get enterUserIdToShare => 'Gib die Benutzer-ID ein, mit der du dein Sprachprofil teilen möchtest';
+
+  @override
+  String get profileSharedSuccess => 'Sprachprofil erfolgreich geteilt';
+
+  @override
+  String get profileSharedFail => 'Sprachprofil konnte nicht geteilt werden';
+
+  @override
+  String get cannotShareWithSelf => 'Du kannst dein Sprachprofil nicht mit dir selbst teilen';
+
+  @override
+  String get userNotFound => 'Benutzer nicht gefunden';
+
+  @override
+  String get noSharedProfiles => 'Du hast dein Sprachprofil noch mit niemandem geteilt';
+
+  @override
+  String get noProfilesSharedWithYou => 'Noch hat niemand sein Sprachprofil mit dir geteilt';
+
+  @override
+  String get revokeShareConfirmation => 'Teilen deines Sprachprofils mit diesem Benutzer beenden?';
+
+  @override
+  String get speechProfileSharing => 'Sprachprofil-Freigabe';
+
+  @override
+  String get noSpeechProfileRecorded => 'Du musst dein Sprachprofil vor dem Teilen aufnehmen';
+
+  @override
+  String get recordNow => 'Jetzt aufnehmen';
+
+  @override
+  String get sharedWithSection => 'Geteilt mit';
+
+  @override
+  String get sharedWithYouSection => 'Mit dir geteilt';
+
+  @override
+  String get removeSharedProfile => 'Entfernen';
+
+  @override
+  String get removeSharedProfileConfirmation => 'Dieses geteilte Sprachprofil nicht mehr verwenden?';
+
+  @override
+  String get alreadySharedWithUser => 'Du hast dein Sprachprofil bereits mit diesem Benutzer geteilt';
+
+  @override
+  String get revokeShareFail => 'Geteiltes Profil konnte nicht widerrufen werden';
+
+  @override
+  String get removeShareFail => 'Geteiltes Profil konnte nicht entfernt werden';
 }
