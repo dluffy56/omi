@@ -198,7 +198,6 @@ struct DashboardPage: View {
     @ObservedObject var appState: AppState
     @Binding var selectedIndex: Int
     @State private var selectedConversation: ServerConversation? = nil
-    @State private var showPromptPopup = false
 
     var body: some View {
         Group {
@@ -217,18 +216,9 @@ struct DashboardPage: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.clear)
-        .overlay {
-            if showPromptPopup, !postOnboardingSuggestions.isEmpty {
-                TryAskingPopupView(
-                    suggestions: postOnboardingSuggestions,
-                    onAsk: handleSuggestedPrompt,
-                    onDismiss: dismissPromptPopup
-                )
-            }
-        }
         .onAppear {
             if PostOnboardingPromptSuggestions.shouldShowPopup && !postOnboardingSuggestions.isEmpty {
-                showPromptPopup = true
+                NotificationCenter.default.post(name: .showTryAskingPopup, object: nil)
             }
         }
         .onReceive(NotificationCenter.default.publisher(for: NSApplication.didBecomeActiveNotification)) { _ in
@@ -237,17 +227,17 @@ struct DashboardPage: View {
     }
 
     private var dashboardWidgets: some View {
-        VStack(alignment: .leading, spacing: 24) {
+        VStack(alignment: .leading, spacing: 28) {
             if shouldShowSuggestionBanner {
                 PromptSuggestionBanner(
                     suggestions: postOnboardingSuggestions,
-                    onOpen: { showPromptPopup = true },
+                    onOpen: { NotificationCenter.default.post(name: .showTryAskingPopup, object: nil) },
                     onAsk: handleSuggestedPrompt,
                     onDismiss: dismissSuggestionBanner
                 )
             }
 
-            Grid(horizontalSpacing: 16, verticalSpacing: 16) {
+            Grid(horizontalSpacing: 20, verticalSpacing: 20) {
                 // Top row: Tasks + Goals
                 GridRow {
                     TasksWidget(
@@ -299,9 +289,9 @@ struct DashboardPage: View {
                 }
             }
         }
-        .padding(.horizontal, 24)
-        .padding(.top, 36)
-        .padding(.bottom, 8)
+        .padding(.horizontal, 30)
+        .padding(.top, 40)
+        .padding(.bottom, 16)
     }
 
     private var postOnboardingSuggestions: [String] {
@@ -312,19 +302,13 @@ struct DashboardPage: View {
         !postOnboardingSuggestions.isEmpty && !PostOnboardingPromptSuggestions.isDismissed
     }
 
-    private func dismissPromptPopup() {
-        showPromptPopup = false
-        PostOnboardingPromptSuggestions.shouldShowPopup = false
-    }
-
     private func dismissSuggestionBanner() {
-        showPromptPopup = false
         PostOnboardingPromptSuggestions.shouldShowPopup = false
         PostOnboardingPromptSuggestions.isDismissed = true
     }
 
     private func handleSuggestedPrompt(_ suggestion: String) {
-        dismissPromptPopup()
+        PostOnboardingPromptSuggestions.shouldShowPopup = false
         FloatingControlBarManager.shared.openAIInputWithQuery(suggestion)
     }
 

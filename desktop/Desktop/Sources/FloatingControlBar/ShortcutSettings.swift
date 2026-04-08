@@ -46,6 +46,9 @@ class ShortcutSettings: ObservableObject {
         var displayTokens: [String] {
             let modifierTokens = Self.modifierTokens(for: modifiers)
             if modifierOnly {
+                if requiresRightCommand {
+                    return ["Right ⌘"]
+                }
                 return modifierTokens
             }
             if let keyDisplay {
@@ -349,6 +352,35 @@ class ShortcutSettings: ObservableObject {
         didSet { UserDefaults.standard.set(draggableBarEnabled, forKey: "shortcut_draggableBarEnabled") }
     }
 
+    /// When true, floating-bar replies are spoken aloud.
+    @Published var floatingBarVoiceAnswersEnabled: Bool {
+        didSet {
+            UserDefaults.standard.set(floatingBarVoiceAnswersEnabled, forKey: "shortcut_floatingBarVoiceAnswersEnabled")
+            if !floatingBarVoiceAnswersEnabled {
+                FloatingBarVoicePlaybackService.shared.stop()
+            }
+        }
+    }
+
+    /// Voice playback speed (0.8x – 2.0x). Default 1.4x.
+    @Published var voicePlaybackSpeed: Float {
+        didSet {
+            UserDefaults.standard.set(voicePlaybackSpeed, forKey: "shortcut_voicePlaybackSpeed")
+        }
+    }
+
+    /// Speed presets for the voice speed slider (6 steps).
+    static let voiceSpeedSteps: [Float] = [0.8, 1.0, 1.2, 1.4, 1.6, 2.0]
+
+    static func voiceSpeedLabel(for speed: Float) -> String {
+        if speed <= 0.8 { return "Slow" }
+        if speed <= 1.0 { return "Normal" }
+        if speed <= 1.2 { return "Fast" }
+        if speed <= 1.4 { return "Faster" }
+        if speed <= 1.6 { return "Very Fast" }
+        return "Maximum"
+    }
+
     var askOmiUsesCustomShortcut: Bool {
         !Self.askOmiPresets.contains(askOmiShortcut)
     }
@@ -381,9 +413,11 @@ class ShortcutSettings: ObservableObject {
            let mode = PTTTranscriptionMode(rawValue: saved) {
             self.pttTranscriptionMode = mode
         } else {
-            self.pttTranscriptionMode = .batch
+            self.pttTranscriptionMode = .live
         }
         self.draggableBarEnabled = UserDefaults.standard.object(forKey: "shortcut_draggableBarEnabled") as? Bool ?? false
+        self.floatingBarVoiceAnswersEnabled = UserDefaults.standard.object(forKey: "shortcut_floatingBarVoiceAnswersEnabled") as? Bool ?? true
+        self.voicePlaybackSpeed = UserDefaults.standard.object(forKey: "shortcut_voicePlaybackSpeed") as? Float ?? 1.4
     }
 
     private func persistShortcut(_ shortcut: KeyboardShortcut, forKey key: String) {

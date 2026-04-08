@@ -216,6 +216,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
   private var relaunchOnLoginSuppressedForOnboarding = false
 
   func applicationDidFinishLaunching(_ notification: Notification) {
+    if ViewExporter.shouldExport() {
+      ViewExporter.run()
+      return
+    }
+
     // Ignore SIGPIPE so broken-pipe writes return errors instead of crashing the app.
     // Without this, writing to a dead FFmpeg stdin or agent-bridge pipe kills the process.
     signal(SIGPIPE, SIG_IGN)
@@ -388,6 +393,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
       // Fetch API keys from backend (keys are not bundled in the app)
       APIKeyService.shared.startFetchingKeys()
+
+      // Fetch subscription plan for floating bar usage limits
+      Task { await FloatingBarUsageLimiter.shared.fetchPlan() }
 
       // Check tier eligibility (at most once per day)
       Task {

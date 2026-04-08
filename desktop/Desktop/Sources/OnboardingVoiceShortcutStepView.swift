@@ -6,6 +6,7 @@ struct OnboardingVoiceShortcutStepView: View {
     @ObservedObject var chatProvider: ChatProvider
     var onComplete: () -> Void
     var onSkip: () -> Void
+    var onForceComplete: (() -> Void)?
 
     @ObservedObject private var shortcutSettings = ShortcutSettings.shared
 
@@ -16,12 +17,12 @@ struct OnboardingVoiceShortcutStepView: View {
     @State private var localKeyMonitor: Any?
     @State private var globalKeyMonitor: Any?
 
+    static var savedMenu: NSMenu?
+
     var body: some View {
         VStack(spacing: 0) {
             HStack {
-                Text("Set your voice shortcut")
-                    .font(.system(size: 18, weight: .semibold))
-                    .foregroundColor(OmiColors.textPrimary)
+                OnboardingLogoMark(onForceComplete: onForceComplete)
 
                 Spacer()
 
@@ -41,7 +42,7 @@ struct OnboardingVoiceShortcutStepView: View {
             Spacer()
 
             VStack(spacing: 24) {
-                Text("Press and hold to test.\nDoes the button light up?")
+                Text("Let's set \"Audio ask a question\" shortcut.\nPress and hold to test. Does the button light up?")
                     .font(.system(size: 22, weight: .semibold))
                     .foregroundColor(OmiColors.textPrimary)
                     .multilineTextAlignment(.center)
@@ -269,6 +270,11 @@ struct OnboardingVoiceShortcutStepView: View {
         globalKeyMonitor = NSEvent.addGlobalMonitorForEvents(matching: mask) { event in
             _ = handleShortcutEvent(event)
         }
+
+        DispatchQueue.main.async {
+            Self.savedMenu = NSApp.mainMenu
+            NSApp.mainMenu = nil
+        }
     }
 
     private func removeKeyMonitors() {
@@ -279,6 +285,10 @@ struct OnboardingVoiceShortcutStepView: View {
         if let monitor = globalKeyMonitor {
             NSEvent.removeMonitor(monitor)
             globalKeyMonitor = nil
+        }
+        if let menu = Self.savedMenu {
+            NSApp.mainMenu = menu
+            Self.savedMenu = nil
         }
     }
 
