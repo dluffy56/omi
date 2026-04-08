@@ -22,9 +22,9 @@ RUN git clone https://github.com/google/liblc3.git && \
 RUN pip install --no-cache-dir /tmp/wheels/*.whl && rm -rf /tmp/wheels /tmp/liblc3
 
 WORKDIR /app
-COPY requirements.txt /tmp/requirements.txt
+COPY backend/requirements.txt /tmp/requirements.txt
 RUN pip install --no-cache-dir --upgrade -r /tmp/requirements.txt
 
-COPY . /app
+COPY backend/ /app
 
 CMD ["sh", "-c", "uvicorn main:app --host 0.0.0.0 --port ${PORT:-8080}"]
