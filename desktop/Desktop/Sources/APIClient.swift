@@ -3869,9 +3869,10 @@ struct NotificationSettingsResponse: Codable {
 }
 
 enum SubscriptionPlanType: String, Codable {
-  case basic
-  case unlimited
-  case pro
+  case basic      // display "Free"
+  case unlimited  // legacy — display "Unlimited (legacy)"
+  case pro        // display "Architect" — same Stripe IDs, pure rename
+  case `operator` // new — display "Operator"
 }
 
 enum SubscriptionStatusType: String, Codable {
@@ -4132,12 +4133,10 @@ struct MemorySettingsResponse: Codable {
 
 struct FloatingBarSettingsResponse: Codable {
   var voiceAnswersEnabled: Bool?
-  var elevenLabsApiKey: String?
   var elevenLabsVoiceID: String?
 
   enum CodingKeys: String, CodingKey {
     case voiceAnswersEnabled = "voice_answers_enabled"
-    case elevenLabsApiKey = "elevenlabs_api_key"
     case elevenLabsVoiceID = "elevenlabs_voice_id"
   }
 }
@@ -4925,13 +4924,51 @@ extension APIClient {
     }
   }
 
+  // MARK: - Chat Usage Quota
+
+  /// Current-month chat usage + the plan's cap. Backed by Python backend
+  /// endpoint `/v1/users/me/usage-quota` which reads `users/{uid}/llm_usage/*`.
+  struct ChatUsageQuota: Decodable {
+    let plan: String       // display name: "Free" | "Plus" | "Pro"
+    let planType: String   // internal id: "basic" | "unlimited" | "pro"
+    let unit: String       // "questions" | "cost_usd"
+    let used: Double
+    let limit: Double?     // nil means unlimited
+    let percent: Double
+    let allowed: Bool
+    let resetAt: Int?      // unix seconds — start of next UTC month
+
+    enum CodingKeys: String, CodingKey {
+      case plan
+      case planType = "plan_type"
+      case unit
+      case used
+      case limit
+      case percent
+      case allowed
+      case resetAt = "reset_at"
+    }
+  }
+
+  func fetchChatUsageQuota() async -> ChatUsageQuota? {
+    do {
+      let res: ChatUsageQuota = try await get("v1/users/me/usage-quota")
+      log(
+        "APIClient: Quota plan=\(res.plan) unit=\(res.unit) used=\(res.used) limit=\(res.limit ?? -1) allowed=\(res.allowed)"
+      )
+      return res
+    } catch {
+      log("APIClient: Chat quota fetch failed: \(error.localizedDescription)")
+      return nil
+    }
+  }
+
   // MARK: - API Keys
 
   struct ApiKeysResponse: Decodable {
     let deepgramApiKey: String?
     let geminiApiKey: String?
     let anthropicApiKey: String?
-    let elevenLabsApiKey: String?
     let firebaseApiKey: String?
     let googleCalendarApiKey: String?
 
@@ -4939,7 +4976,6 @@ extension APIClient {
       case deepgramApiKey = "deepgram_api_key"
       case geminiApiKey = "gemini_api_key"
       case anthropicApiKey = "anthropic_api_key"
-      case elevenLabsApiKey = "elevenlabs_api_key"
       case firebaseApiKey = "firebase_api_key"
       case googleCalendarApiKey = "google_calendar_api_key"
     }
@@ -4947,6 +4983,79 @@ extension APIClient {
 
   func fetchApiKeys() async throws -> ApiKeysResponse {
     return try await get("v1/config/api-keys", customBaseURL: rustBackendURL)
+  }
+
+  // MARK: - TTS Proxy (issue #6622)
+
+  struct TtsSynthesizeRequest: Encodable {
+    let text: String
+    let voiceId: String
+    let modelId: String
+    let outputFormat: String
+    let voiceSettings: TtsVoiceSettings
+
+    enum CodingKeys: String, CodingKey {
+      case text
+      case voiceId = "voice_id"
+      case modelId = "model_id"
+      case outputFormat = "output_format"
+      case voiceSettings = "voice_settings"
+    }
+  }
+
+  struct TtsVoiceSettings: Encodable {
+    let stability: Double
+    let similarityBoost: Double
+    let style: Double
+    let useSpeakerBoost: Bool
+
+    enum CodingKeys: String, CodingKey {
+      case stability
+      case similarityBoost = "similarity_boost"
+      case style
+      case useSpeakerBoost = "use_speaker_boost"
+    }
+  }
+
+  /// Synthesize speech via the backend TTS proxy (ElevenLabs key stays server-side).
+  /// Returns raw audio data (audio/mpeg).
+  func synthesizeSpeech(request: TtsSynthesizeRequest) async throws -> Data {
+    let base = rustBackendURL
+    let url = URL(string: base + "v1/tts/synthesize")!
+    var urlRequest = URLRequest(url: url)
+    urlRequest.httpMethod = "POST"
+    urlRequest.allHTTPHeaderFields = try await buildHeaders(requireAuth: true)
+    urlRequest.httpBody = try JSONEncoder().encode(request)
+    urlRequest.timeoutInterval = 60
+
+    let (data, response) = try await session.data(for: urlRequest)
+    guard let httpResponse = response as? HTTPURLResponse else {
+      throw APIError.invalidResponse
+    }
+
+    if httpResponse.statusCode == 401 {
+      // Retry with refreshed token
+      let authService = await MainActor.run { AuthService.shared }
+      _ = try await authService.getIdToken(forceRefresh: true)
+
+      var retryRequest = urlRequest
+      retryRequest.setValue(
+        try await authService.getAuthHeader(), forHTTPHeaderField: "Authorization")
+
+      let (retryData, retryResponse) = try await session.data(for: retryRequest)
+      guard let retryHttpResponse = retryResponse as? HTTPURLResponse else {
+        throw APIError.invalidResponse
+      }
+      guard (200...299).contains(retryHttpResponse.statusCode) else {
+        throw APIError.httpError(statusCode: retryHttpResponse.statusCode)
+      }
+      return retryData
+    }
+
+    guard (200...299).contains(httpResponse.statusCode) else {
+      throw APIError.httpError(statusCode: httpResponse.statusCode)
+    }
+    return data
   }
 
   // MARK: - Platform Tools (backend RAG)
