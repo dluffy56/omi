@@ -151,6 +151,8 @@ backend/scripts/rag/visualizations/
 /backend/scripts/data/
 /backend/pretrained_models/
 */pretrained_models/
+!/backend/pretrained_models/
+!/backend/pretrained_models/README.md
 /backend/_speech_profiles
 
 backend/google-credentials.json
