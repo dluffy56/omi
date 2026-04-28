@@ -450,7 +450,6 @@ class _TranscriptWidgetState extends State<TranscriptWidget> {
   Widget _buildSegmentItem(int segmentIdx) {
     final data = widget.segments[segmentIdx];
     final Person? person = data.personId != null ? _getPersonById(data.personId) : null;
-    final suggestion = widget.suggestions[data.id];
     final isTagging = widget.taggingSegmentIds.contains(data.id);
     final bool isUser = data.isUser;
     return Container(
@@ -509,13 +508,11 @@ class _TranscriptWidgetState extends State<TranscriptWidget> {
                             child: Text(
                               data.speakerId == omiSpeakerId
                                   ? 'omi'
-                                  : (suggestion != null && person == null
-                                      ? '${suggestion.personName}?'
-                                      : (person?.name ??
-                                          widget.sharedSpeakerNames[data.speakerId] ??
-                                          context.l10n.speakerWithId(
-                                            '${TranscriptSegment.getDisplaySpeakerId(data.speakerId, widget.segments)}',
-                                          ))),
+                                  : (person?.name ??
+                                      widget.sharedSpeakerNames[data.speakerId] ??
+                                      context.l10n.speakerWithId(
+                                        '${TranscriptSegment.getDisplaySpeakerId(data.speakerId, widget.segments)}',
+                                      )),
                               style: TextStyle(
                                 color: data.speakerId == omiSpeakerId || person != null
                                     ? Colors.grey.shade300
