@@ -91,15 +91,11 @@ class _SpeechProfileSharingPageState extends State<SpeechProfileSharingPage> {
     await _loadData();
   }
 
-  void _openShareDialog() {
-    showShareSpeechProfileDialog(
-      context,
-      cachedHasProfile: _hasProfile,
-      onShared: () {
-        setState(() => _loading = true);
-        _loadData();
-      },
-    );
+  Future<void> _openShareDialog() async {
+    final shared = await showShareSpeechProfileDialog(context, cachedHasProfile: _hasProfile);
+    if (!mounted || !shared) return;
+    setState(() => _loading = true);
+    await _loadData();
   }
 
   Widget _buildSectionHeader(String title) {
