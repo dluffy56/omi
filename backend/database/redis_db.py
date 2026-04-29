@@ -1,20 +1,36 @@
 import base64
 import json
 import os
+import ssl
 from typing import List, Union, Optional
 from datetime import datetime, timedelta, timezone
+from urllib.parse import urlparse
 
 import redis
 import logging
 
 logger = logging.getLogger(__name__)
 
+_redis_url = urlparse(os.getenv('REDIS_URL', ''))
+_redis_ssl_cert_reqs = os.getenv('REDIS_DB_SSL_CERT_REQS')
+_redis_ssl_options = {}
+
+if _redis_ssl_cert_reqs or _redis_url.scheme == 'rediss':
+    _redis_ssl_options['ssl'] = True
+    if _redis_ssl_cert_reqs:
+        _redis_ssl_options['ssl_cert_reqs'] = {
+            'none': ssl.CERT_NONE,
+            'optional': ssl.CERT_OPTIONAL,
+            'required': ssl.CERT_REQUIRED,
+        }.get(_redis_ssl_cert_reqs.lower(), _redis_ssl_cert_reqs)
+
 r = redis.Redis(
-    host=os.getenv('REDIS_DB_HOST'),
-    port=int(os.getenv('REDIS_DB_PORT')) if os.getenv('REDIS_DB_PORT') is not None else 6379,
-    username='default',
-    password=os.getenv('REDIS_DB_PASSWORD'),
+    host=os.getenv('REDIS_DB_HOST') or _redis_url.hostname,
+    port=int(os.getenv('REDIS_DB_PORT') or _redis_url.port or 6379),
+    username=os.getenv('REDIS_DB_USERNAME') or _redis_url.username or 'default',
+    password=os.getenv('REDIS_DB_PASSWORD') or _redis_url.password,
     health_check_interval=30,
+    **_redis_ssl_options,
 )
 
 
