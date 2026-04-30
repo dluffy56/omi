@@ -10308,6 +10308,10 @@
   "@removeShareFail": {
     "description": "Error message when removing a shared speech profile fails"
   },
+  "speechProfileSharingDescription": "Speech profile sharing lets others identify your voice in their conversations",
+  "@speechProfileSharingDescription": {
+    "description": "Description shown at the top of the speech profile sharing page explaining what the feature does"
+  },
   "omisStorage": "Omi's Storage",
   "@omisStorage": {
     "description": "Label for device storage tier in sync pipeline"

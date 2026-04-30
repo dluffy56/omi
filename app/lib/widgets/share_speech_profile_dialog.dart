@@ -53,10 +53,19 @@ class _ShareSpeechProfileDialogState extends State<_ShareSpeechProfileDialog> {
   bool _isSharing = false;
 
   @override
+  void initState() {
+    super.initState();
+    _controller.addListener(_onTextChanged);
+  }
+
+  @override
   void dispose() {
+    _controller.removeListener(_onTextChanged);
     _controller.dispose();
     super.dispose();
   }
+
+  void _onTextChanged() => setState(() {});
 
   Future<void> _share() async {
     final targetUid = _controller.text.trim();
@@ -64,7 +73,7 @@ class _ShareSpeechProfileDialogState extends State<_ShareSpeechProfileDialog> {
     if (targetUid == SharedPreferencesUtil().uid) {
       final message = context.l10n.cannotShareWithSelf;
       Navigator.pop(context);
-      AppSnackbar.showSnackbarError(message);
+      AppSnackbar.showSnackbar(message);
       return;
     }
 
@@ -75,7 +84,7 @@ class _ShareSpeechProfileDialogState extends State<_ShareSpeechProfileDialog> {
     if (result['status'] == 'ok') {
       final message = context.l10n.profileSharedSuccess;
       Navigator.pop(context, true);
-      AppSnackbar.showSnackbarSuccess(message);
+      AppSnackbar.showSnackbar(message);
       return;
     }
 
@@ -93,7 +102,7 @@ class _ShareSpeechProfileDialogState extends State<_ShareSpeechProfileDialog> {
       message = context.l10n.profileSharedFail;
     }
     Navigator.pop(context);
-    AppSnackbar.showSnackbarError(message);
+    AppSnackbar.showSnackbar(message);
   }
 
   @override
@@ -110,6 +119,9 @@ class _ShareSpeechProfileDialogState extends State<_ShareSpeechProfileDialog> {
           TextField(
             controller: _controller,
             enabled: !_isSharing,
+            autofocus: true,
+            autocorrect: false,
+            enableSuggestions: false,
             style: const TextStyle(color: Colors.white),
             decoration: InputDecoration(
               hintText: context.l10n.userId,
@@ -125,15 +137,23 @@ class _ShareSpeechProfileDialogState extends State<_ShareSpeechProfileDialog> {
           onPressed: _isSharing ? null : () => Navigator.pop(context),
           child: Text(context.l10n.cancel, style: TextStyle(color: _isSharing ? Colors.grey : Colors.white)),
         ),
-        TextButton(
-          onPressed: _isSharing ? null : _share,
-          child: _isSharing
-              ? const SizedBox(
-                  width: 16,
-                  height: 16,
-                  child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white),
-                )
-              : Text(context.l10n.share, style: const TextStyle(color: Colors.white)),
+        Builder(
+          builder: (_) {
+            final canShare = !_isSharing && _controller.text.trim().isNotEmpty;
+            return TextButton(
+              onPressed: canShare ? _share : null,
+              child: _isSharing
+                  ? const SizedBox(
+                      width: 16,
+                      height: 16,
+                      child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white),
+                    )
+                  : Text(
+                      context.l10n.share,
+                      style: TextStyle(color: canShare ? Colors.white : Colors.grey),
+                    ),
+            );
+          },
         ),
       ],
     );
