@@ -12,7 +12,7 @@ Future<bool> showShareSpeechProfileDialog(
   BuildContext context, {
   bool? cachedHasProfile,
 }) async {
-  final hasProfile = (cachedHasProfile == true) ? true : await userHasSpeakerProfile();
+  final hasProfile = (cachedHasProfile == true) ? true : await userHasSpeakerProfile(checkFreshness: false);
   if (!context.mounted) return false;
 
   if (!hasProfile) {

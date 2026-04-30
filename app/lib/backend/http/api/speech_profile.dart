@@ -5,8 +5,9 @@ import 'package:omi/backend/http/shared.dart';
 import 'package:omi/env/env.dart';
 import 'package:omi/utils/logger.dart';
 
-Future<bool> userHasSpeakerProfile() async {
-  var response = await makeApiCall(url: '${Env.apiBaseUrl}v3/speech-profile', headers: {}, method: 'GET', body: '');
+Future<bool> userHasSpeakerProfile({bool checkFreshness = true}) async {
+  final url = '${Env.apiBaseUrl}v3/speech-profile${checkFreshness ? '' : '?check_freshness=false'}';
+  var response = await makeApiCall(url: url, headers: {}, method: 'GET', body: '');
   if (response == null) return true;
   Logger.debug('userHasSpeakerProfile: ${response.body}');
   if (response.statusCode == 200) {

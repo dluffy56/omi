@@ -31,7 +31,7 @@ class _SpeechProfileSharingPageState extends State<SpeechProfileSharingPage> {
       final results = await Future.wait([
         getUsersIHaveSharedWith(),
         getProfilesSharedWithMe(),
-        userHasSpeakerProfile(),
+        userHasSpeakerProfile(checkFreshness: false),
       ]);
       if (!mounted) return;
       setState(() {
@@ -198,66 +198,71 @@ class _SpeechProfileSharingPageState extends State<SpeechProfileSharingPage> {
               color: Colors.white,
               backgroundColor: const Color(0xFF1C1C1E),
               onRefresh: _loadData,
-              child: SingleChildScrollView(
-                physics: const AlwaysScrollableScrollPhysics(),
-                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    _buildSectionHeader(context.l10n.sharedWithSection),
-                    if (_sharedWith.isEmpty)
-                      _buildEmptyState(context.l10n.noSharedProfiles, Icons.person_add_alt_1_outlined)
-                    else
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(12),
-                        child: Container(
-                          decoration: const BoxDecoration(color: Color(0xFF1C1C1E)),
-                          child: Column(
-                            children: [
-                              for (int i = 0; i < _sharedWith.length; i++) ...[
-                                if (i > 0) Divider(height: 1, color: Colors.grey.shade800, indent: 16),
-                                _buildProfileTile(
-                                  _sharedWith[i],
-                                  trailing: _buildActionPill(
-                                    context.l10n.revoke,
-                                    const Color(0xFFEF4444),
-                                    () => _revokeShare(_sharedWith[i]),
-                                  ),
-                                ),
-                              ],
-                            ],
+              child: LayoutBuilder(
+                builder: (context, constraints) => SingleChildScrollView(
+                  physics: const AlwaysScrollableScrollPhysics(),
+                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                  child: ConstrainedBox(
+                    constraints: BoxConstraints(minHeight: constraints.maxHeight),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        _buildSectionHeader(context.l10n.sharedWithSection),
+                        if (_sharedWith.isEmpty)
+                          _buildEmptyState(context.l10n.noSharedProfiles, Icons.person_add_alt_1_outlined)
+                        else
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Container(
+                              decoration: const BoxDecoration(color: Color(0xFF1C1C1E)),
+                              child: Column(
+                                children: [
+                                  for (int i = 0; i < _sharedWith.length; i++) ...[
+                                    if (i > 0) Divider(height: 1, color: Colors.grey.shade800, indent: 16),
+                                    _buildProfileTile(
+                                      _sharedWith[i],
+                                      trailing: _buildActionPill(
+                                        context.l10n.revoke,
+                                        const Color(0xFFEF4444),
+                                        () => _revokeShare(_sharedWith[i]),
+                                      ),
+                                    ),
+                                  ],
+                                ],
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                    const SizedBox(height: 24),
-                    _buildSectionHeader(context.l10n.sharedWithYouSection),
-                    if (_sharedWithMe.isEmpty)
-                      _buildEmptyState(context.l10n.noProfilesSharedWithYou, Icons.people_outline)
-                    else
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(12),
-                        child: Container(
-                          decoration: const BoxDecoration(color: Color(0xFF1C1C1E)),
-                          child: Column(
-                            children: [
-                              for (int i = 0; i < _sharedWithMe.length; i++) ...[
-                                if (i > 0) Divider(height: 1, color: Colors.grey.shade800, indent: 16),
-                                _buildProfileTile(
-                                  _sharedWithMe[i],
-                                  trailing: _buildActionPill(
-                                    context.l10n.removeSharedProfile,
-                                    const Color(0xFFEF4444),
-                                    () => _removeSharedWithMe(_sharedWithMe[i]),
-                                  ),
-                                ),
-                              ],
-                            ],
+                        const SizedBox(height: 24),
+                        _buildSectionHeader(context.l10n.sharedWithYouSection),
+                        if (_sharedWithMe.isEmpty)
+                          _buildEmptyState(context.l10n.noProfilesSharedWithYou, Icons.people_outline)
+                        else
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Container(
+                              decoration: const BoxDecoration(color: Color(0xFF1C1C1E)),
+                              child: Column(
+                                children: [
+                                  for (int i = 0; i < _sharedWithMe.length; i++) ...[
+                                    if (i > 0) Divider(height: 1, color: Colors.grey.shade800, indent: 16),
+                                    _buildProfileTile(
+                                      _sharedWithMe[i],
+                                      trailing: _buildActionPill(
+                                        context.l10n.removeSharedProfile,
+                                        const Color(0xFFEF4444),
+                                        () => _removeSharedWithMe(_sharedWithMe[i]),
+                                      ),
+                                    ),
+                                  ],
+                                ],
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                    _buildDescriptionFooter(),
-                    const SizedBox(height: 16),
-                  ],
+                        _buildDescriptionFooter(),
+                        const SizedBox(height: 16),
+                      ],
+                    ),
+                  ),
                 ),
               ),
             ),

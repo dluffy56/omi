@@ -685,11 +685,19 @@ async def _stream_handler(
     # Create or get conversation ID early for audio chunk storage
     private_cloud_sync_enabled = user_db.get_user_private_cloud_sync_enabled(uid)
 
-    # Enable speaker identification when user has speech profile or private cloud sync
+    # Enable speaker identification when user has speech profile, private cloud sync, or shared profiles from others
     has_speech_profile = False
     if not use_custom_stt and not is_multi_channel and include_speech_profile:
         has_speech_profile = get_user_has_speech_profile(uid)
-    speaker_id_enabled = not use_custom_stt and (private_cloud_sync_enabled or has_speech_profile)
+    shared_profile_owners: list = []
+    if not use_custom_stt and not is_multi_channel:
+        try:
+            shared_profile_owners = user_db.get_profiles_shared_with_user(uid)
+        except Exception as e:
+            logger.error(f"Failed to load shared profile owners: {e} {uid} {session_id}")
+    speaker_id_enabled = not use_custom_stt and (
+        private_cloud_sync_enabled or has_speech_profile or bool(shared_profile_owners)
+    )
     if speaker_id_enabled:
         audio_ring_buffer = AudioRingBuffer(RING_BUFFER_DURATION, sample_rate)
 
@@ -1778,12 +1786,8 @@ async def _stream_handler(
                     }
 
             # Shared profiles, batch-load each sharer's own user-level embedding
-            try:
-                shared_owners = user_db.get_profiles_shared_with_user(uid)
-            except Exception as e:
-                logger.error(f"Failed to load shared profile owners: {e} {uid} {session_id}")
-                shared_owners = []
-            owner_uids = [o for o in shared_owners if o != uid]
+            # Reuses the list fetched in the speaker_id_enabled gate above to avoid a duplicate Firestore read.
+            owner_uids = [o for o in shared_profile_owners if o != uid]
             try:
                 profiles = user_db.get_user_profiles_batch(owner_uids)
             except Exception as e:
