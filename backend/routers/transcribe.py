@@ -344,6 +344,7 @@ async def _stream_handler(
 
     # Initialize segment buffers early (before onboarding handler needs them)
     realtime_segment_buffers: deque = deque(maxlen=MAX_SEGMENT_BUFFER_SIZE)
+    realtime_segment_received_at_buffers: deque = deque(maxlen=MAX_SEGMENT_BUFFER_SIZE)
     realtime_photo_buffers: deque[ConversationPhoto] = deque(maxlen=MAX_PHOTO_BUFFER_SIZE)
 
     # === Speaker Identification State ===
@@ -392,8 +393,9 @@ async def _stream_handler(
 
         def onboarding_stream_transcript(segments: List[dict]):
             """Inject onboarding question segments into the transcript stream."""
-            nonlocal realtime_segment_buffers
+            nonlocal realtime_segment_buffers, realtime_segment_received_at_buffers
             realtime_segment_buffers.extend(segments)
+            realtime_segment_received_at_buffers.extend([time.monotonic()] * len(segments))
 
         onboarding_handler = OnboardingHandler(uid, send_onboarding_event, onboarding_stream_transcript)
         spawn(onboarding_handler.send_current_question())
@@ -938,10 +940,37 @@ async def _stream_handler(
 
     vad_gate = None
 
+    def _segments_timing_summary(segments: List[dict]) -> Tuple[int, int, float, float]:
+        word_count = 0
+        starts = []
+        ends = []
+        for segment in segments:
+            text = segment.get('text') or ''
+            word_count += len(text.split())
+            if 'start' in segment:
+                starts.append(segment['start'])
+            if 'end' in segment:
+                ends.append(segment['end'])
+        span_start = min(starts) if starts else 0.0
+        span_end = max(ends) if ends else 0.0
+        return len(segments), word_count, span_start, span_end
+
     def stream_transcript(segments):
-        nonlocal realtime_segment_buffers
+        nonlocal realtime_segment_buffers, realtime_segment_received_at_buffers
         # Note: DG timestamp remapping is handled inside GatedDeepgramSocket wrapper
         realtime_segment_buffers.extend(segments)
+        realtime_segment_received_at_buffers.extend([time.monotonic()] * len(segments))
+        segment_count, word_count, span_start, span_end = _segments_timing_summary(segments)
+        logger.info(
+            "listen_timing stt_callback segments=%s words=%s span=%.2f-%.2f queue_size=%s uid=%s session=%s",
+            segment_count,
+            word_count,
+            span_start,
+            span_end,
+            len(realtime_segment_buffers),
+            uid,
+            session_id,
+        )
 
     async def _process_stt():
         nonlocal websocket_close_code
@@ -961,6 +990,20 @@ async def _stream_handler(
                                 seg['is_user'] = cfg.is_user
                                 seg['speaker'] = cfg.speaker_label
                             realtime_segment_buffers.extend(segments)
+                            realtime_segment_received_at_buffers.extend([time.monotonic()] * len(segments))
+                            segment_count, word_count, span_start, span_end = _segments_timing_summary(segments)
+                            logger.info(
+                                "listen_timing stt_callback_multi channel_id=%s channel_label=%s segments=%s words=%s span=%.2f-%.2f queue_size=%s uid=%s session=%s",
+                                cfg.channel_id,
+                                cfg.label,
+                                segment_count,
+                                word_count,
+                                span_start,
+                                span_end,
+                                len(realtime_segment_buffers),
+                                uid,
+                                session_id,
+                            )
 
                         return cb
 
@@ -1893,7 +1936,33 @@ async def _stream_handler(
                 logger.info(
                     f"Speaker ID: extracted audio too short ({extracted_duration:.2f}s < {SPEAKER_ID_MIN_AUDIO}s) after buffer clamping {uid} {session_id}"
                 )
+                logger.info(
+                    "speaker_id_timing skip_short_clip speaker_id=%s segment_duration=%.2f clip_duration=%.2f buffer_span=%.2f-%.2f extract_span=%.2f-%.2f uid=%s session=%s",
+                    speaker_id,
+                    duration,
+                    extracted_duration,
+                    buffer_start_ts,
+                    buffer_end_ts,
+                    extract_start,
+                    extract_end,
+                    uid,
+                    session_id,
+                )
                 return
+
+            logger.info(
+                "speaker_id_timing extract speaker_id=%s segment_duration=%.2f clip_duration=%.2f buffer_span=%.2f-%.2f extract_span=%.2f-%.2f candidates=%s uid=%s session=%s",
+                speaker_id,
+                duration,
+                extracted_duration,
+                buffer_start_ts,
+                buffer_end_ts,
+                extract_start,
+                extract_end,
+                len(person_embeddings_cache),
+                uid,
+                session_id,
+            )
 
             # Extract only the needed bytes directly from ring buffer
             pcm_data = audio_ring_buffer.extract(extract_start, extract_end)
@@ -1922,7 +1991,9 @@ async def _stream_handler(
             wav_bytes = output_buffer.getvalue()
 
             # Extract embedding (API call)
+            embedding_started_at = time.monotonic()
             query_embedding = await asyncio.to_thread(extract_embedding_from_bytes, wav_bytes, "query.wav")
+            embedding_elapsed_ms = (time.monotonic() - embedding_started_at) * 1000
 
             # Find best match
             best_match = None
@@ -1941,6 +2012,17 @@ async def _stream_handler(
 
             if best_match and best_distance < SPEAKER_MATCH_THRESHOLD:
                 person_id, person_name = best_match
+
+                logger.info(
+                    "speaker_id_timing match speaker_id=%s best_distance=%.4f threshold=%.4f embedding_ms=%.1f clip_duration=%.2f uid=%s session=%s",
+                    speaker_id,
+                    best_distance,
+                    SPEAKER_MATCH_THRESHOLD,
+                    embedding_elapsed_ms,
+                    extracted_duration,
+                    uid,
+                    session_id,
+                )
 
                 if person_id == USER_SELF_PERSON_ID:
                     # User's own voice matched — mark speaker as user for session consistency
@@ -1986,6 +2068,16 @@ async def _stream_handler(
                     )
                     speaker_map_dirty = True
             else:
+                logger.info(
+                    "speaker_id_timing no_match speaker_id=%s best_distance=%.4f threshold=%.4f embedding_ms=%.1f clip_duration=%.2f uid=%s session=%s",
+                    speaker_id,
+                    best_distance,
+                    SPEAKER_MATCH_THRESHOLD,
+                    embedding_elapsed_ms,
+                    extracted_duration,
+                    uid,
+                    session_id,
+                )
                 logger.info(f"Speaker ID: speaker {speaker_id} no match (best={best_distance:.3f}) {uid} {session_id}")
 
         except Exception as e:
@@ -2049,7 +2141,7 @@ async def _stream_handler(
             logger.error(f"Error flushing speaker assignments for {conversation_id}: {e} {uid} {session_id}")
 
     async def stream_transcript_process():
-        nonlocal websocket_active, realtime_segment_buffers, realtime_photo_buffers, websocket
+        nonlocal websocket_active, realtime_segment_buffers, realtime_segment_received_at_buffers, realtime_photo_buffers, websocket
         nonlocal current_conversation_id, translation_enabled, speaker_to_person_map, suggested_segments, words_transcribed_since_last_record, last_transcript_time
 
         while websocket_active or len(realtime_segment_buffers) > 0 or len(realtime_photo_buffers) > 0:
@@ -2063,14 +2155,36 @@ async def _stream_handler(
 
             segments_to_process = list(realtime_segment_buffers)
             realtime_segment_buffers.clear()
+            segment_received_times = list(realtime_segment_received_at_buffers)
+            realtime_segment_received_at_buffers.clear()
 
             photos_to_process = list(realtime_photo_buffers)
             realtime_photo_buffers.clear()
 
             finished_at = datetime.now(timezone.utc)
+            batch_started_at = time.monotonic()
+            max_queue_wait_ms = 0.0
+            if segment_received_times:
+                max_queue_wait_ms = max(
+                    (batch_started_at - received_at) * 1000 for received_at in segment_received_times
+                )
+            segment_count, word_count, span_start, span_end = _segments_timing_summary(segments_to_process)
+            logger.info(
+                "listen_timing batch_start segments=%s words=%s photos=%s span=%.2f-%.2f max_queue_wait_ms=%.1f uid=%s session=%s",
+                segment_count,
+                word_count,
+                len(photos_to_process),
+                span_start,
+                span_end,
+                max_queue_wait_ms,
+                uid,
+                session_id,
+            )
 
             # Get conversation (cached — refreshes on ID change or every 30s)
+            get_conversation_started_at = time.monotonic()
             conversation_data = _get_cached_conversation()
+            get_conversation_ms = (time.monotonic() - get_conversation_started_at) * 1000
             if not conversation_data:
                 logger.warning(
                     f"Warning: conversation {current_conversation_id} not found during segment processing {uid} {session_id}"
@@ -2123,8 +2237,10 @@ async def _stream_handler(
                 transcript_segments, _, _ = TranscriptSegment.combine_segments([], newly_processed_segments)
 
             # Update transcript segments
+            update_started_at = time.monotonic()
             conversation = deserialize_conversation(conversation_data)
             result = _update_in_progress_conversation(conversation, transcript_segments, photos_to_process, finished_at)
+            update_ms = (time.monotonic() - update_started_at) * 1000
             if not result or not result[0]:
                 continue
             conversation, updated_segments, removed_ids = result
@@ -2133,15 +2249,43 @@ async def _stream_handler(
                 _send_message_event(SegmentsDeletedEvent(segment_ids=removed_ids))
 
             if transcript_segments:
+                websocket_send_started_at = time.monotonic()
                 await websocket.send_json([segment.dict() for segment in updated_segments])
+                websocket_send_ms = (time.monotonic() - websocket_send_started_at) * 1000
+                logger.info(
+                    "listen_timing websocket_sent transcript_segments=%s updated_segments=%s get_conversation_ms=%.1f update_ms=%.1f websocket_send_ms=%.1f uid=%s session=%s",
+                    len(transcript_segments),
+                    len(updated_segments),
+                    get_conversation_ms,
+                    update_ms,
+                    websocket_send_ms,
+                    uid,
+                    session_id,
+                )
 
                 if transcript_send is not None and user_has_credits:
+                    pusher_send_started_at = time.monotonic()
                     transcript_send([segment.dict() for segment in transcript_segments])
+                    logger.info(
+                        "listen_timing pusher_transcript_send_ms=%.1f segments=%s uid=%s session=%s",
+                        (time.monotonic() - pusher_send_started_at) * 1000,
+                        len(transcript_segments),
+                        uid,
+                        session_id,
+                    )
                 elif not PUSHER_ENABLED and user_has_credits:
                     # Fallback: trigger realtime integrations directly when pusher is disabled
                     try:
+                        realtime_started_at = time.monotonic()
                         await trigger_realtime_integrations(
                             uid, [s.dict() for s in transcript_segments], current_conversation_id
+                        )
+                        logger.info(
+                            "listen_timing realtime_integrations_ms=%.1f segments=%s uid=%s session=%s",
+                            (time.monotonic() - realtime_started_at) * 1000,
+                            len(transcript_segments),
+                            uid,
+                            session_id,
                         )
                     except Exception as e:
                         logger.error(f"Error triggering realtime integrations: {e} {uid} {session_id}")
@@ -2151,7 +2295,15 @@ async def _stream_handler(
                     onboarding_handler.on_segments_received([s.dict() for s in transcript_segments])
 
                 if translation_enabled:
+                    translation_started_at = time.monotonic()
                     await translate(updated_segments, conversation.id, removed_ids=removed_ids)
+                    logger.info(
+                        "listen_timing translate_ms=%.1f updated_segments=%s uid=%s session=%s",
+                        (time.monotonic() - translation_started_at) * 1000,
+                        len(updated_segments),
+                        uid,
+                        session_id,
+                    )
 
                 # Speaker detection
                 for segment in updated_segments:
@@ -2199,7 +2351,22 @@ async def _stream_handler(
                                         'text': segment.text,  # TODO: remove
                                     }
                                 )
+                                logger.info(
+                                    "speaker_id_timing queued speaker_id=%s segment_duration=%.2f queue_size=%s uid=%s session=%s",
+                                    segment.speaker_id,
+                                    segment.end - segment.start,
+                                    speaker_id_segment_queue.qsize(),
+                                    uid,
+                                    session_id,
+                                )
                             except asyncio.QueueFull:
+                                logger.warning(
+                                    "speaker_id_timing queue_full speaker_id=%s segment_duration=%.2f uid=%s session=%s",
+                                    segment.speaker_id,
+                                    segment.end - segment.start,
+                                    uid,
+                                    session_id,
+                                )
                                 pass  # Drop if queue is full
 
                     # Text-based detection

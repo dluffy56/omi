@@ -241,6 +241,19 @@ async def process_audio_dg(
                         }
                     )
 
+        word_count = sum(len(segment['text'].split()) for segment in segments)
+        span_start = min((segment['start'] for segment in segments), default=0.0)
+        span_end = max((segment['end'] for segment in segments), default=0.0)
+        logger.info(
+            "stt_timing dg_transcript segments=%s words=%s span=%.2f-%.2f model=%s language=%s",
+            len(segments),
+            word_count,
+            span_start,
+            span_end,
+            model,
+            language,
+        )
+
         stream_transcript(segments)
 
     def on_error(self, error, **kwargs):
