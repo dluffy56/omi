@@ -14,6 +14,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 import 'package:omi/backend/http/api/conversations.dart';
+import 'package:omi/backend/http/api/speech_profile.dart';
 import 'package:omi/backend/http/api/users.dart';
 import 'package:omi/backend/preferences.dart';
 import 'package:omi/services/auth_service.dart';
@@ -1143,6 +1144,50 @@ class CaptureProvider extends ChangeNotifier
     _segmentsPhotosVersion++; // Bump version so Selector rebuilds
     setHasTranscripts(segments.isNotEmpty);
     notifyListeners();
+    unawaited(_rebuildSharedSpeakerNamesFromSegments(List<TranscriptSegment>.from(segments)));
+  }
+
+  Future<void> _rebuildSharedSpeakerNamesFromSegments(List<TranscriptSegment> restoredSegments) async {
+    final sharedSegments = restoredSegments.where((s) => s.personId?.startsWith('shared:') ?? false).toList();
+    final snapshotSpeakerIds = sharedSegments.map((s) => s.speakerId).toSet();
+    if (sharedSegments.isEmpty) {
+      if (sharedSpeakerNames.isNotEmpty) {
+        sharedSpeakerNames = {};
+        notifyListeners();
+      }
+      return;
+    }
+
+    final rebuilt = <int, String>{};
+    try {
+      final sharedProfiles = await getProfilesSharedWithMe();
+      final namesByOwnerUid = {
+        for (final p in sharedProfiles)
+          if (p.uid.isNotEmpty) p.uid: p.displayName,
+      };
+      for (final seg in sharedSegments) {
+        final ownerUid = seg.personId!.substring('shared:'.length);
+        final name = namesByOwnerUid[ownerUid];
+        if (name != null && name.isNotEmpty) {
+          rebuilt[seg.speakerId] = name;
+        }
+      }
+    } catch (e) {
+      Logger.debug('Failed to rebuild shared speaker names: $e');
+      return;
+    }
+
+    final updated = Map<int, String>.from(sharedSpeakerNames);
+    for (final id in snapshotSpeakerIds) {
+      updated.remove(id);
+    }
+    updated.addAll(rebuilt);
+
+    final changed = !const MapEquality<int, String>().equals(sharedSpeakerNames, updated);
+    if (changed) {
+      sharedSpeakerNames = updated;
+      notifyListeners();
+    }
   }
 
   @override
